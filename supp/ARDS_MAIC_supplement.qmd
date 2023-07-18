@@ -1,0 +1,226 @@
+---
+title: "The genomic landscape of Acute Respiratory Distress Syndrome: a meta-analysis by information content of whole-genome studies of the host response."
+format: 
+  pdf:
+    include-in-header: 
+      text: |
+        \usepackage{lscape}
+        \newcommand{\blandscape}{\begin{landscape}}
+        \newcommand{\elandscape}{\end{landscape}}
+    keep-tex: true
+mainfont: Times New Roman
+fontsize: "11"
+mainfontoptions: 
+  - Numbers=Lowercase
+  - Numbers=Proportional
+linestretch: "1.5"
+cap-location: bottom
+tbl-cap-location: top
+fig-align: center
+documentclass: article
+papersize: "A4"
+geometry: 
+  - top=30mm
+  - left=22.5mm
+  - right=22.5mm
+  - bottom=30mm
+echo: false
+bibliography: ref.bib
+csl: nature-medicine.csl
+biblio-title: "References"
+---
+
+\begin{center}
+
+\textbf{\LARGE Supplement}
+
+\end{center}
+
+\newpage
+
+## Supplementary Methods
+
+\newpage
+
+### Search Strategy
+
+We used the following strategy to search MEDLINE and a direct translation to search Embase.
+
+**1** exp Respiratory Distress Syndrome, Adult/
+
+**2** "acute lung injury*".ti,ab,kf,kw
+
+**3** 1 OR 2
+
+**4** "gene*".mp
+
+**5** "genome*".mp
+
+**6** "transcript*".mp
+
+**7** "protein*".mp
+
+**8** 4 OR 5 OR 6 OR 7
+
+**9** 3 AND 8
+
+**10** ("COVID-19\*" OR "COVID19\*" OR "COVID-2019*" OR "covid").ti,ab,kf,kw
+
+**11** ("SARS-CoV-2\*" OR "SARSCov-2\*" OR "SARSCoV2*" OR "SARS-CoV2").ti,sh,kf,kw
+
+**12** ("2019-nCoV\*" OR "2019nCoV\*" OR "19- nCoV\*" OR "19nCoV\*" OR "nCoV2019\*" OR "nCoV-2019\*" OR "nCoV19\*" OR "nCoV- 19*").ti,ab,kf,kw 
+
+**13** 10 OR 11 OR 12
+
+**14** 9 NOT 13
+
+**15** Letter.pt OR Conference Abstract.pt OR Conference Paper.pt OR Conference Review.pt OR Editorial.pt OR Erratum.pt OR Review.pt OR Note.pt OR Tombstone.pt
+
+**16** 14 NOT 15
+
+**17** exp \*adolescence/ or exp \*adolescent/ or exp \*child/ or exp \*childhood disease/ or exp \*infant disease/ or (adolescen* or babies or baby or boy? or boyfriend or boyhood or girlfriend or girlhood or child or child* or child\*3 or children* or girl? or infan* or juvenil* or juvenile* or kid? or minors or minors* or neonat* or neo-nat* or newborn* or new-born* or paediatric* or peadiatric* or pediatric* or perinat* or preschool* or puber* or pubescen* or school* or teen* or toddler? or underage? or under-age? or youth*).ti,kw
+
+**18** 16 NOT 17
+
+**19** ((exp animal/ or nonhuman/) NOT exp human/)
+
+**20** 18 NOT 19
+
+**21** limit 20 to yr="1967-Current"
+
+\newpage
+
+### Inclusion criteria
+
+Inclusion:
+
+  - Human studies: *in-vivo* or *in-vitro*
+  - Adults (age ≥ 18 years)
+  - Acute Respiratory Distress Syndrome (ARDS) 
+      - by any contemporaneous definition
+  - Accepted methodologies:
+      - CRISPR screen
+      - RNAi screen
+      - Protein-protein interaction study
+      - Host proteins incorporated into virion or virus-like particle
+      - Genome wide association study
+      - Transcriptomic study
+      - Proteomic study
+      
+Exclusion:
+
+  - Children (age < 18 years)
+  - Animal studies
+  - Meta-analyses, *in-silico* analyses, or re-analysis of previously published data
+  - Excluded methodologies:
+      - *In-vitro* human studies simulating ARDS
+      - Candidate *in-vivo* or *in-vitro* transcriptomic or proteomic studies (defined as those investigating < 50 genes)
+      - Candidate gene association studies
+      - Studies including fewer than 5 individuals in either the control or ARDS arm
+
+\newpage
+
+## Supplementary Results
+
+\newpage
+
+![**Systematic review inclusion diagram**. Abbreviations: db - data base; GEO - NCBI Gene Expression Omnibus.](./figures/Supplementary_Figure_1_production.png)
+
+\newpage
+
+![**Overlap between ARDS MAIC and ARDS-associated genes and ARDS MAIC and COVID-19 MAIC**. a. Eular diagram of gene overlap between ARDS MAIC and a BioLitMine search using the ARDS MeSH term. b. Eular diagram of gene overlap between ARDS MAIC and the ARDS Database of Genes. c. Eular diagram of gene overlap between ARDS MAIC and a MAIC of COVID-19 host-response studies. d. Heatmap of the 50 top ranked ARDS MAIC genes also prioritised by the COVID-19 MAIC, displaying the ARDS MAIC score for each gene, highest gene score in each category, and the number of supporting gene lists.](./figures/Supplementary_Figure_2_production.png)
+
+\newpage
+
+**Supplementary Table 2.  Gene list information content and contribution.**
+
+| **Study**                     | **Method**      | **Category** | **N genes** | **rIC** (%)    | **rICtb** (%)     |
+|-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
+| Sarma[@Sarma2022]             | Transcriptomics | RNA-seq      | 4954        | 50.8           | 53.1              |
+| Juss[@Juss2016]               | Transcriptomics | Microarray   | 1318        | 16             | 15.7              |
+| Sarma[@Sarma2022]             | Transcriptomics | scRNA-seq    | 706         | 9.8            | 10.3              |
+| Nguyen[@Nguyen2013]           | Proteomics      | Mass Spec    | 161         | 2.2            | 2.1               |
+| Wang[@Wang2008]               | Transcriptomics | Microarray   | 137         | 1.9            | 1.9               |
+| Bhargava[@Bhargava2014]       | Proteomics      | Mass Spec    | 233         | 3.1            | 1.9               |
+| Kovach[@Kovach2015]           | Transcriptomics | Microarray   | 123         | 1.8            | 1.9               |
+| Bhargava[@Bhargava2017]       | Proteomics      | Mass Spec    | 144         | 1.9            | 1.8               |
+| Morrell[@Morrell2019]         | Transcriptomics | Microarray   | 155         | 1.9            | 1.7               |
+| Christie[@Christie2012]       | GWAS            | Genotyping   | 143         | 1.4            | 1.5               |
+| Liao[@Liao2021]               | GWAS            | Genotyping   | 67          | 0.7            | 0.8               |
+| Sarma[@Sarma2022]             | Proteomics      | Other        | 60          | 0.8            | 0.7               |
+| Jiang[@Jiang2020]             | Transcriptomics | scRNA-seq    | 53          | 0.7            | 0.6               |
+| Batra[@Batra2022]             | Proteomics      | Other        | 39          | 0.6            | 0.6               |
+| Bime[@Bime2018]               | GWAS            | Genotyping   | 51          | 0.5            | 0.5               |
+| Bos[@Bos2019]                 | Transcriptomics | Microarray   | 53          | 0.7            | 0.5               |
+| Chang[@Chang2008]             | Proteomics      | Mass Spec    | 37          | 0.5            | 0.5               |
+| Mirchandani[@Mirchandani2022] | Transcriptomics | Microarray   | 41          | 0.5            | 0.4               |
+| Mirchandani[@Mirchandani2022] | Proteomics      | Mass Spec    | 29          | 0.4            | 0.4               |
+| Liao[@Liao2021]               | Transcriptomics | RNA-seq      | 43          | 0.4            | 0.4               |
+| Dong[@Dong2013]               | Proteomics      | Mass Spec    | 27          | 0.4            | 0.4               |
+| Ren[@Ren2016]                 | Proteomics      | Other        | 17          | 0.3            | 0.3               |
+| Tejera[@Tejera2012]           | GWAS            | Genotyping   | 19          | 0.3            | 0.3               |
+| Howrylak[@Howrylak2009]       | Transcriptomics | Microarray   | 28          | 0.3            | 0.2               |
+| Xu[@Xu2021]                   | GWAS            | WES          | 16          | 0.2            | 0.2               |
+| Chen[@Chen2016]               | Proteomics      | Mass Spec    | 16          | 0.2            | 0.2               |
+| Zhang[@Zhang2022]             | Transcriptomics | RNA-seq      | 20          | 0.2            | 0.2               |
+| Kangelaris[@Kangelaris2015]   | Transcriptomics | Microarray   | 15          | 0.2            | 0.2               |
+| Meyer[@Meyer2013]             | GWAS            | Genotyping   | 10          | 0.1            | 0.1               |
+| Martucci[@Martucci2020]       | Transcriptomics | Microarray   | 13          | 0.1            | 0.1               |
+| Zhu[@Zhu2017]                 | Transcriptomics | Microarray   | 14          | 0.1            | 0.1               |
+| Englert[@Englert2019]         | Transcriptomics | RNA-seq      | 10          | 0.1            | 0.1               |
+| Lu[@Lu2017]                   | Transcriptomics | Microarray   | 12          | < 0.1          | < 0.1             |
+| Scheller[@Scheller2019]       | Transcriptomics | RNA-seq      | 9           | < 0.1          | < 0.1             |
+| Nick[@Nick2016]               | Transcriptomics | Microarray   | 4           | < 0.1          | < 0.1             |
+| Guillen-Guio[@GuillenGuio2020]| GWAS            | Genotyping   | 6           | < 0.1          | < 0.1             |
+| Meyer[@Meyer2011]             | GWAS            | Genotyping   | 4           | < 0.1          | < 0.1             |
+| Dolinay[@Dolinay2012]         | Transcriptomics | Microarray   | 4           | < 0.1          | < 0.1             |
+| Chen[@Chen2013]               | Proteomics      | Mass Spec    | 16          | < 0.1          | < 0.1             |
+| Zhang[@Zhang2021]             | Transcriptomics | RNA-seq      | 5           | < 0.1          | < 0.1             |
+| Shortt[@Shortt2014]           | GWAS            | WES          | 3           | < 0.1          | < 0.1             |
+| Bowler[@Bowler2004]           | Proteomics      | Mass Spec    | 18          | < 0.1          | < 0.1             |
+| Morrell[@Morrell2018]         | Transcriptomics | Microarray   | 1           | < 0.1          | < 0.1             |
+
+```{=tex}
+\begin{scriptsize}
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; rIC - Relative information content; rICtb - Relative information contribution; WES - Whole-exome sequencing.
+\end{scriptsize}
+```
+
+\newpage
+
+**Supplementary Table 3.  ARDS MAIC prioritised genes found in common by BioLitMine with >= 2 associated publications.**
+
+| **Gene**      | **Publication count** | **PubMed IDs**                                                                 | **MAIC rank** | 
+|---------------|-----------------------|--------------------------------------------------------------------------------|---------------|
+| TGFB1         | 8                     | 30395619, 29083412, 28188225, 27309347, 22034170, 20142324, 16100012, 12654639 | 225           |
+| VEGFA         | 8                     | 24356493, 23542734, 21797753, 19543148, 19349383, 17289863, 15920019, 15741444 | 320           |
+| IL10          | 8                     | 32217834, 31936183, 30280795, 28432351, 22033829, 21138342, 18242340, 16585075 | 1268          |
+| SFTPB         | 6                     | 21128671, 18679120, 16100012, 15190959, 14718442, 12490037                     | 177           |
+| IL17A         | 6                     | 34239039, 32795834, 32651218, 30655311, 26709006, 26002979                     | 1294          |
+| PI3           | 5                     | 28187039, 24617927, 19251943, 19197381, 18203972                               | 2             |
+| CXCL8         | 5                     | 22897124, 22080750, 21348591, 17498967, 14729508                               | 3             |
+| IL6           | 5                     | 34757857, 33250487, 32826331, 31261506, 18593632                               | 144           |
+| TNF           | 5                     | 31261506, 22507624, 21784970, 17034639, 16135717                               | 651           |
+| NAMPT         | 4                     | 24821571, 24053186, 18486613, 17392604                                         | 58            |
+| IL1RN         | 4                     | 30095747, 29943912, 23449693, 18838927                                         | 175           |
+| SCGB1A1       | 4                     | 32787812, 28548310, 18521628, 16215398                                         | 187           |
+| NPPB          | 4                     | 28322314, 26359292, 21696613, 19830720                                         | 1239          |
+| HGF           | 3                     | 18065658, 17702746, 11943656                                                   | 343           |
+| IL33          | 3                     | 33936076, 31147742, 23000728                                                   | 385           |
+| CXCL10        | 3                     | 31651197, 23542734, 23144331                                                   | 671           |
+| S100A12       | 2                     | 26274928, 24887223                                                             | 5             |
+| MUC1          | 2                     | 21418654, 17565019                                                             | 69            |
+| PLAU          | 2                     | 23064953, 17994220                                                             | 244           |
+| EPAS1         | 2                     | 28613249, 25574837                                                             | 425           |
+| FASLG         | 2                     | 30385692, 12414525                                                             | 503           |
+| EDN1          | 2                     | 27765761, 17875064                                                             | 643           |
+| AKT1          | 2                     | 27607575, 15961723                                                             | 950           |
+| MMP8          | 2                     | 24651234, 15187163                                                             | 1223          |
+
+\newpage
+
+## References
+
+::: {#refs}
+:::
+
