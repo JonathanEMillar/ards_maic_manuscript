@@ -219,7 +219,7 @@ We performed functional enrichment of prioritised genes against the universe of 
 
 #### Software and code availability
 
-MAIC is implemented in Python v3.9.7 (Python Software Foundation, Wilmington, United States). All other analyses were performed with R v4.2.2 (R Core Team, R Foundation for Statistical Computing, Vienna, Austria). All code required to reproduce the analyses is available at \[Github link\].
+MAIC is implemented in Python v3.9.7 (Python Software Foundation, Wilmington, United States). All other analyses were performed with R v4.2.2 (R Core Team, R Foundation for Statistical Computing, Vienna, Austria). All code required to reproduce the analyses is available at <https://github.com/JonathanEMillar/ards_maic_analysis>.
 
 \newpage
 
