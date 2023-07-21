@@ -183,7 +183,7 @@ response.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, interior hidden, enhanced, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, interior hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, frame hidden, breakable, sharp corners]}{\end{tcolorbox}}\fi
 
 \setstretch{1.5}
 Jonathan E Millar\textsuperscript{1}, Sara
@@ -268,7 +268,7 @@ Here we present a living meta-analysis by information content of ARDS
 host genomics studies as an open-source resource for gene
 prioritisation, translational genomics, and drug target discovery. A
 comprehensive, interactive interface is available at
-\url{https://ardsmaic.site44.com}.
+\url{https://baillielab.net/maic/ards}.
 
 \newpage
 
@@ -282,8 +282,8 @@ Our search yielded 8,937 unique citations (Fig. S1). Of these, we
 retrieved 74 studies for full-text evaluation and ultimately included 40
 in our meta-analysis\textsuperscript{9,10,15--52}. These studies
 produced 44 unique gene lists (22 transcriptomic, 13 proteomic, and 9
-genome-wide association studies (GWAS); see Table~\ref{tbl-tab1}). Three
-studies reported results from multiple
+based on genome-wide association studies (GWAS); see
+Table~\ref{tbl-tab1}). Three studies reported results from multiple
 methodologies\textsuperscript{10,34,39}, and several used more than one
 tissue type\textsuperscript{19,22,33}. Excluding GWAS, 14 lists (40\%)
 were from lung or airway samples, and 21 (60\%) from blood. We could not
@@ -304,22 +304,23 @@ demographics, and ARDS aetiology.
 \paragraph{Meta-analysis by information content
 (MAIC)}\label{meta-analysis-by-information-content-maic}}
 
-First, we analysed all 43 gene lists using MAIC. Lists were categorized
-by method (GWAS, transcriptomics, proteomics) and technique
-(e.g.~RNA-seq, mass spectrometry; see Table 1). In total, we ranked
+First, we analysed the 43 available gene lists using MAIC. Lists were
+categorized by method (GWAS, transcriptomics, proteomics) and technique
+(e.g., RNA-seq, mass spectrometry; see Table 1). In total, we ranked
 7,085 unique genes or SNPs, with a median of 27 genes per list (range
 1-4,954). The top 100 ranked genes are summarized in
 Figure~\ref{fig-fig1}. Most genes were found in a single category
 (n=5,866, 82.8\%); only 157 (2.2\%) were identified in ≥ 3 categories,
-with a maximum of 5 (Figure~\ref{fig-fig1}). Similarly, few genes
-(n=362, 5.1\%) were identified by \textgreater{} 1 method, with only
-\emph{AKR1B10}, \emph{HINT1}, \emph{HSPG2}, \emph{S100A11}, and
-\emph{SLC18A1} present in GWAS, transcriptomic, and proteomic lists. To
-prioritise genes, we used the knee method\textsuperscript{53} to
-identify the inflection point in the MAIC score curve. This prioritised
-1,306 genes with scores above this point (Figure~\ref{fig-fig1}). These
-genes were more likely to be found in ≥ 2 lists or categories and by
-\textgreater{} 1 method (Figure~\ref{fig-fig1}).
+with a maximum of 5 categories (Figure~\ref{fig-fig1}). Similarly, few
+genes (n=362, 5.1\%) were identified by \textgreater{} 1 method, with
+only \emph{AKR1B10}, \emph{HINT1}, \emph{HSPG2}, \emph{S100A11}, and
+\emph{SLC18A1} present in transcriptomic, proteomic, and GWAS based
+lists. To prioritise genes, we used the unit invariant knee
+method\textsuperscript{53} to identify the inflection point in the MAIC
+score curve. This prioritised 1,306 genes with scores above this point
+(Figure~\ref{fig-fig1}). These genes were more likely to be found in ≥ 2
+lists or categories and by \textgreater{} 1 method
+(Figure~\ref{fig-fig1}).
 
 To assess the influence of individual lists, we calculated the
 information content (IC), reflecting the sum of gene scores across all
@@ -329,10 +330,10 @@ score. To obtain relative values, we divided the IC/ICtb for each list
 by the total. This showed that only 10 lists (from 9 studies)
 contributed \textgreater1\% of total information by either metric (Tab.
 S2). Notably, the RNA-seq list from Sarma et al.\textsuperscript{10}
-accounted for \textgreater50\% of IC and ICtb, a function of its length.
-To account for this, we normalised relative IC/ICtb by the number of
-genes per list. Along with the proportion of replicated genes, this
-provided an alternative perspective, with several proteomic lists
+accounts for \textgreater50\% of the total IC and ICtb, a function of
+its length. To account for this, we normalised relative IC/ICtb by the
+number of genes per list. Along with the proportion of replicated genes,
+this provides an alternative perspective, with several proteomic lists
 ranking highly (Figure~\ref{fig-fig2}).
 
 \hypertarget{comparison-with-existing-ards-sources-and-covid-19}{%
@@ -340,12 +341,12 @@ ranking highly (Figure~\ref{fig-fig2}).
 COVID-19}\label{comparison-with-existing-ards-sources-and-covid-19}}
 
 To contextualise the results of our meta-analysis, we evaluated the
-degree of overlap between the genes prioritized by MAIC and those from
+degree of overlap between the genes prioritised by MAIC and those from
 two established resources: BioLitMine\textsuperscript{54}, using an ARDS
 MeSH search, and the ARDS Database of Genes\textsuperscript{55} (Fig.
 S2). BioLitMine identified 271 ARDS-associated genes, of which 142
 (52.4\%) were in our analysis. Almost half of the overlapping genes (n =
-63, 44.4\%) were ranked within our prioritized set (Tab. S3). Of the 239
+63, 44.4\%) were ranked within our prioritizsd set (Tab. S3). Of the 239
 genes catalogued in the ARDS Database, 177 (74.1\%) were also present in
 our study. However, both sources contain some unsupported gene
 associations.
@@ -560,6 +561,15 @@ Shared IC between tissue types, scaled.}
 \hypertarget{tissue-and-cell-specific-expression}{%
 \paragraph{Tissue and cell-specific
 expression}\label{tissue-and-cell-specific-expression}}
+
+Despite the dominance of blood sampling, the majority of genes included
+in the meta-analysis were identified in airways samples (n=5,847,
+82.5\%) (Fig. S3). This was true for the prioritised set of genes,
+however, here most were also identified in blood (n=818, 62.6\%) (Fig.
+S3). For the genes solely found in blood sampling lists (n=1,238),
+almost three-quarters are known to be expressed in the lung using
+scRNA-seq data (≥ 5 normalised transcripts per million (nTPM)), with a
+quarter highly-expressed (≥ 100 nTPM) (Fig S2).
 
 \hypertarget{functional-enrichment}{%
 \paragraph{Functional enrichment}\label{functional-enrichment}}

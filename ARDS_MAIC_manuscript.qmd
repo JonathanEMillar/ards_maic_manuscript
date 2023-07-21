@@ -37,6 +37,20 @@ Jonathan E Millar^1^, Sara Clohisey-Hendry^1^, Megan McMannus^1^, Marie Zechner^
 3.  Division of Pulmonary, Critical Care, Allergy & Sleep Medicine, Department of Medicine, University of California San Francisco, San Francisco, USA.
 4.  Wellcome-Wolfson Institute for Experimental Medicine, Queen's University Belfast, Belfast, United Kingdom.
 
+<!-- To Do
+
+- Functional enrichment text
+- In-silico perturbation - analysis, text, and figure
+- Sub-groups - analysis, text, and figure
+- Methods - update tissue expression, functional enrichment, and in-silico perturbation
+- Supplementary table for study details
+- Supplementary data files
+
+- Update website
+- Update ARDSMAICR
+
+-->
+
 \newpage
 
 ## Abstract
@@ -52,7 +66,7 @@ Functional genomics technologies enable disease characterisation at unprecedente
 
 An unresolved challenge is how large omics data can be effectively exploited[@Gomez-Cabrero2014]. Specifically, how can we combine data from heterogeneous sources to derive new insights or recalibrate our current understanding in the light of new data? We have proposed meta-analysis by information content (MAIC) as a data-driven, algorithmic, method for combining gene lists from diverse sources[@Li2020]. MAIC is agnostic to the quality or methodology of the sources and combines ranked or un-ranked gene sets by calculating weights for each list and gene, and iteratively updating them to converge on a ranked meta-list. We have successfully applied MAIC to host-genomics studies of Influenza A[@Li2020] and SARS-CoV-2[@Pairo-Castineira2021; @Parkinson2020], and shown that it out-performs existing algorithms when combining ranked and un-ranked lists obtained from heterogeneous sources[@Wang2022-jb].
 
-Here we present a living meta-analysis by information content of ARDS host genomics studies as an open-source resource for gene prioritisation, translational genomics, and drug target discovery. A comprehensive, interactive interface is available at <https://ardsmaic.site44.com>.
+Here we present a living meta-analysis by information content of ARDS host genomics studies as an open-source resource for gene prioritisation, translational genomics, and drug target discovery. A comprehensive, interactive interface is available at <https://baillielab.net/maic/ards>.
 
 \newpage
 
@@ -60,19 +74,19 @@ Here we present a living meta-analysis by information content of ARDS host genom
 
 #### Systematic review
 
-Our search yielded 8,937 unique citations (Fig. S1). Of these, we retrieved 74 studies for full-text evaluation and ultimately included 40 in our meta-analysis[@Batra2022; @Bhargava2014; @Bhargava2017; @Bime2018; @Bos2019; @Bowler2004; @Chang2008; @Chen2013; @Chen2016; @Christie2012; @Dolinay2012; @Dong2013; @Englert2019; @Frenzel2011; @GuillenGuio2020; @Howrylak2009; @Jiang2020; @Juss2016; @Kangelaris2015; @Kovach2015; @Liao2021; @Lu2017; @Martucci2020; @Meyer2011; @Meyer2013; @Mirchandani2022; @Morrell2018; @Morrell2019; @Nick2016; @Nguyen2013; @Ren2016; @Sarma2022; @Scheller2019; @Shortt2014; @Wang2008; @Tejera2012; @Xu2021; @Zhang2021; @Zhang2022; @Zhu2017]. These studies produced 44 unique gene lists (22 transcriptomic, 13 proteomic, and 9 genome-wide association studies (GWAS); see @tbl-tab1). Three studies reported results from multiple methodologies[@Liao2021; @Mirchandani2022; @Sarma2022], and several used more than one tissue type[@Bowler2004; @Chen2016; @Kovach2015]. Excluding GWAS, 14 lists (40%) were from lung or airway samples, and 21 (60%) from blood. We could not retrieve one gene list[@Frenzel2011], and no whole-genome sequencing GWAS were found. Only 36% (n=8) of transcriptomic lists used next-generation sequencing. The earliest study was published in 2004[@Bowler2004], while almost half (n=19, 47.5%) were published in the last 5 years.
+Our search yielded 8,937 unique citations (Fig. S1). Of these, we retrieved 74 studies for full-text evaluation and ultimately included 40 in our meta-analysis[@Batra2022; @Bhargava2014; @Bhargava2017; @Bime2018; @Bos2019; @Bowler2004; @Chang2008; @Chen2013; @Chen2016; @Christie2012; @Dolinay2012; @Dong2013; @Englert2019; @Frenzel2011; @GuillenGuio2020; @Howrylak2009; @Jiang2020; @Juss2016; @Kangelaris2015; @Kovach2015; @Liao2021; @Lu2017; @Martucci2020; @Meyer2011; @Meyer2013; @Mirchandani2022; @Morrell2018; @Morrell2019; @Nick2016; @Nguyen2013; @Ren2016; @Sarma2022; @Scheller2019; @Shortt2014; @Wang2008; @Tejera2012; @Xu2021; @Zhang2021; @Zhang2022; @Zhu2017]. These studies produced 44 unique gene lists (22 transcriptomic, 13 proteomic, and 9 based on genome-wide association studies (GWAS); see @tbl-tab1). Three studies reported results from multiple methodologies[@Liao2021; @Mirchandani2022; @Sarma2022], and several used more than one tissue type[@Bowler2004; @Chen2016; @Kovach2015]. Excluding GWAS, 14 lists (40%) were from lung or airway samples, and 21 (60%) from blood. We could not retrieve one gene list[@Frenzel2011], and no whole-genome sequencing GWAS were found. Only 36% (n=8) of transcriptomic lists used next-generation sequencing. The earliest study was published in 2004[@Bowler2004], while almost half (n=19, 47.5%) were published in the last 5 years.
 
 Most studies aimed to identify genes/proteins associated with ARDS susceptibility (n=27, 67.5%). The remainder examined associations with survival (n=6, 15%), sub-phenotype (n=4, 10%), disease progression (n=2, 5%), or severity (n=1, 2.5%). In total, studies included 6,856 ARDS patients. Supplementary Table 1 provides detailed study designs, demographics, and ARDS aetiology.
 
 #### Meta-analysis by information content (MAIC)
 
-First, we analysed all 43 gene lists using MAIC. Lists were categorized by method (GWAS, transcriptomics, proteomics) and technique (e.g. RNA-seq, mass spectrometry; see Table 1). In total, we ranked 7,085 unique genes or SNPs, with a median of 27 genes per list (range 1-4,954). The top 100 ranked genes are summarized in @fig-fig1. Most genes were found in a single category (n=5,866, 82.8%); only 157 (2.2%) were identified in ≥ 3 categories, with a maximum of 5 (@fig-fig1). Similarly, few genes (n=362, 5.1%) were identified by > 1 method, with only *AKR1B10*, *HINT1*, *HSPG2*, *S100A11*, and *SLC18A1* present in GWAS, transcriptomic, and proteomic lists. To prioritise genes, we used the knee method[@Christopoulos2016-jb] to identify the inflection point in the MAIC score curve. This prioritised 1,306 genes with scores above this point (@fig-fig1). These genes were more likely to be found in ≥ 2 lists or categories and by > 1 method (@fig-fig1).
+First, we analysed the 43 available gene lists using MAIC. Lists were categorized by method (GWAS, transcriptomics, proteomics) and technique (e.g., RNA-seq, mass spectrometry; see Table 1). In total, we ranked 7,085 unique genes or SNPs, with a median of 27 genes per list (range 1-4,954). The top 100 ranked genes are summarized in @fig-fig1. Most genes were found in a single category (n=5,866, 82.8%); only 157 (2.2%) were identified in ≥ 3 categories, with a maximum of 5 categories (@fig-fig1). Similarly, few genes (n=362, 5.1%) were identified by > 1 method, with only *AKR1B10*, *HINT1*, *HSPG2*, *S100A11*, and *SLC18A1* present in transcriptomic, proteomic, and GWAS based lists. To prioritise genes, we used the unit invariant knee method[@Christopoulos2016-jb] to identify the inflection point in the MAIC score curve. This prioritised 1,306 genes with scores above this point (@fig-fig1). These genes were more likely to be found in ≥ 2 lists or categories and by > 1 method (@fig-fig1).
 
-To assess the influence of individual lists, we calculated the information content (IC), reflecting the sum of gene scores across all lists (@fig-fig2), and the information contribution (ICtb), measuring the sum of gene scores contributing to a gene's overall MAIC score. To obtain relative values, we divided the IC/ICtb for each list by the total. This showed that only 10 lists (from 9 studies) contributed >1% of total information by either metric (Tab. S2). Notably, the RNA-seq list from Sarma et al.[@Sarma2022] accounted for >50% of IC and ICtb, a function of its length. To account for this, we normalised relative IC/ICtb by the number of genes per list. Along with the proportion of replicated genes, this provided an alternative perspective, with several proteomic lists ranking highly (@fig-fig2).
+To assess the influence of individual lists, we calculated the information content (IC), reflecting the sum of gene scores across all lists (@fig-fig2), and the information contribution (ICtb), measuring the sum of gene scores contributing to a gene's overall MAIC score. To obtain relative values, we divided the IC/ICtb for each list by the total. This showed that only 10 lists (from 9 studies) contributed >1% of total information by either metric (Tab. S2). Notably, the RNA-seq list from Sarma et al.[@Sarma2022] accounts for >50% of the total IC and ICtb, a function of its length. To account for this, we normalised relative IC/ICtb by the number of genes per list. Along with the proportion of replicated genes, this provides an alternative perspective, with several proteomic lists ranking highly (@fig-fig2).
 
 #### Comparison with existing ARDS sources and COVID-19
 
-To contextualise the results of our meta-analysis, we evaluated the degree of overlap between the genes prioritized by MAIC and those from two established resources: BioLitMine[@Hu2020-dl], using an ARDS MeSH search, and the ARDS Database of Genes[@Quintanilla2021] (Fig. S2). BioLitMine identified 271 ARDS-associated genes, of which 142 (52.4%) were in our analysis. Almost half of the overlapping genes (n = 63, 44.4%) were ranked within our prioritized set (Tab. S3). Of the 239 genes catalogued in the ARDS Database, 177 (74.1%) were also present in our study. However, both sources contain some unsupported gene associations. 
+To contextualise the results of our meta-analysis, we evaluated the degree of overlap between the genes prioritised by MAIC and those from two established resources: BioLitMine[@Hu2020-dl], using an ARDS MeSH search, and the ARDS Database of Genes[@Quintanilla2021] (Fig. S2). BioLitMine identified 271 ARDS-associated genes, of which 142 (52.4%) were in our analysis. Almost half of the overlapping genes (n = 63, 44.4%) were ranked within our prioritizsd set (Tab. S3). Of the 239 genes catalogued in the ARDS Database, 177 (74.1%) were also present in our study. However, both sources contain some unsupported gene associations. 
 
 \newpage
 
@@ -144,6 +158,10 @@ For the BioLitMine search, we identified 4 such genes not initially found in the
 ![**Attributing information in MAIC**. (a) Shared information content (IC) between gene lists. Links indicate absolute IC (sum of common gene scores) between studies. (b) Proportion of replicated genes. Circle diameter is logarithm (base 2) of gene number per list. (c) IC normalized by number of genes. Overlapping circles denote equal normalized IC and contribution (ICtb - sum of common gene scores contributing to MAIC), indicating all gene scores contributed to MAIC. (d) Shared IC between categories, scaled so links show fraction of total IC. (e) Shared IC between methods, scaled. (f) Shared IC between tissue types, scaled.](./img/Figure_2.png){#fig-fig2}
 
 #### Tissue and cell-specific expression
+
+Despite the dominance of blood sampling, the majority of genes included in the meta-analysis were identified in airways samples (n=5,847, 82.5%) (Fig. S3). This was true for the prioritised set of genes, however, here most were also identified in blood (n=818, 62.6%) (Fig. S3). For the genes solely found in blood sampling lists (n=1,238), almost three-quarters are known to be expressed in the lung using scRNA-seq data (≥ 5 normalised transcripts per million (nTPM)), with a quarter highly-expressed (≥ 100 nTPM) (Fig S2).
+
+
 
 #### Functional enrichment 
 
