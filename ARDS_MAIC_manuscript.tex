@@ -183,7 +183,7 @@ response.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, frame hidden, sharp corners, enhanced, boxrule=0pt, interior hidden, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, breakable, frame hidden, enhanced, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \setstretch{1.5}
 Jonathan E Millar\textsuperscript{1}, Sara
@@ -322,6 +322,24 @@ score curve. This prioritised 1,306 genes with scores above this point
 lists or categories and by \textgreater{} 1 method
 (Figure~\ref{fig-fig1}).
 
+\begin{figure}
+
+{\centering \includegraphics{./img/Figure_1.png}
+
+}
+
+\caption{\label{fig-fig1}\textbf{Meta-analysis by information content}.
+(a) Heatmap of top 100 ranked genes showing MAIC score, highest score
+per category, and number of supporting lists. (b) UpSet plot of MAIC
+genes showing total numbers for each category combination, MAIC score
+distribution, and supporting lists. (b) Gene prioritization using the
+Unit Invariant Knee method. Intersection of lines identifies elbow point
+of best-fit curve. 1,306 genes in upper left quadrant were prioritied.
+(c) Strip plots comparing number of lists and categories/methods per
+gene between prioritized and deprioritized sets.}
+
+\end{figure}
+
 To assess the influence of individual lists, we calculated the
 information content (IC), reflecting the sum of gene scores across all
 lists (Figure~\ref{fig-fig2}), and the information contribution (ICtb),
@@ -335,6 +353,25 @@ its length. To account for this, we normalised relative IC/ICtb by the
 number of genes per list. Along with the proportion of replicated genes,
 this provides an alternative perspective, with several proteomic lists
 ranking highly (Figure~\ref{fig-fig2}).
+
+\begin{figure}
+
+{\centering \includegraphics{./img/Figure_2.png}
+
+}
+
+\caption{\label{fig-fig2}\textbf{Attributing information in MAIC}. (a)
+Shared information content (IC) between gene lists. Links indicate
+absolute IC (sum of common gene scores) between studies. (b) Proportion
+of replicated genes. Circle diameter is logarithm (base 2) of gene
+number per list. (c) IC normalized by number of genes. Overlapping
+circles denote equal normalized IC and contribution (ICtb - sum of
+common gene scores contributing to MAIC), indicating all gene scores
+contributed to MAIC. (d) Shared IC between categories, scaled so links
+show fraction of total IC. (e) Shared IC between methods, scaled. (f)
+Shared IC between tissue types, scaled.}
+
+\end{figure}
 
 \hypertarget{comparison-with-existing-ards-sources-and-covid-19}{%
 \paragraph{Comparison with existing ARDS sources and
@@ -509,24 +546,6 @@ Abbreviations: AECC - American-European Consensus Conference; AMs - Alveolar mac
 
 \newpage
 
-\begin{figure}
-
-{\centering \includegraphics{./img/Figure_1.png}
-
-}
-
-\caption{\label{fig-fig1}\textbf{Meta-analysis by information content}.
-(a) Heatmap of top 100 ranked genes showing MAIC score, highest score
-per category, and number of supporting lists. (b) UpSet plot of MAIC
-genes showing total numbers for each category combination, MAIC score
-distribution, and supporting lists. (b) Gene prioritization using the
-Unit Invariant Knee method. Intersection of lines identifies elbow point
-of best-fit curve. 1,306 genes in upper left quadrant were prioritied.
-(c) Strip plots comparing number of lists and categories/methods per
-gene between prioritized and deprioritized sets.}
-
-\end{figure}
-
 For the BioLitMine search, we identified 4 such genes not initially
 found in the ARDS MAIC set after correcting historical gene symbol
 aliases. A further 104 were supported by a single publication. For the
@@ -539,46 +558,21 @@ COVID-19\textsuperscript{13} (Fig. S2). In total, 2,606 ARDS genes
 (36.8\%) were also found in COVID-19, of which 143 were prioritized by
 both analyses (Fig. S2).
 
-\begin{figure}
-
-{\centering \includegraphics{./img/Figure_2.png}
-
-}
-
-\caption{\label{fig-fig2}\textbf{Attributing information in MAIC}. (a)
-Shared information content (IC) between gene lists. Links indicate
-absolute IC (sum of common gene scores) between studies. (b) Proportion
-of replicated genes. Circle diameter is logarithm (base 2) of gene
-number per list. (c) IC normalized by number of genes. Overlapping
-circles denote equal normalized IC and contribution (ICtb - sum of
-common gene scores contributing to MAIC), indicating all gene scores
-contributed to MAIC. (d) Shared IC between categories, scaled so links
-show fraction of total IC. (e) Shared IC between methods, scaled. (f)
-Shared IC between tissue types, scaled.}
-
-\end{figure}
-
 \hypertarget{tissue-and-cell-specific-expression}{%
 \paragraph{Tissue and cell-specific
 expression}\label{tissue-and-cell-specific-expression}}
 
-Despite the dominance of blood sampling, the majority of genes included
-in the meta-analysis were identified in airways samples (n=5,847,
-82.5\%) (Fig. S3). This was true for the prioritised set of genes,
-however, here most were also identified in blood (n=818, 62.6\%) (Fig.
-S3). For the genes solely found in blood sampling lists (n=1,238),
-almost three-quarters are known to be expressed in the lung using
-scRNA-seq data (≥ 5 normalised transcripts per million (nTPM)), with a
-quarter highly-expressed (≥ 100 nTPM) (Fig S2).
+Despite the majority of gene lists being derived from blood samples,
+most genes included in the meta-analysis were identified in airways
+samples (n=5,847, 82.5\%) (Fig. S3). This was true for the prioritised
+set of genes, however, here most were also identified in blood (n=818,
+62.6\%) (Fig. S3). For the genes uniquely found in lists derived from
+blood samples (n=1,238), almost three-quarters are known to be expressed
+in the lung (HPA scRNA-seq data, ≥ 5 normalised transcripts per million
+(nTPM)), with a quarter highly-expressed (≥ 100 nTPM) (Fig S2).
 
 \hypertarget{functional-enrichment}{%
 \paragraph{Functional enrichment}\label{functional-enrichment}}
-
-\hypertarget{in-silico-perturbation}{%
-\paragraph{In-silico perturbation}\label{in-silico-perturbation}}
-
-\hypertarget{sub-groups}{%
-\paragraph{Sub-groups}\label{sub-groups}}
 
 \begin{figure}
 
@@ -598,6 +592,12 @@ tissue type(s), MAIC score, highest category score, supporting lists,
 and presence in the druggable genome.}
 
 \end{figure}
+
+\hypertarget{in-silico-perturbation}{%
+\paragraph{In-silico perturbation}\label{in-silico-perturbation}}
+
+\hypertarget{sub-groups}{%
+\paragraph{Sub-groups}\label{sub-groups}}
 
 \newpage
 
@@ -731,45 +731,46 @@ genomics\textsuperscript{13}.
 \paragraph{Tissue expression and
 enrichment}\label{tissue-expression-and-enrichment}}
 
-Transcript and protein expression data for prioritised genes were
-retrieved from the Human Protein Atlas (HPA, version
-21.0)\textsuperscript{64}. We investigated transcript expression in a
-consensus RNA-seq dataset of 55 tissues, combining data from
-GTEx\textsuperscript{65,66} (RSEMv1.3.0 v8) and the
-HPA\textsuperscript{67}, and in the HPA RNA-seq blood
-dataset\textsuperscript{68}, containing expression levels in 18 immune
-cell types and total peripheral blood mononuclear cells. We calculated
-tissue enrichment scores, using the R package
-TissueEnrich\textsuperscript{69}, for genes in comparison to all genes
-present in GTEx\textsuperscript{65,66} (RSEMv1.3.0 v8) and corrected for
-multiple comparisons using the Benjamini-Hochberg
-method\textsuperscript{69}. To investigate protein expression, we
-retrieved tissue-specific expression scores from the
-HPA\textsuperscript{67}.
+Transcript and protein expression data for genes included in ARDS MAIC
+were retrieved from the Human Protein Atlas (HPA, version
+21.0)\textsuperscript{64}. We investigated mRNA expression in a
+consensus scRNA-seq dataset of 81 cells from 31 sources
+(\url{https://www.proteinatlas.org/about/assays+annotation\#singlecell_rna})
+and in the HPA RNA-seq blood dataset\textsuperscript{65}, containing
+expression levels in 18 immune cell types and total peripheral blood
+mononuclear cells. To investigate protein expression, we retrieved
+tissue-specific expression scores from the HPA\textsuperscript{66}. We
+conducted cell-type specific enrichment analysis using
+WebCSEA\textsuperscript{67} and extracted the top 20 general cell types
+for each query.
 
 \hypertarget{functional-enrichment-1}{%
 \paragraph{Functional enrichment}\label{functional-enrichment-1}}
 
-We performed functional enrichment of prioritised genes against the
-universe of all annotated genes using g:Profiler\textsuperscript{70}.
-The following data sources were used; Gene Ontology (GO) Biological
-Process\textsuperscript{71}, Kyoto Encyclopaedia of Genes and Genomes
-(KEGG)\textsuperscript{72}, Reactome\textsuperscript{73}, and
-WikiPathways\textsuperscript{74}. Multiple testing was corrected for
-using the g:SCS algorithm\textsuperscript{70}, with a threshold of
-\emph{P} \textless{} 0.01. The input list was ordered by MAIC score. To
-address pathway redundancy, we used the output of the functional
-enrichment analysis as an input to Enrichment Map\textsuperscript{75}.
-We created networks based on a Jaccard similarity cutoff of 0.25 for
-each of; GO:Molecular Function, GO:Cellular Component, GO:Biological
-Process, Reactome, and Wiki Pathways. We then repeated this for all
-combined. Protein-protein interaction enrichment was performed using
-STRING v11\textsuperscript{76}. We included all possible interaction
-sources but specified a minimum interaction score of 0.9. We used the
-the whole annotated genome as the statistical background. Markov
-Clustering Analysis (MCL) was applied to the resulting network with an
-inflation parameter of 3. Clusters were annotated with the Reactome
-pathway with the smallest False Discovery Rate.
+We performed functional enrichment of genes against the universe of all
+annotated genes using g:Profiler\textsuperscript{68}. The following data
+sources were used; Kyoto Encyclopaedia of Genes and Genomes
+(KEGG)\textsuperscript{69}, Reactome\textsuperscript{70}, and
+WikiPathways\textsuperscript{71}. Multiple testing was corrected for
+using the g:SCS algorithm\textsuperscript{68}, with a threshold of
+\emph{P} \textless{} 0.01. Input lists were ordered by MAIC score were
+appropriate. Enrichment was also performed against the National Human
+Genome Research Institute GWAS Catalog\textsuperscript{72} using the
+Enrichr web-interface\textsuperscript{73}. Protein-protein interaction
+enrichment was performed using STRING v11\textsuperscript{74}. We
+included all possible interaction sources but specified a minimum
+interaction score of 0.9. We used the the whole annotated genome as the
+statistical background. Markov Clustering Analysis (MCL) was applied to
+the resulting network with an inflation parameter of 3. Clusters were
+annotated by hand having considered enrichment against KEGG, Reactome,
+and WikiPathways. To identify hub genes within the PPI network, we used
+cytoHubba\textsuperscript{75} and Cytoscape\textsuperscript{76}. The
+highest ranked genes by Maximum Neighbourhood Component (MNC), Maximal
+Clique Centrality (MCC), Density of MNC (DMNC), Edge Percolated
+Component (EPC), and node degree were retrieved. The intersecting genes
+of these methods were deemed hub genes. Hub genes were searched for in
+the Drug Gene Interaction Database\textsuperscript{77} to identify if
+they were present in the druggable genome.
 
 \hypertarget{in-silico-perturbation-1}{%
 \paragraph{\texorpdfstring{\emph{In-silico}
@@ -782,8 +783,11 @@ availability}\label{software-and-code-availability}}
 MAIC is implemented in Python v3.9.7 (Python Software Foundation,
 Wilmington, United States). All other analyses were performed with R
 v4.2.2 (R Core Team, R Foundation for Statistical Computing, Vienna,
-Austria). All code required to reproduce the analyses is available at
-\url{https://github.com/JonathanEMillar/ards_maic_analysis}.
+Austria). Code required to reproduce the analyses is available at
+\url{https://github.com/JonathanEMillar/ards_maic_analysis}. An R
+package (ARDSMAICR) containing the data used in this manuscript and
+several functions useful in its analysis is available at
+\url{https://github.com/baillielab/ARDSMAICr}.
 
 \newpage
 
@@ -1205,78 +1209,83 @@ Finds the inflection point of a curve}}. (2019).}
 \CSLRightInline{Uhlen, M. \emph{et al.} Towards a knowledge-based human
 protein atlas. \emph{Nat. Biotechnol.} \textbf{28}, 1248--1250 (2010).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-GTEx_Consortium2020}{}}%
-\CSLLeftMargin{65. }%
-\CSLRightInline{GTEx Consortium. The {GTEx} consortium atlas of genetic
-regulatory effects across human tissues. \emph{Science} \textbf{369},
-1318--1330 (2020).}
-
-\leavevmode\vadjust pre{\hypertarget{ref-Carithers2015}{}}%
-\CSLLeftMargin{66. }%
-\CSLRightInline{Carithers, L. J. \emph{et al.} A novel approach to
-high-quality postmortem tissue procurement: The {GTEx} project.
-\emph{Biopreserv. Biobank.} \textbf{13}, 311--319 (2015).}
-
-\leavevmode\vadjust pre{\hypertarget{ref-Uhlen2015}{}}%
-\CSLLeftMargin{67. }%
-\CSLRightInline{Uhlén, M. \emph{et al.} Proteomics. Tissue-based map of
-the human proteome. \emph{Science} \textbf{347}, 1260419 (2015).}
-
 \leavevmode\vadjust pre{\hypertarget{ref-Uhlen2019}{}}%
-\CSLLeftMargin{68. }%
+\CSLLeftMargin{65. }%
 \CSLRightInline{Uhlen, M. \emph{et al.} A genome-wide transcriptomic
 analysis of protein-coding genes in human blood cells. \emph{Science}
 \textbf{366}, eaax9198 (2019).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Jain2019}{}}%
-\CSLLeftMargin{69. }%
-\CSLRightInline{Jain, A. \& Tuteja, G. {TissueEnrich}: Tissue-specific
-gene enrichment analysis. \emph{Bioinformatics} \textbf{35}, 1966--1967
-(2019).}
+\leavevmode\vadjust pre{\hypertarget{ref-Uhlen2015}{}}%
+\CSLLeftMargin{66. }%
+\CSLRightInline{Uhlén, M. \emph{et al.} Proteomics. Tissue-based map of
+the human proteome. \emph{Science} \textbf{347}, 1260419 (2015).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-WebCSEA}{}}%
+\CSLLeftMargin{67. }%
+\CSLRightInline{Dai, Y. \emph{et al.} {WebCSEA: web-based
+cell-type-specific enrichment analysis of genes}. \emph{Nucleic Acids
+Research} \textbf{50}, W782--W790 (2022).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Raudvere2019}{}}%
-\CSLLeftMargin{70. }%
+\CSLLeftMargin{68. }%
 \CSLRightInline{Raudvere, U. \emph{et al.} G:profiler: A web server for
 functional enrichment analysis and conversions of gene lists (2019
 update). \emph{Nucleic Acids Res.} \textbf{47}, W191--W198 (2019).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Mi2019}{}}%
-\CSLLeftMargin{71. }%
-\CSLRightInline{Mi, H., Muruganujan, A., Ebert, D., Huang, X. \& Thomas,
-P. D. {PANTHER} version 14: More genomes, a new {PANTHER} {GO-slim} and
-improvements in enrichment analysis tools. \emph{Nucleic Acids Res.}
-\textbf{47}, D419--D426 (2019).}
-
 \leavevmode\vadjust pre{\hypertarget{ref-Kanehisa2000}{}}%
-\CSLLeftMargin{72. }%
+\CSLLeftMargin{69. }%
 \CSLRightInline{Kanehisa, M. \& Goto, S. {KEGG}: Kyoto encyclopedia of
 genes and genomes. \emph{Nucleic Acids Res.} \textbf{28}, 27--30
 (2000).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Gillespie2022}{}}%
-\CSLLeftMargin{73. }%
+\CSLLeftMargin{70. }%
 \CSLRightInline{Gillespie, M. \emph{et al.} The reactome pathway
 knowledgebase 2022. \emph{Nucleic Acids Res.} \textbf{50}, D687--D692
 (2022).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Martens2021}{}}%
-\CSLLeftMargin{74. }%
+\CSLLeftMargin{71. }%
 \CSLRightInline{Martens, M. \emph{et al.} {WikiPathways}: Connecting
 communities. \emph{Nucleic Acids Res.} \textbf{49}, D613--D621 (2021).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Merico2010}{}}%
-\CSLLeftMargin{75. }%
-\CSLRightInline{Merico, D., Isserlin, R., Stueker, O., Emili, A. \&
-Bader, G. D. Enrichment map: A network-based method for gene-set
-enrichment visualization and interpretation. \emph{PLoS One} \textbf{5},
-e13984 (2010).}
+\leavevmode\vadjust pre{\hypertarget{ref-GWAScatalog}{}}%
+\CSLLeftMargin{72. }%
+\CSLRightInline{Welter, D. \emph{et al.} {The NHGRI GWAS Catalog, a
+curated resource of SNP-trait associations}. \emph{Nucleic Acids
+Research} \textbf{42}, D1001--D1006 (2013).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-enrichr}{}}%
+\CSLLeftMargin{73. }%
+\CSLRightInline{Kuleshov, M. V. \emph{et al.} {Enrichr: a comprehensive
+gene set enrichment analysis web server 2016 update}. \emph{Nucleic
+Acids Research} \textbf{44}, W90--W97 (2016).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Szklarczyk2019}{}}%
-\CSLLeftMargin{76. }%
+\CSLLeftMargin{74. }%
 \CSLRightInline{Szklarczyk, D. \emph{et al.} {STRING} v11:
 Protein-protein association networks with increased coverage, supporting
 functional discovery in genome-wide experimental datasets. \emph{Nucleic
 Acids Res.} \textbf{47}, D607--D613 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-cytoHubba}{}}%
+\CSLLeftMargin{75. }%
+\CSLRightInline{Chin, C.-H. \emph{et al.} {cytoHubba}: Identifying hub
+objects and sub-networks from complex interactome. \emph{BMC Systems
+Biology} \textbf{8}, S11 (2014).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-cytoscape}{}}%
+\CSLLeftMargin{76. }%
+\CSLRightInline{Shannon, P. \emph{et al.} Cytoscape: A software
+environment for integrated models of biomolecular interaction networks.
+\emph{Genome Research} \textbf{13}, 2498--2504 (2003).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-DGidb}{}}%
+\CSLLeftMargin{77. }%
+\CSLRightInline{Freshour, S. L. \emph{et al.} {Integration of the
+Drug--Gene Interaction Database (DGIdb 4.0) with open crowdsource
+efforts}. \emph{Nucleic Acids Research} \textbf{49}, D1144--D1151
+(2020).}
 
 \end{CSLReferences}
 
