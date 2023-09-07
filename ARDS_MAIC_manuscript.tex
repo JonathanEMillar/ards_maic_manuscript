@@ -183,7 +183,7 @@ response.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, breakable, frame hidden, enhanced, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, breakable, frame hidden, sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \setstretch{1.5}
 Jonathan E Millar\textsuperscript{1}, Sara
@@ -278,12 +278,12 @@ comprehensive, interactive interface is available at
 \hypertarget{systematic-review}{%
 \paragraph{Systematic review}\label{systematic-review}}
 
-Our search yielded 8,937 unique citations (Fig. S1). Of these, we
-retrieved 74 studies for full-text evaluation and ultimately included 40
-in our meta-analysis\textsuperscript{9,10,15--52}. These studies
-produced 44 unique gene lists (22 transcriptomic, 13 proteomic, and 9
-based on genome-wide association studies (GWAS); see
-Table~\ref{tbl-tab1}). Three studies reported results from multiple
+Our search yielded 8,937 unique citations (Fig. S1). Of which, we
+retrieved 74 for full-text evaluation and ultimately included 40 in our
+meta-analysis\textsuperscript{9,10,15--52}. These 40 studies produced 44
+unique gene lists (22 transcriptomic, 13 proteomic, and 9 based on
+genome-wide association studies (GWAS); see Table~\ref{tbl-tab1}). Three
+studies reported results from multiple
 methodologies\textsuperscript{10,34,39}, and several used more than one
 tissue type\textsuperscript{19,22,33}. Excluding GWAS, 14 lists (40\%)
 were from lung or airway samples, and 21 (60\%) from blood. We could not
@@ -305,7 +305,7 @@ demographics, and ARDS aetiology.
 (MAIC)}\label{meta-analysis-by-information-content-maic}}
 
 First, we analysed the 43 available gene lists using MAIC. Lists were
-categorized by method (GWAS, transcriptomics, proteomics) and technique
+categorised by method (GWAS, transcriptomics, proteomics) and technique
 (e.g., RNA-seq, mass spectrometry; see Table 1). In total, we ranked
 7,085 unique genes or SNPs, with a median of 27 genes per list (range
 1-4,954). The top 100 ranked genes are summarized in
@@ -383,7 +383,7 @@ two established resources: BioLitMine\textsuperscript{54}, using an ARDS
 MeSH search, and the ARDS Database of Genes\textsuperscript{55} (Fig.
 S2). BioLitMine identified 271 ARDS-associated genes, of which 142
 (52.4\%) were in our analysis. Almost half of the overlapping genes (n =
-63, 44.4\%) were ranked within our prioritizsd set (Tab. S3). Of the 239
+63, 44.4\%) were ranked within our prioritised set (Tab. S3). Of the 239
 genes catalogued in the ARDS Database, 177 (74.1\%) were also present in
 our study. However, both sources contain some unsupported gene
 associations.
@@ -569,7 +569,7 @@ set of genes, however, here most were also identified in blood (n=818,
 62.6\%) (Fig. S3). For the genes uniquely found in lists derived from
 blood samples (n=1,238), almost three-quarters are known to be expressed
 in the lung (HPA scRNA-seq data, ≥ 5 normalised transcripts per million
-(nTPM)), with a quarter highly-expressed (≥ 100 nTPM) (Fig S2).
+(nTPM)), with a quarter highly-expressed (≥ 100 nTPM) (Fig. S3).
 
 \hypertarget{functional-enrichment}{%
 \paragraph{Functional enrichment}\label{functional-enrichment}}
@@ -592,9 +592,6 @@ tissue type(s), MAIC score, highest category score, supporting lists,
 and presence in the druggable genome.}
 
 \end{figure}
-
-\hypertarget{in-silico-perturbation}{%
-\paragraph{In-silico perturbation}\label{in-silico-perturbation}}
 
 \hypertarget{sub-groups}{%
 \paragraph{Sub-groups}\label{sub-groups}}
@@ -771,10 +768,6 @@ Component (EPC), and node degree were retrieved. The intersecting genes
 of these methods were deemed hub genes. Hub genes were searched for in
 the Drug Gene Interaction Database\textsuperscript{77} to identify if
 they were present in the druggable genome.
-
-\hypertarget{in-silico-perturbation-1}{%
-\paragraph{\texorpdfstring{\emph{In-silico}
-perturbation}{In-silico perturbation}}\label{in-silico-perturbation-1}}
 
 \hypertarget{software-and-code-availability}{%
 \paragraph{Software and code

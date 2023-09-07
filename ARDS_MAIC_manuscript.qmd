@@ -40,14 +40,11 @@ Jonathan E Millar^1^, Sara Clohisey-Hendry^1^, Megan McMannus^1^, Marie Zechner^
 <!-- To Do
 
 - Functional enrichment text
-- In-silico perturbation - analysis, text, and figure
-- Sub-groups - analysis, text, and figure
-- Methods - update tissue expression, functional enrichment, and in-silico perturbation
-- Supplementary table for study details
+- Sub-groups - analysis, text, and figure/sup figures
+- Methods - update tissue expression and functional enrichment
 - Supplementary data files
 
 - Update website
-- Update ARDSMAICR
 
 -->
 
@@ -80,7 +77,7 @@ Most studies aimed to identify genes/proteins associated with ARDS susceptibilit
 
 #### Meta-analysis by information content (MAIC)
 
-First, we analysed the 43 available gene lists using MAIC. Lists were categorized by method (GWAS, transcriptomics, proteomics) and technique (e.g., RNA-seq, mass spectrometry; see Table 1). In total, we ranked 7,085 unique genes or SNPs, with a median of 27 genes per list (range 1-4,954). The top 100 ranked genes are summarized in @fig-fig1. Most genes were found in a single category (n=5,866, 82.8%); only 157 (2.2%) were identified in ≥ 3 categories, with a maximum of 5 categories (@fig-fig1). Similarly, few genes (n=362, 5.1%) were identified by > 1 method, with only *AKR1B10*, *HINT1*, *HSPG2*, *S100A11*, and *SLC18A1* present in transcriptomic, proteomic, and GWAS based lists. To prioritise genes, we used the unit invariant knee method[@Christopoulos2016-jb] to identify the inflection point in the MAIC score curve. This prioritised 1,306 genes with scores above this point (@fig-fig1). These genes were more likely to be found in ≥ 2 lists or categories and by > 1 method (@fig-fig1).
+First, we analysed the 43 available gene lists using MAIC. Lists were categorised by method (GWAS, transcriptomics, proteomics) and technique (e.g., RNA-seq, mass spectrometry; see Table 1). In total, we ranked 7,085 unique genes or SNPs, with a median of 27 genes per list (range 1-4,954). The top 100 ranked genes are summarized in @fig-fig1. Most genes were found in a single category (n=5,866, 82.8%); only 157 (2.2%) were identified in ≥ 3 categories, with a maximum of 5 categories (@fig-fig1). Similarly, few genes (n=362, 5.1%) were identified by > 1 method, with only *AKR1B10*, *HINT1*, *HSPG2*, *S100A11*, and *SLC18A1* present in transcriptomic, proteomic, and GWAS based lists. To prioritise genes, we used the unit invariant knee method[@Christopoulos2016-jb] to identify the inflection point in the MAIC score curve. This prioritised 1,306 genes with scores above this point (@fig-fig1). These genes were more likely to be found in ≥ 2 lists or categories and by > 1 method (@fig-fig1).
 
 ![**Meta-analysis by information content**. (a) Heatmap of top 100 ranked genes showing MAIC score, highest score per category, and number of supporting lists. (b) UpSet plot of MAIC genes showing total numbers for each category combination, MAIC score distribution, and supporting lists. (b) Gene prioritization using the Unit Invariant Knee method. Intersection of lines identifies elbow point of best-fit curve. 1,306 genes in upper left quadrant were prioritied. (c) Strip plots comparing number of lists and categories/methods per gene between prioritized and deprioritized sets. ](./img/Figure_1.png){#fig-fig1}
 
@@ -90,7 +87,7 @@ To assess the influence of individual lists, we calculated the information conte
 
 #### Comparison with existing ARDS sources and COVID-19
 
-To contextualise the results of our meta-analysis, we evaluated the degree of overlap between the genes prioritised by MAIC and those from two established resources: BioLitMine[@Hu2020-dl], using an ARDS MeSH search, and the ARDS Database of Genes[@Quintanilla2021] (Fig. S2). BioLitMine identified 271 ARDS-associated genes, of which 142 (52.4%) were in our analysis. Almost half of the overlapping genes (n = 63, 44.4%) were ranked within our prioritizsd set (Tab. S3). Of the 239 genes catalogued in the ARDS Database, 177 (74.1%) were also present in our study. However, both sources contain some unsupported gene associations. 
+To contextualise the results of our meta-analysis, we evaluated the degree of overlap between the genes prioritised by MAIC and those from two established resources: BioLitMine[@Hu2020-dl], using an ARDS MeSH search, and the ARDS Database of Genes[@Quintanilla2021] (Fig. S2). BioLitMine identified 271 ARDS-associated genes, of which 142 (52.4%) were in our analysis. Almost half of the overlapping genes (n = 63, 44.4%) were ranked within our prioritised set (Tab. S3). Of the 239 genes catalogued in the ARDS Database, 177 (74.1%) were also present in our study. However, both sources contain some unsupported gene associations. 
 
 \newpage
 
@@ -159,7 +156,7 @@ For the BioLitMine search, we identified 4 such genes not initially found in the
 
 #### Tissue and cell-specific expression
 
-Despite the majority of gene lists being derived from blood samples, most genes included in the meta-analysis were identified in airways samples (n=5,847, 82.5%) (Fig. S3). This was true for the prioritised set of genes, however, here most were also identified in blood (n=818, 62.6%) (Fig. S3). For the genes uniquely found in lists derived from blood samples (n=1,238), almost three-quarters are known to be expressed in the lung (HPA scRNA-seq data, ≥ 5 normalised transcripts per million (nTPM)), with a quarter highly-expressed (≥ 100 nTPM) (Fig S2).
+Despite the majority of gene lists being derived from blood samples, most genes included in the meta-analysis were identified in airways samples (n=5,847, 82.5%) (Fig. S3). This was true for the prioritised set of genes, however, here most were also identified in blood (n=818, 62.6%) (Fig. S3). For the genes uniquely found in lists derived from blood samples (n=1,238), almost three-quarters are known to be expressed in the lung (HPA scRNA-seq data, ≥ 5 normalised transcripts per million (nTPM)), with a quarter highly-expressed (≥ 100 nTPM) (Fig. S3).
 
 #### Functional enrichment 
 
