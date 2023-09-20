@@ -183,7 +183,7 @@ response.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, breakable, frame hidden, sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, breakable, interior hidden, enhanced, boxrule=0pt, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
 
 \setstretch{1.5}
 Jonathan E Millar\textsuperscript{1}, Sara
@@ -278,22 +278,22 @@ comprehensive, interactive interface is available at
 \hypertarget{systematic-review}{%
 \paragraph{Systematic review}\label{systematic-review}}
 
-Our search yielded 8,937 unique citations (Fig. S1). Of which, we
-retrieved 74 for full-text evaluation and ultimately included 40 in our
+Our search yielded 8,937 unique citations (Fig. S1). We retrieved 74 for
+full-text evaluation and ultimately included 40 in our
 meta-analysis\textsuperscript{9,10,15--52}. These 40 studies produced 44
 unique gene lists (22 transcriptomic, 13 proteomic, and 9 based on
 genome-wide association studies (GWAS); see Table~\ref{tbl-tab1}). Three
 studies reported results from multiple
 methodologies\textsuperscript{10,34,39}, and several used more than one
-tissue type\textsuperscript{19,22,33}. Excluding GWAS, 14 lists (40\%)
-were from lung or airway samples, and 21 (60\%) from blood. We could not
-retrieve one gene list\textsuperscript{27}, and no whole-genome
-sequencing GWAS were found. Only 36\% (n=8) of transcriptomic lists used
-next-generation sequencing. The earliest study was published in
-2004\textsuperscript{19}, while almost half (n=19, 47.5\%) were
-published in the last 5 years.
+tissue type\textsuperscript{19,22,33}. Excluding GWAS, 14 gene lists
+(40\%) were derived from lung or airway samples, and 21 (60\%) from
+blood. We could not retrieve one gene list\textsuperscript{27}. No
+whole-genome sequencing GWAS were found, and only 36\% (n=8) of
+transcriptomic lists used next-generation sequencing. The earliest
+included study was published in 2004\textsuperscript{19}, however,
+almost half (n=19, 47.5\%) were published in the last 5 years.
 
-Most studies aimed to identify genes/proteins associated with ARDS
+Most studies aimed to identify genes or proteins associated with ARDS
 susceptibility (n=27, 67.5\%). The remainder examined associations with
 survival (n=6, 15\%), sub-phenotype (n=4, 10\%), disease progression
 (n=2, 5\%), or severity (n=1, 2.5\%). In total, studies included 6,856
@@ -304,23 +304,23 @@ demographics, and ARDS aetiology.
 \paragraph{Meta-analysis by information content
 (MAIC)}\label{meta-analysis-by-information-content-maic}}
 
-First, we analysed the 43 available gene lists using MAIC. Lists were
+First, we analysed all 43 available gene lists using MAIC. Lists were
 categorised by method (GWAS, transcriptomics, proteomics) and technique
 (e.g., RNA-seq, mass spectrometry; see Table 1). In total, we ranked
-7,085 unique genes or SNPs, with a median of 27 genes per list (range
+7,085 unique genes (or SNPs), with a median of 27 genes per list (range
 1-4,954). The top 100 ranked genes are summarized in
 Figure~\ref{fig-fig1}. Most genes were found in a single category
 (n=5,866, 82.8\%); only 157 (2.2\%) were identified in ≥ 3 categories,
-with a maximum of 5 categories (Figure~\ref{fig-fig1}). Similarly, few
-genes (n=362, 5.1\%) were identified by \textgreater{} 1 method, with
-only \emph{AKR1B10}, \emph{HINT1}, \emph{HSPG2}, \emph{S100A11}, and
-\emph{SLC18A1} present in transcriptomic, proteomic, and GWAS based
-lists. To prioritise genes, we used the unit invariant knee
+with the maximum number of categories supporting a gene being 5
+(Figure~\ref{fig-fig1}). Similarly, few genes (n=362, 5.1\%) were
+identified by more than one method, with only \emph{AKR1B10},
+\emph{HINT1}, \emph{HSPG2}, \emph{S100A11}, and \emph{SLC18A1} present
+in transcriptomic, proteomic, and GWAS-based lists. To prioritise genes
+for further investigation, we used the unit invariant knee
 method\textsuperscript{53} to identify the inflection point in the MAIC
 score curve. This prioritised 1,306 genes with scores above this point
 (Figure~\ref{fig-fig1}). These genes were more likely to be found in ≥ 2
-lists or categories and by \textgreater{} 1 method
-(Figure~\ref{fig-fig1}).
+lists or categories and by more than one method (Figure~\ref{fig-fig1}).
 
 \begin{figure}
 
@@ -345,14 +345,14 @@ information content (IC), reflecting the sum of gene scores across all
 lists (Figure~\ref{fig-fig2}), and the information contribution (ICtb),
 measuring the sum of gene scores contributing to a gene's overall MAIC
 score. To obtain relative values, we divided the IC/ICtb for each list
-by the total. This showed that only 10 lists (from 9 studies)
+by the total. This demonstrated that only 10 lists (from 9 studies)
 contributed \textgreater1\% of total information by either metric (Tab.
 S2). Notably, the RNA-seq list from Sarma et al.\textsuperscript{10}
 accounts for \textgreater50\% of the total IC and ICtb, a function of
 its length. To account for this, we normalised relative IC/ICtb by the
-number of genes per list. Along with the proportion of replicated genes,
-this provides an alternative perspective, with several proteomic lists
-ranking highly (Figure~\ref{fig-fig2}).
+number of genes per list. Along with the proportion of replicated genes
+in each list, this provides an alternative perspective, with several
+proteomic studies ranking highly (Figure~\ref{fig-fig2}).
 
 \begin{figure}
 
@@ -378,15 +378,15 @@ Shared IC between tissue types, scaled.}
 COVID-19}\label{comparison-with-existing-ards-sources-and-covid-19}}
 
 To contextualise the results of our meta-analysis, we evaluated the
-degree of overlap between the genes prioritised by MAIC and those from
-two established resources: BioLitMine\textsuperscript{54}, using an ARDS
+overlap between the genes prioritised by MAIC and those from two
+established resources: BioLitMine\textsuperscript{54}, using an ARDS
 MeSH search, and the ARDS Database of Genes\textsuperscript{55} (Fig.
 S2). BioLitMine identified 271 ARDS-associated genes, of which 142
-(52.4\%) were in our analysis. Almost half of the overlapping genes (n =
-63, 44.4\%) were ranked within our prioritised set (Tab. S3). Of the 239
-genes catalogued in the ARDS Database, 177 (74.1\%) were also present in
-our study. However, both sources contain some unsupported gene
-associations.
+(52.4\%) were found in our analysis. Almost half of the overlapping
+genes (n = 63, 44.4\%) were ranked within our prioritised set (Tab. S3).
+Of the 239 genes catalogued in the ARDS Database, 177 (74.1\%) were also
+present in our study. However, both sources contain gene associations
+which lack genome-wide support.
 
 \newpage
 
@@ -546,17 +546,17 @@ Abbreviations: AECC - American-European Consensus Conference; AMs - Alveolar mac
 
 \newpage
 
-For the BioLitMine search, we identified 4 such genes not initially
-found in the ARDS MAIC set after correcting historical gene symbol
-aliases. A further 104 were supported by a single publication. For the
-remaining 21, we obtained their 100 most co-expressed genes using
-ARCHS4\textsuperscript{56} (returning data for 18) and assessed the
-overlap with ARDS MAIC (Fig. S2). Two-thirds exhibited \textless50\%
-overlap. Finally, we compared the overlap between the genes ranked by
-MAIC for ARDS and by a previous MAIC of the host response to
-COVID-19\textsuperscript{13} (Fig. S2). In total, 2,606 ARDS genes
-(36.8\%) were also found in COVID-19, of which 143 were prioritized by
-both analyses (Fig. S2).
+After correcting historical gene symbol aliases, we matched 4 additional
+genes from the BioLitMine search not initially found in the ARDS MAIC
+set. A further 104 genes from this search were supported by a single
+publication. For each of the remaining 21 genes, we obtained the 100
+most co-expressed genes using ARCHS4\textsuperscript{56} (returning data
+for 18) and assessed the overlap of these sets with ARDS MAIC;
+two-thirds exhibited \textless50\% overlap (Fig. S2). Finally, we
+compared the overlap between the genes ranked by ARDS MAIC and by a
+previous MAIC of the host response to COVID-19\textsuperscript{13} (Fig.
+S2). In total, 2,606 ARDS genes (36.8\%) were also found in COVID-19, of
+which 143 were prioritised by both analyses (Fig. S2).
 
 \hypertarget{tissue-and-cell-specific-expression}{%
 \paragraph{Tissue and cell-specific
@@ -565,14 +565,47 @@ expression}\label{tissue-and-cell-specific-expression}}
 Despite the majority of gene lists being derived from blood samples,
 most genes included in the meta-analysis were identified in airways
 samples (n=5,847, 82.5\%) (Fig. S3). This was true for the prioritised
-set of genes, however, here most were also identified in blood (n=818,
-62.6\%) (Fig. S3). For the genes uniquely found in lists derived from
-blood samples (n=1,238), almost three-quarters are known to be expressed
-in the lung (HPA scRNA-seq data, ≥ 5 normalised transcripts per million
-(nTPM)), with a quarter highly-expressed (≥ 100 nTPM) (Fig. S3).
+set of genes, however, most of these were also identified in blood
+(n=818, 62.6\%) (Fig. S3). For the genes uniquely identified in lists
+derived from blood samples (n=1,238), almost three-quarters are known to
+be expressed in the lung (HPA scRNA-seq data, ≥ 5 normalised transcripts
+per million (nTPM)), with a quarter highly-expressed (≥ 100 nTPM) (Fig.
+S3).
 
 \hypertarget{functional-enrichment}{%
 \paragraph{Functional enrichment}\label{functional-enrichment}}
+
+Having identified a set of prioritised genes, we undertook several
+functional enrichment analyses. First, we performed over-representation
+analysis. In Reactome, 51 terms were significantly enriched (\emph{P}
+\textless{} 0.001) (Figure~\ref{fig-fig3}). Expectedly, neutrophil
+degranulation and several innate immune pathways (e.g., IL-10
+signalling, interferon signalling, MHC II antigen presentation, TLR4
+cascade) feature heavily. However, multiple pathways associated with
+cholesterol biology and metabolism (e.g., chylomicron
+assembly/remodelling, GLUT4 translocation, TP53 regulation of metabolic
+genes, insulin regulation) were also observed to be over-represented.
+Similarly, lipid and cholesterol metabolism, as well as hyperlipidaemia,
+were over-represented in KEGG and WikiPathways (Fig. S4). In an
+enrichment analysis using the GWAS Catolog, the prioritised set of genes
+was associated with asthma (adult onset/time to onset), monocyte,
+lymphocyte, and eosinophil counts, aspartate aminotransferase levels,
+and levels of apolipoprotein A1 (Fig. S4).
+
+Next, we used the prioritised set of genes to create a protein-protein
+interaction (PPI) network. We then graph-clustered this network,
+identifying 48 clusters with ≥ 5 members. Amongst the 10 largest
+clusters, we found programs associated with the proteaosome, cholesterol
+metabolism, interferon signalling, IL-6 signalling, and the complement
+cascade (Fig. S5). We then sought to use the PPI network to identify hub
+genes using an ensemble of topological methods. This analysis suggested
+51 genes central to the wider network (Figure~\ref{fig-fig3}).
+Clustering these genes alone identified 5 clusters, which may be
+associated with innate immune cytokine signalling, interferon
+signalling, MHC class II antigen presentation, PI3K-Akt signalling, and
+eukaryotic translation elongation (Figure~\ref{fig-fig3}). The majority
+of hub genes (n=31, 61\%) are currently druggable and include targets
+such as \emph{IL-6}, \emph{IL-17A}, \emph{IL-18}, and \emph{MAP3K14}.
 
 \begin{figure}
 
@@ -595,6 +628,28 @@ and presence in the druggable genome.}
 
 \hypertarget{sub-groups}{%
 \paragraph{Sub-groups}\label{sub-groups}}
+
+A source of tension in our approach is the balance between the dispartiy
+in study designs (e.g., susceptibilty or sub-phenotype) and the
+requirement for sufficient data to make meaningful inferences. In an
+attempt to partially resolve this, we undertook MAIC on subsets of the
+included gene lists stratified by study focus. There were sufficient
+lists to make this tractable for studies focused on susceptibility to
+ARDS (n=28) and studies of ARDS survival or severity (n=7). For
+susceptibility, MAIC ranked 2096 genes (Figure~\ref{fig-fig4}). The
+majority of these (n=1222, 58\%) were unique to susceptibility-based
+lists (Figure~\ref{fig-fig4}). Most were identified in blood only, with
+only a small fraction found solely in airways samples.
+
+\begin{figure}
+
+{\centering \includegraphics{./img/Figure_4.png}
+
+}
+
+\caption{\label{fig-fig4}\textbf{MAIC on sub-groups}.}
+
+\end{figure}
 
 \newpage
 
