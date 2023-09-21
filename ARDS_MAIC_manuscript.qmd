@@ -39,10 +39,10 @@ Jonathan E Millar^1^, Sara Clohisey-Hendry^1^, Megan McMannus^1^, Marie Zechner^
 
 <!-- To Do
 
-- Functional enrichment text
-- Sub-groups - analysis, text, and figure/sup figures
-- Methods - update tissue expression and functional enrichment
+- Tissue expression text
+- Sub-groups - sup figures = ORA + PPI and text
 - Supplementary data files
+- Supplementary tables
 
 - Update website
 
