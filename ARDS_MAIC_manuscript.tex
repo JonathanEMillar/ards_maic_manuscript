@@ -183,7 +183,7 @@ response.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, breakable, interior hidden, enhanced, boxrule=0pt, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, interior hidden, sharp corners, frame hidden, breakable, enhanced]}{\end{tcolorbox}}\fi
 
 \setstretch{1.5}
 Jonathan E Millar\textsuperscript{1}, Sara
@@ -577,9 +577,9 @@ S3).
 
 Having identified a set of prioritised genes, we undertook several
 functional enrichment analyses. First, we performed over-representation
-analysis. In Reactome, 51 terms were significantly enriched (\emph{P}
-\textless{} 0.001) (Figure~\ref{fig-fig3}). Expectedly, neutrophil
-degranulation and several innate immune pathways (e.g., IL-10
+analysis (ORA). In Reactome, 51 terms were significantly enriched
+(\emph{P} \textless{} 0.001) (Figure~\ref{fig-fig3}). Expectedly,
+neutrophil degranulation and several innate immune pathways (e.g., IL-10
 signalling, interferon signalling, MHC II antigen presentation, TLR4
 cascade) feature heavily. However, multiple pathways associated with
 cholesterol biology and metabolism (e.g., chylomicron
@@ -629,17 +629,30 @@ and presence in the druggable genome.}
 \hypertarget{sub-groups}{%
 \paragraph{Sub-groups}\label{sub-groups}}
 
-A source of tension in our approach is the balance between the dispartiy
-in study designs (e.g., susceptibilty or sub-phenotype) and the
-requirement for sufficient data to make meaningful inferences. In an
-attempt to partially resolve this, we undertook MAIC on subsets of the
-included gene lists stratified by study focus. There were sufficient
-lists to make this tractable for studies focused on susceptibility to
-ARDS (n=28) and studies of ARDS survival or severity (n=7). For
-susceptibility, MAIC ranked 2096 genes (Figure~\ref{fig-fig4}). The
-majority of these (n=1222, 58\%) were unique to susceptibility-based
-lists (Figure~\ref{fig-fig4}). Most were identified in blood only, with
-only a small fraction found solely in airways samples.
+A source of tension in our approach is the balance between dispartiy in
+study designs (e.g., susceptibilty, sub-phenotype) and the requirement
+for sufficient data to make meaningful inferences. To partially resolve
+this, we undertook MAIC on subsets of included gene lists, stratified by
+study focus. There were sufficient lists to make this tractable for
+studies focused on susceptibility to ARDS (n=28) and studies of ARDS
+survival and severity (n=7) (Figure~\ref{fig-fig4}).
+
+For susceptibility, MAIC ranked 2,096 genes (Figure~\ref{fig-fig4}). The
+majority of these (n=1,222, 58\%) were unique to susceptibility-based
+lists (Figure~\ref{fig-fig4}). Most were identified in blood, with a
+small fraction found solely in airways samples. The inflection point
+method prioritised the top ranked 130 genes, which were subject to
+functional enrichment. ORA . A consensus of topological models
+identified 7 hub genes within a PPI network of prioritised genes. These
+genes cluster in a single group, characterised as being related to
+cholesterol metabolism by several pathway databases.
+
+For survival, MAIC ranked 463 genes (Figure~\ref{fig-fig4}).
+Approximately half of these (n=238, 51\%) were unique to survival-based
+lists. In contrast to the susceptibility analysis, most survival genes
+were found in airways samples. Thirty-three genes were prioritised.
+IL-10 and IL-18 signalling pathways were both significantly enriched in
+ORA.
 
 \begin{figure}
 
@@ -647,7 +660,7 @@ only a small fraction found solely in airways samples.
 
 }
 
-\caption{\label{fig-fig4}\textbf{MAIC on sub-groups}.}
+\caption{\label{fig-fig4}\textbf{MAIC of sub-groups}.}
 
 \end{figure}
 
@@ -758,6 +771,10 @@ proteomics - other. For secondary analyses, we performed MAIC on subsets
 of lists based on study focus (i.e., susceptibility to ARDS or
 survival/severity).
 
+In secondary analyses, we repeated this pipeline for gene lists arising
+from studies in which the focus was susceptibility to ARDS or ARDS
+survival/severity.
+
 For each MAIC iteration, we prioritised genes with sufficient
 evidentiary support for further study (i.e., the gene set before which
 information content diminished such that there was little/no
@@ -802,26 +819,27 @@ for each query.
 We performed functional enrichment of genes against the universe of all
 annotated genes using g:Profiler\textsuperscript{68}. The following data
 sources were used; Kyoto Encyclopaedia of Genes and Genomes
-(KEGG)\textsuperscript{69}, Reactome\textsuperscript{70}, and
-WikiPathways\textsuperscript{71}. Multiple testing was corrected for
-using the g:SCS algorithm\textsuperscript{68}, with a threshold of
-\emph{P} \textless{} 0.01. Input lists were ordered by MAIC score were
-appropriate. Enrichment was also performed against the National Human
-Genome Research Institute GWAS Catalog\textsuperscript{72} using the
-Enrichr web-interface\textsuperscript{73}. Protein-protein interaction
-enrichment was performed using STRING v11\textsuperscript{74}. We
+(KEGG)\textsuperscript{69}, Reactome\textsuperscript{70},
+WikiPathways\textsuperscript{71}, and Gene Ontology\textsuperscript{72}.
+Multiple testing was corrected for using the g:SCS
+algorithm\textsuperscript{68}, with a threshold of \emph{P} \textless{}
+0.01. Input lists were ordered by MAIC score were appropriate.
+Enrichment was also performed against the National Human Genome Research
+Institute GWAS Catalog\textsuperscript{73} using the Enrichr
+web-interface\textsuperscript{74}. Protein-protein interaction
+enrichment was performed using STRING v11\textsuperscript{75}. We
 included all possible interaction sources but specified a minimum
-interaction score of 0.9. We used the the whole annotated genome as the
+interaction score of 0.7. We used the the whole annotated genome as the
 statistical background. Markov Clustering Analysis (MCL) was applied to
 the resulting network with an inflation parameter of 3. Clusters were
 annotated by hand having considered enrichment against KEGG, Reactome,
 and WikiPathways. To identify hub genes within the PPI network, we used
-cytoHubba\textsuperscript{75} and Cytoscape\textsuperscript{76}. The
+cytoHubba\textsuperscript{76} and Cytoscape\textsuperscript{77}. The
 highest ranked genes by Maximum Neighbourhood Component (MNC), Maximal
 Clique Centrality (MCC), Density of MNC (DMNC), Edge Percolated
 Component (EPC), and node degree were retrieved. The intersecting genes
 of these methods were deemed hub genes. Hub genes were searched for in
-the Drug Gene Interaction Database\textsuperscript{77} to identify if
+the Drug Gene Interaction Database\textsuperscript{78} to identify if
 they were present in the druggable genome.
 
 \hypertarget{software-and-code-availability}{%
@@ -834,7 +852,7 @@ v4.2.2 (R Core Team, R Foundation for Statistical Computing, Vienna,
 Austria). Code required to reproduce the analyses is available at
 \url{https://github.com/JonathanEMillar/ards_maic_analysis}. An R
 package (ARDSMAICR) containing the data used in this manuscript and
-several functions useful in its analysis is available at
+several functions helpful in analyses is available at
 \url{https://github.com/baillielab/ARDSMAICr}.
 
 \newpage
@@ -1297,39 +1315,45 @@ knowledgebase 2022. \emph{Nucleic Acids Res.} \textbf{50}, D687--D692
 \CSLRightInline{Martens, M. \emph{et al.} {WikiPathways}: Connecting
 communities. \emph{Nucleic Acids Res.} \textbf{49}, D613--D621 (2021).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-GWAScatalog}{}}%
+\leavevmode\vadjust pre{\hypertarget{ref-GO}{}}%
 \CSLLeftMargin{72. }%
+\CSLRightInline{Ashburner, M. \emph{et al.} {{G}ene ontology: tool for
+the unification of biology. {T}he {G}ene {O}ntology {C}onsortium}.
+\emph{Nat Genet} \textbf{25}, 25--29 (2000).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-GWAScatalog}{}}%
+\CSLLeftMargin{73. }%
 \CSLRightInline{Welter, D. \emph{et al.} {The NHGRI GWAS Catalog, a
 curated resource of SNP-trait associations}. \emph{Nucleic Acids
 Research} \textbf{42}, D1001--D1006 (2013).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-enrichr}{}}%
-\CSLLeftMargin{73. }%
+\CSLLeftMargin{74. }%
 \CSLRightInline{Kuleshov, M. V. \emph{et al.} {Enrichr: a comprehensive
 gene set enrichment analysis web server 2016 update}. \emph{Nucleic
 Acids Research} \textbf{44}, W90--W97 (2016).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Szklarczyk2019}{}}%
-\CSLLeftMargin{74. }%
+\CSLLeftMargin{75. }%
 \CSLRightInline{Szklarczyk, D. \emph{et al.} {STRING} v11:
 Protein-protein association networks with increased coverage, supporting
 functional discovery in genome-wide experimental datasets. \emph{Nucleic
 Acids Res.} \textbf{47}, D607--D613 (2019).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-cytoHubba}{}}%
-\CSLLeftMargin{75. }%
+\CSLLeftMargin{76. }%
 \CSLRightInline{Chin, C.-H. \emph{et al.} {cytoHubba}: Identifying hub
 objects and sub-networks from complex interactome. \emph{BMC Systems
 Biology} \textbf{8}, S11 (2014).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-cytoscape}{}}%
-\CSLLeftMargin{76. }%
+\CSLLeftMargin{77. }%
 \CSLRightInline{Shannon, P. \emph{et al.} Cytoscape: A software
 environment for integrated models of biomolecular interaction networks.
 \emph{Genome Research} \textbf{13}, 2498--2504 (2003).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-DGidb}{}}%
-\CSLLeftMargin{77. }%
+\CSLLeftMargin{78. }%
 \CSLRightInline{Freshour, S. L. \emph{et al.} {Integration of the
 Drug--Gene Interaction Database (DGIdb 4.0) with open crowdsource
 efforts}. \emph{Nucleic Acids Research} \textbf{49}, D1144--D1151
