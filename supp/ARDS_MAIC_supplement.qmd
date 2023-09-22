@@ -124,11 +124,22 @@ Exclusion:
 
 \newpage
 
-![**Systematic review inclusion diagram**. Abbreviations: db - data base; GEO - NCBI Gene Expression Omnibus.](./figures/Supplementary_Figure_1_production.png)
-
+![**Systematic review inclusion diagram**. Abbreviations: db - data base; GEO - NCBI Gene Expression Omnibus.](../img/Supplementary_Figure_1.png)
 \newpage
 
-![**Overlap between ARDS MAIC and ARDS-associated genes and ARDS MAIC and COVID-19 MAIC**. a. Eular diagram of gene overlap between ARDS MAIC and a BioLitMine search using the ARDS MeSH term. b. Eular diagram of gene overlap between ARDS MAIC and the ARDS Database of Genes. c. Eular diagram of gene overlap between ARDS MAIC and a MAIC of COVID-19 host-response studies. d. Heatmap of the 50 top ranked ARDS MAIC genes also prioritised by the COVID-19 MAIC, displaying the ARDS MAIC score for each gene, highest gene score in each category, and the number of supporting gene lists.](./figures/Supplementary_Figure_2_production.png)
+![**Overlap between ARDS MAIC and ARDS-associated genes and ARDS MAIC and COVID-19 MAIC**. a. Eular diagram of gene overlap between ARDS MAIC and a BioLitMine search using the ARDS MeSH term. b. Eular diagram of gene overlap between ARDS MAIC and the ARDS Database of Genes. c. Eular diagram of gene overlap between ARDS MAIC and a MAIC of COVID-19 host-response studies. d. Heatmap of the 50 top ranked ARDS MAIC genes also prioritised by the COVID-19 MAIC, displaying the ARDS MAIC score for each gene, highest gene score in each category, and the number of supporting gene lists.](../img/Supplementary_Figure_2.png)
+\newpage
+
+![**Tissue and cell-type expression**.](../img/Supplementary_Figure_3.png)
+\newpage
+
+![**Functional enrichment**.](../img/Supplementary_Figure_4.png)
+\newpage
+
+![**PPI clusters**.](../img/Supplementary_Figure_5.png)
+\newpage
+
+**Supplementary Table 1. Details of included studies.**
 
 \newpage
 
@@ -216,6 +227,68 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 | EDN1          | 2                     | 27765761, 17875064                                                             | 643           |
 | AKT1          | 2                     | 27607575, 15961723                                                             | 950           |
 | MMP8          | 2                     | 24651234, 15187163                                                             | 1223          |
+
+\newpage
+
+**Supplementary Table 4. ARDS susceptibility gene list information content and contribution.**
+
+| **Study**                     | **Method**      | **Category** | **N genes** | **rIC** (%)    | **rICtb** (%)     |
+|-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
+| Juss[@Juss2016]               | Transcriptomics | Microarray   | 1318        | 54.7           | 54.7              |
+| Nguyen[@Nguyen2013]           | Proteomics      | Mass Spec    | 161         | 8.1            | 7.7               |
+| Christie[@Christie2012]       | GWAS            | Genotyping   | 143         | 6              | 6.3               |
+| Kovach[@Kovach2015]           | Transcriptomics | Microarray   | 123         | 5.8            | 6.1               |
+| Wang[@Wang2008]               | Transcriptomics | Microarray   | 137         | 5.8            | 6                 |
+| Jiang[@Jiang2020]             | Transcriptomics | scRNA-seq    | 53          | 2.9            | 3                 |
+| Bime[@Bime2018]               | GWAS            | Genotyping   | 51          | 2.2            | 2.3               |
+| Mirchandani[@Mirchandani2022] | Transcriptomics | Microarray   | 41          | 1.7            | 1.6               |
+| Chang[@Chang2008]             | Proteomics      | Mass Spec    | 37          | 1.9            | 1.5               |
+| Mirchandani[@Mirchandani2022] | Proteomics      | Mass Spec    | 29          | 1.4            | 1.3               |
+| Howrylak[@Howrylak2009]       | Transcriptomics | Microarray   | 28          | 1.2            | 1.3               |
+| Ren[@Ren2016]                 | Proteomics      | Other        | 17          | 1              | 1.1               |
+| Tejera[@Tejera2012]           | GWAS            | Genotyping   | 19          | 0.9            | 1                 |
+| Chen[@Chen2013]               | Proteomics      | Mass Spec    | 16          | 0.9            | 0.9               |
+| Zhang[@Zhang2022]             | Transcriptomics | RNA-seq      | 20          | 0.8            | 0.9               |
+| Zhu[@Zhu2017]                 | Transcriptomics | Microarray   | 14          | 0.6            | 0.6               |
+| Kangelaris[@Kangelaris2015]   | Transcriptomics | Microarray   | 15          | 0.7            | 0.6               |
+| Englert[@Englert2019]         | Transcriptomics | RNA-seq      | 10          | 0.6            | 0.6               |
+| Lu[@Lu2017]                   | Transcriptomics | Microarray   | 12          | 0.5            | 0.5               |
+| Meyer[@Meyer2013]             | GWAS            | Genotyping   | 10          | 0.4            | 0.4               |
+| Bowler[@Bowler2004]           | Proteomics      | Mass Spec    | 18          | 0.9            | 0.4               |
+| Scheller[@Scheller2019]       | Transcriptomics | RNA-seq      | 9           | 0.4            | 0.3               |
+| Guillen-Guio[@GuillenGuio2020]| GWAS            | Genotyping   | 6           | 0.2            | 0.2               |
+| Zhang[@Zhang2021]             | Transcriptomics | RNA-seq      | 5           | 0.2            | 0.2               |
+| Dolinay[@Dolinay2012]         | Transcriptomics | Microarray   | 4           | 0.2            | 0.2               |
+| Shortt[@Shortt2014]           | GWAS            | WES          | 3           | 0.1            | 0.1               |
+| Meyer[@Meyer2011]             | GWAS            | Genotyping   | 4           | < 0.1          | 0.1               |
+| Morrell[@Morrell2018]         | Transcriptomics | Microarray   | 1           | < 0.1          | < 0.1             |
+
+```{=tex}
+\begin{scriptsize}
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; rIC - Relative information content; rICtb - Relative information contribution; WES - Whole-exome sequencing.
+\end{scriptsize}
+```
+
+\newpage
+
+**Supplementary Table 5. ARDS survival/severity gene list information content and contribution.**
+
+| **Study**                     | **Method**      | **Category** | **N genes** | **rIC** (%)    | **rICtb** (%)     |
+|-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
+| Bhargava[@Bhargava2017]       | Proteomics      | Mass Spec    | 144         | 30.4           | 30.3              |
+| Morrell[@Morrell2019]         | Transcriptomics | Microarray   | 155         | 29.7           | 29.7              |
+| Liao[@Liao2021]               | GWAS            | Genotyping   | 67          | 12.9           | 13                |
+| Batra[@Batra2022]             | Proteomics      | Other        | 39          | 9.4            | 9.4               |
+| Liao[@Liao2021]               | Transcriptomics | RNA-seq      | 43          | 8.5            | 8.5               |
+| Xu[@Xu2021]                   | GWAS            | WES          | 16          | 3.5            | 3.5               |
+| Chen[@Chen2016]               | Proteomics      | Mass Spec    | 16          | 3.4            | 3.4               |
+| Lu[@Lu2017]                   | Transcriptomics | Microarray   | 12          | 2.2            | 2.2               |
+
+```{=tex}
+\begin{scriptsize}
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; rIC - Relative information content; rICtb - Relative information contribution; WES - Whole-exome sequencing.
+\end{scriptsize}
+```
 
 \newpage
 
