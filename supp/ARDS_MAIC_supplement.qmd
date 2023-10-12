@@ -20,12 +20,12 @@ fig-align: center
 documentclass: article
 papersize: "A4"
 geometry: 
-  - top=30mm
+  - top=15mm
   - left=22.5mm
   - right=22.5mm
-  - bottom=30mm
+  - bottom=15mm
 echo: false
-bibliography: ref.bib
+bibliography: ref_supplement.bib
 csl: nature-medicine.csl
 biblio-title: "References"
 ---
@@ -39,8 +39,6 @@ biblio-title: "References"
 \newpage
 
 ## Supplementary Methods
-
-\newpage
 
 ### Search Strategy
 
@@ -125,23 +123,22 @@ Exclusion:
 \newpage
 
 ![**Systematic review inclusion diagram**. Abbreviations: db - data base; GEO - NCBI Gene Expression Omnibus.](../img/Supplementary_Figure_1.png)
-\newpage
 
-![**Overlap between ARDS MAIC and ARDS-associated genes and ARDS MAIC and COVID-19 MAIC**. a. Eular diagram of gene overlap between ARDS MAIC and a BioLitMine search using the ARDS MeSH term. b. Eular diagram of gene overlap between ARDS MAIC and the ARDS Database of Genes. c. Eular diagram of gene overlap between ARDS MAIC and a MAIC of COVID-19 host-response studies. d. Heatmap of the 50 top ranked ARDS MAIC genes also prioritised by the COVID-19 MAIC, displaying the ARDS MAIC score for each gene, highest gene score in each category, and the number of supporting gene lists.](../img/Supplementary_Figure_2.png)
-\newpage
+![**Overlap between ARDS MAIC and ARDS-associated genes and ARDS MAIC and COVID-19 MAIC**. (a) Eular diagram of gene overlap between ARDS MAIC and a BioLitMine search using the ARDS MeSH term. (b) Schematic overview of a co-expression search for genes identified in the BioLitMine search but not present in ARDS MAIC and a stacked bar plot of the proportion of the 100 most co-expressed genes of this group and ARDS MAIC. (c) Eular diagram of gene overlap between ARDS MAIC and the ARDS Database of Genes. (d) Eular diagram of gene overlap between ARDS MAIC and a MAIC of COVID-19 host-response studies. (e) Heatmap of the 50 top ranked ARDS MAIC genes also prioritised by the COVID-19 MAIC, displaying the ARDS MAIC score for each gene, highest gene score in each category, and the number of supporting gene lists.](../img/Supplementary_Figure_2.png)
 
-![**Tissue and cell-type expression**.](../img/Supplementary_Figure_3.png)
-\newpage
+![**Tissue and cell-specific expression**. (a) Bar plot of the tissue type in which genes are identified - all genes (n=7,085). (b) Bar plot of the tissue type in which genes are identified - prioritised genes (n=1,306). (c) Bar plot of the proportion of genes identified solely in blood meeting mRNA expression thresholds in bulk lung tissue. nTPM - normalised transcripts per million. (d) Heatmap of mRNA expression in lung cell-types for genes identified in studies based on airways sampling. (e) Heatmap of mRNA expression in blood cell-types for genes identified solely in studies based on blood sampling. (f) Manhatten plot of the top 20 cell types overenriched for expression of genes identified by studies based on airways sampling. (g) Manhatten plot of the top 20 cell types overenriched for expression of genes identified by studies based on blood sampling.](../img/Supplementary_Figure_3.png)
 
-![**Functional enrichment**.](../img/Supplementary_Figure_4.png)
-\newpage
+![**Functional enrichment**. (a) Significantly enriched KEGG terms (*P* < 0.01) for prioritised genes. Terms size proportional to recall. (b) Significantly enriched WikiPathways terms (*P* < 0.01) for prioritised genes. Terms size proportional to recall. (c) Scatter plot of the semantic similarity between signficantly enriched GO cellular component terms for prioritised genes (d) Manhatten plot of the overenrichment of prioritised genes against the GWAS catolog.](../img/Supplementary_Figure_4.png)
 
-![**PPI clusters**.](../img/Supplementary_Figure_5.png)
-\newpage
+![**PPI clusters**. A protein-protein interaction network of prioritsed genes and the 10 largest graph-based clusters. Functional annotation by hand based on a concencus of enriched Reactome, KEGG, WikiPathways, and GO Biological Process terms.](../img/Supplementary_Figure_5.png)
+
+![**Details of MAIC on sub-groups**. (a) Gene prioritization for the ARDS MAIC susceptibility sub-group using the Unit Invariant Knee method. Intersection of lines identifies elbow point of best-fit curve. 130 genes in upper left quadrant were prioritied. (b) Eular diagrams of gene overlap between the ARDS MAIC susceptibility sub-group and a BioLitMine search using the ARDS MeSH term and the ARDS Database of Genes. (c) Shared information content (IC) between susceptibility gene lists. Links indicate absolute IC (sum of common gene scores) between studies. (d) Gene prioritization for the ARDS MAIC survival sub-group using the Unit Invariant Knee method. Intersection of lines identifies elbow point of best-fit curve. 33 genes in upper left quadrant were prioritied. (e) Eular diagrams of gene overlap between the ARDS MAIC survival sub-group and a BioLitMine search using the ARDS MeSH term and the ARDS Database of Genes. (f) Shared information content (IC) between survival gene lists. Links indicate absolute IC (sum of common gene scores) between studies.](../img/Supplementary_Figure_6.png)
+
+![**Sub-group functional enrichment**. (a) Significantly enriched Reactome, WikiPathways, and KEGG terms (*P* < 0.01) for prioritised genes in the susceptibility sub-group. Terms are coloured by pathway and size is proportional to recall. (b) A protein-protein interaction network of prioritsed genes in the susceptibility cohort and graph-based clusters with ≥ 5 members. (c) Significantly enriched Reactome, WikiPathways, and KEGG terms (*P* < 0.01) for prioritised genes in the survival sub-group. Terms are coloured by pathway and size is proportional to recall. (d) A protein-protein interaction network of prioritsed genes in the survival cohort and graph-based clusters with ≥ 5 members.](../img/Supplementary_Figure_7.png)
 
 **Supplementary Table 1. Details of included studies.**
 
-\newpage
+
 
 **Supplementary Table 2.  Gene list information content and contribution.**
 
