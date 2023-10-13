@@ -7,6 +7,7 @@ format:
         \usepackage{lscape}
         \newcommand{\blandscape}{\begin{landscape}}
         \newcommand{\elandscape}{\end{landscape}}
+        \pagenumbering{roman}
     keep-tex: true
 mainfont: Times New Roman
 fontsize: "11"
@@ -32,13 +33,19 @@ biblio-title: "References"
 
 \begin{center}
 
-\textbf{\LARGE Supplement}
+\textbf{\LARGE Supplementary Material}
 
 \end{center}
 
 \newpage
 
 ## Supplementary Methods
+
+Search strategy
+
+Inclusion criteria
+
+\newpage
 
 ### Search Strategy
 
@@ -120,7 +127,9 @@ Exclusion:
 
 ## Supplementary Results
 
-\newpage
+Supplementary Figures 1-7
+
+Supplementary Tables 1-4
 
 ![**Systematic review inclusion diagram**. Abbreviations: db - data base; GEO - NCBI Gene Expression Omnibus.](../img/Supplementary_Figure_1.png)
 
@@ -136,11 +145,9 @@ Exclusion:
 
 ![**Sub-group functional enrichment**. (a) Significantly enriched Reactome, WikiPathways, and KEGG terms (*P* < 0.01) for prioritised genes in the susceptibility sub-group. Terms are coloured by pathway and size is proportional to recall. (b) A protein-protein interaction network of prioritsed genes in the susceptibility cohort and graph-based clusters with ≥ 5 members. (c) Significantly enriched Reactome, WikiPathways, and KEGG terms (*P* < 0.01) for prioritised genes in the survival sub-group. Terms are coloured by pathway and size is proportional to recall. (d) A protein-protein interaction network of prioritsed genes in the survival cohort and graph-based clusters with ≥ 5 members.](../img/Supplementary_Figure_7.png)
 
-**Supplementary Table 1. Details of included studies.**
+\newpage
 
-
-
-**Supplementary Table 2.  Gene list information content and contribution.**
+**Supplementary Table 1.  Gene list information content and contribution.**
 
 | **Study**                     | **Method**      | **Category** | **N genes** | **rIC** (%)    | **rICtb** (%)     |
 |-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
@@ -196,7 +203,7 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 
 \newpage
 
-**Supplementary Table 3.  ARDS MAIC prioritised genes found in common by BioLitMine with >= 2 associated publications.**
+**Supplementary Table 2.  ARDS MAIC prioritised genes found in common by BioLitMine with >= 2 associated publications.**
 
 | **Gene**      | **Publication count** | **PubMed IDs**                                                                 | **MAIC rank** | 
 |---------------|-----------------------|--------------------------------------------------------------------------------|---------------|
@@ -227,7 +234,7 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 
 \newpage
 
-**Supplementary Table 4. ARDS susceptibility gene list information content and contribution.**
+**Supplementary Table 3. ARDS susceptibility gene list information content and contribution.**
 
 | **Study**                     | **Method**      | **Category** | **N genes** | **rIC** (%)    | **rICtb** (%)     |
 |-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
@@ -268,7 +275,7 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 
 \newpage
 
-**Supplementary Table 5. ARDS survival/severity gene list information content and contribution.**
+**Supplementary Table 4. ARDS survival/severity gene list information content and contribution.**
 
 | **Study**                     | **Method**      | **Category** | **N genes** | **rIC** (%)    | **rICtb** (%)     |
 |-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
@@ -286,6 +293,46 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; rIC - Relative information content; rICtb - Relative information contribution; WES - Whole-exome sequencing.
 \end{scriptsize}
 ```
+
+\newpage
+
+## Supplementary Data
+
+Supplementary Data Files 1-8
+
+\newpage
+
+**Supplementary Data File 1. Raw gene list input to MAIC**.
+
+<https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_1.csv>
+
+**Supplementary Data File 2. MAIC output - overall**.
+
+<https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_2.csv>
+
+**Supplementary Data File 3. BioLitMine and ARDS Database of Genes results**.
+
+<https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_3.csv>
+
+**Supplementary Data File 4. MAIC output - susceptibility sub-group**.
+
+<https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_4.csv>
+
+**Supplementary Data File 5. MAIC output - survival sub-group**.
+
+<https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_5.csv>
+
+**Supplementary Data File 6. Functional enrichment results - overall**.
+
+<https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_6.csv>
+
+**Supplementary Data File 7. Functional enrichment results - susceptibility sub-group**.
+
+<https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_7.csv>
+
+**Supplementary Data File 8. Functional enrichment results - survival sub-group**.
+
+<https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_8.csv>
 
 \newpage
 

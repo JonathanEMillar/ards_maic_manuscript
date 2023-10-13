@@ -183,7 +183,7 @@ response.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, sharp corners, frame hidden, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, sharp corners]}{\end{tcolorbox}}\fi
 
 \setstretch{1.5}
 Jonathan E Millar\textsuperscript{1,2}, Sara
@@ -192,11 +192,11 @@ Marie Zechner\textsuperscript{1}, Bo Wang\textsuperscript{1}, Nick
 Parkinson\textsuperscript{1}, Melissa Jungnickel\textsuperscript{1},
 Nureen Mohamad Zaki\textsuperscript{1}, Erola
 Pairo-Castineira\textsuperscript{1,2}, Konrad
-Rawlik\textsuperscript{1,2}, Clark D Russell\textsuperscript{2}, Lieuwe
-DJ Bos\textsuperscript{3}, Nuala J Meyer\textsuperscript{4}, Manu
-Shankar-Hari\textsuperscript{2}, Carolyn Calfee\textsuperscript{5},
-Daniel F McAuley\textsuperscript{6}, and J Kenneth
-Baillie\textsuperscript{1,2}
+Rawlik\textsuperscript{1,2}, Joshua Rogers\textsuperscript{1}, Clark D
+Russell\textsuperscript{2}, Lieuwe DJ Bos\textsuperscript{3}, Nuala J
+Meyer\textsuperscript{4}, Carolyn Calfee\textsuperscript{5}, Daniel F
+McAuley\textsuperscript{6}, Manu Shankar-Hari\textsuperscript{2} and J
+Kenneth Baillie\textsuperscript{1,2}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -204,8 +204,8 @@ Baillie\textsuperscript{1,2}
 \item
   Roslin Institute, University of Edinburgh, Edinburgh, United Kingdom.
 \item
-  Centre for Inflammation Research, University of Edinburgh, Edinburgh,
-  United Kingdom.
+  Baillie-Gifford Pandemic Science Hub, Centre for Inflammation
+  Research, University of Edinburgh, Edinburgh, United Kingdom.
 \item
   Intensive Care, Amsterdam UMC-location AMC, University of Amsterdam,
   Amsterdam, The Netherlands.
@@ -226,6 +226,39 @@ Baillie\textsuperscript{1,2}
 
 \hypertarget{abstract}{%
 \subsection{Abstract}\label{abstract}}
+
+Acute respiratory distress syndrome (ARDS) is a clinically defined
+syndrome of acute hypoxaemic respiratory failure secondary to
+non-cardiogenic pulmonary oedema. It arises from a diverse set of
+triggers and encompasses marked biological heterogeneity, which has
+complicated efforts to develop effective therapies. Using using an
+algorithm called meta-analysis by information content (MAIC), we
+performed a systematic review and computational integration of
+historical omics data implicating host response pathways in ARDS
+pathogenesis. The review identified 40 studies published over 20 years
+reporting genome-wide associations for 6,856 ARDS patients. These
+encompassed diverse study designs including transcriptomics, proteomics,
+and genome-wide association studies. By comparing gene lists across
+heterogeneous data sources, MAIC ranked over 7,000 genes by weighted
+cumulative evidence of association. This approach prioritized 1,306
+genes most strongly implicated in ARDS pathogenesis. Functional
+enrichment of these genes revealed cholesterol metabolism, endothelial
+dysfunction, and innate immune activation - particularly neutrophil
+degranulation - as key processes. The analysis also highlighted 51
+potential therapeutic targets such as \emph{IL-6} and \emph{MAP3K14}. To
+explore biological heterogeneity, MAIC was repeated on subsets of
+studies stratified by their focus on ARDS susceptibility or outcomes.
+This revealed most susceptibility genes were identified in blood while
+outcome-associated genes were enriched in airway samples, suggesting
+tissue-specific genomic perturbations. Overall, this study represents
+the first large-scale integration of historical omics data in ARDS,
+enhancing our understanding of the genomic landscape by synthesis of
+decades of disperse data. The gene rankings and interactive portal
+provided will help researchers refine hypotheses, select candidates for
+functional validation, and identify potential therapeutic targets or
+repurposing opportunities. Overall, our findings and the publically
+available computational framework represent an open, evolving platform
+for ARDS genomics.
 
 \newpage
 
@@ -276,8 +309,8 @@ In this work, we present a living meta-analysis by information content
 of ARDS host genomics studies. This serves as an open-source resource
 for gene prioritisation, functional genomics, and drug target discovery.
 An interactive interface can be accessed at
-\url{https://baillielab.net/maic/ards}, alongside a complementary (R
-package){[}https://github.com/baillielab/ARDSMAICr{]}.
+\url{https://baillielab.net/maic/ards}, alongside a complementary
+\href{https://github.com/baillielab/ARDSMAICr}{R package}.
 
 \newpage
 
@@ -306,8 +339,7 @@ Most studies aimed to identify genes or proteins associated with ARDS
 susceptibility (n=27, 67.5\%). The remainder examined associations with
 survival (n=6, 15\%), sub-phenotype (n=4, 10\%), disease progression
 (n=2, 5\%), or severity (n=1, 2.5\%). In total, studies included 6,856
-patients with ARDS. A detailed summary of study designs, demographics,
-and ARDS aetiology is provided in Supplementary Table 1.
+patients with ARDS.
 
 \hypertarget{meta-analysis-by-information-content-maic}{%
 \paragraph{Meta-analysis by information content
@@ -720,52 +752,99 @@ the Markov Chain Algorithm - for susceptibility.}
 \hypertarget{discussion}{%
 \subsection{Discussion}\label{discussion}}
 
-Our systematic integration and re-analysis of more than 20 years of
-omics data is the first large-scale meta-analysis of the genomic
-landscape of ARDS. This implicates and ranks over 7,000 genes and
-prioritises 1,306. The wide inclusion criteria capture a diverse range
-of study designs and methods and the strength of MAIC is its ability to
-establish the sum of this knowledge, while downgrading noisy or
-irrelevant information. These results have three main applications.
-First, they can be used to better understand the pathobiology of ARDS,
-providing a resource to prioritise future \emph{in-vitro} and
-\emph{in-vivo} studies and permitting comparisons between important
-sub-groups. Second, they prioritise therapeutic targets, serving as a
-source against which novel and repurposed drugs treatments can be
-screened. Third, they serve as a base for identifying the novelty or
-additive nature of future omics studies in ARDS.
+Our systematic integration and re-analysis of more than 20 years of data
+is the first large-scale meta-analysis of the genomic landscape of ARDS.
+This implicates over 7,000 genes and prioritises 1,306. The wide
+inclusion criteria capture a diverse range of study designs and methods;
+the subsequent application of MAIC establishes the sum of this
+knowledge, downgrading noisy, irrelevant, or low-quality information.
+These results have three main applications. First, they can be used to
+better understand the pathobiology of ARDS, providing a resource to
+prioritise future \emph{in-vitro} and \emph{in-vivo} studies and
+permitting comparisons between important sub-groups. Second, they
+prioritise therapeutic targets, serving as a source against which novel
+and repurposed treatments can be screened. Third, they serve as a base
+for quantifying the novelty or additive nature of future omics studies
+in ARDS.
+
+Our review included 40 studies with genome-wide hypotheses. These
+studies varied in their aims and methods, however, some key themes are
+of note. Most obviously, the rate at which this form of study is being
+published is increasing; half of all studies in the last 5 years and a
+quarter since 2020. Relatedly, there were few stduies which employed
+next-generation sequencing (NGS) techniques or equivalent, and only two
+single-cell RNA-seq studies. A partial explanation may be the emergence
+of COVID-19, which is likely to have consumed the attention of many
+research teams active in this field. It is not unreasonable to conclude
+that an increasing number of non-COVID ARDS single-cell and NGS studies
+will emerge in the coming years. This reinforces the requirement for
+methods capable of meta-analysing multi-omic data\textsuperscript{57}.
+Less obviously, a minority of studies have sampled the lung in ARDS,
+with only four examining the bulk transcriptome in the distal airspace.
+Reliance on information derived from blood samples may present a skewed
+picture of the pathobiology of ARDS and represents a missed opportunity
+to identify novel targets in the lung\textsuperscript{58}.
+
+The key advantage of the MAIC approach in this setting is its ability to
+integrate diverse data sources. Traditional methods of gene list
+meta-analysis rely on simple vote counting or robust rank
+aggregation\textsuperscript{\textbf{pmid22247279?}}. Instead, MAIC
+applies a data-derived weighting to each gene list, allows the
+investigator to define granular categorisation
+
+Our prioritisation of genes simultaneously validates existing concepts
+of ARDS pathobiology and provides novel insights. The functional
+prominence of innate immunity and cytokine signalling - in particular
+neutrophil-related activity - is unsurprising\textsuperscript{59}. As is
+the high ranking of genes such as \emph{CXCL8}\textsuperscript{60},
+\emph{IL-18}\textsuperscript{61}, \emph{MMP9}\textsuperscript{62}, and
+\emph{MUC1}\textsuperscript{63}. However, other findings are intriguing.
+A single gene example is histidine triad nucleotide binding protein 1
+(\emph{HINT1}), ranked 10\textsuperscript{th} and one of only 5 genes to
+have support from GWAS, transcriptomics, and proteomics methods. To our
+knowledge, no plausible role for \emph{HINT1} has previously been
+suggested in ARDS\textsuperscript{64}. Another notable finding is the
+significant enrichment of cholesterol uptake, efflux, and esterification
+pathways among prioritised genes. especially in the sub-group analysis
+of susceptibility.
+
+Outcome genes showed greater overlap, indicating shared pathways
+determine mortality/severity once established. IL-10 and IL-18
+enrichment aligns with their anti-inflammatory and epithelial repair
+roles.
 
 Our approach has limitations. We purposefully sought studies with
 genome-wide hypotheses, excluding single-gene or candidate genetics
 studies. In the case of a gene with extensive evidence from the latter,
 our methodology may underestimate its association with ARDS. However,
-these study designs are subject to other biases, such as publication
-bias and investigator-driven hypotheses. In our iteration of MAIC, we
-did not account for direction of expression or effect. For a given gene,
-if the direction of expression differs between studies, MAIC may
-overestimate the strength of evidence associated with that gene. The
-inability to account for directionality also limits the scope of
-functional enrichment analyses which can be performed. Similarly, the
-use of an unsupervised prioritisation threshold may influence the
-outcomes of downstream analysis, however principled the approach.
-Finally, the general paucity of data, and in particular the limited
-number of single-cell transcriptomics (or proteomics) studies, limits
-the depth of inference that can be made. It is likely that many
+these study designs are subject to other limitations, such as
+publication and investigator biases\textsuperscript{65}. In our
+iteration of MAIC, we did not account for direction of expression or
+effect. For a given gene, if the direction of expression differs between
+studies, MAIC may overestimate the strength of evidence associated with
+that gene. The inability to account for directionality also limits the
+scope of functional enrichment analyses which can be performed.
+Similarly, the use of an unsupervised prioritisation threshold may
+influence the outcomes of downstream analyses, however principled the
+approach. Finally, the general paucity of data, and in particular the
+limited number of single-cell transcriptomics (or proteomics) studies,
+limits the depth of inference that can be made. It is likely that many
 pathological perturbations occur with cell-specificity, which may not be
-apparent in a largely bulk analysis of heterogeneous tissues. The future
-addition of data from these modalities may reveal precision targets.
+apparent in bulk analyses of heterogeneous tissues\textsuperscript{66}.
+In future. the addition of data from these modalities may reveal
+precision targets.
 
-Crucially, we provide an open platform and tools to enable deeper mining
-of the output. This may allow others to re-analyse the data based on
-alternative sub-group divisions or to integrate unseen information.
-Ongoing multi-omic data integration with this initial study will further
-enhance the resolution of the data and increase our confidence in the
-results.
+Crucially, we provide an open platform and associated tools to enable
+deeper mining of the output. This allows others to re-analyse the data
+based on alternative sub-group divisions or to integrate unseen
+information. Ongoing multi-omic data integration with this initial study
+will further enhance the resolution of the data and increase our
+confidence in the results.
 
 In summary, by systematically integrating decades of ARDS genomics, this
-study enhances are scope for gene prioritisation and enhances molecular
-pathophysiological clarity. Our results strongly implicate endothelial
-dysfunction and cholesterol metabolism dysregulation, providing a
+study improves the scope for gene prioritisation and enhances molecular
+pathophysiological clarity. Our results strongly implicate interferon
+signalling and cholesterol metabolism dysregulation, providing a
 specific therapeutic targets. Enrichment patterns and sub-group
 differences also give clues to genomic drivers of susceptibility,
 outcomes, and mortality. This substantially improves our
@@ -781,7 +860,7 @@ The systematic review and meta-analysis protocol was registered with the
 International Prospective Register of Systematic Reviews (PROSPERO;
 CRD42022306270). The review is reported in compliance with the Preferred
 Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA)
-guidelines\textsuperscript{57}.
+guidelines\textsuperscript{67}.
 
 \hypertarget{search-strategy-and-selection-criteria}{%
 \paragraph{Search strategy and selection
@@ -793,8 +872,8 @@ Embase, bioRxiv, medRxiv, the ARDS Database of
 Genes\textsuperscript{55}, and the NCBI Gene Expression Omnibus from
 inception to April 1\textsuperscript{st}, 2023 without language
 restrictions. We also performed single-level backwards and forwards
-citation searches using SpiderCite\textsuperscript{58} and hand-searched
-recent review articles\textsuperscript{59--62}.
+citation searches using SpiderCite\textsuperscript{68} and hand-searched
+recent review articles\textsuperscript{69--72}.
 
 We included human genome-wide studies reporting associations between
 genes, transcripts, or proteins and ARDS susceptibility, severity,
@@ -826,7 +905,7 @@ extraction}\label{study-selection-and-data-extraction}}
 Article titles and abstracts from our search were stored in Zotero
 v6.0-beta (Corporation for Digital Scholarship, United States). Titles
 were initially screened by one author using
-Screenatron\textsuperscript{58}. Two authors then independently screened
+Screenatron\textsuperscript{68}. Two authors then independently screened
 abstracts against eligibility criteria, with a third resolving
 inconsistencies. Full texts and supplements of eligible studies were
 retrieved and inclusion adjudicated by consensus.
@@ -884,7 +963,7 @@ For each MAIC iteration, we prioritised genes with sufficient
 evidentiary support for further study (i.e., the gene set before which
 information content diminished such that there was little/no
 corroboration for the remainder's ARDS association). We used the unit
-invariant knee method\textsuperscript{53,63} to identify the elbow point
+invariant knee method\textsuperscript{53,73} to identify the elbow point
 in the best-fit curve of MAIC scores. Genes with values above this point
 were prioritized for downstream analyses.
 
@@ -907,47 +986,47 @@ enrichment}\label{tissue-expression-and-enrichment}}
 
 Transcript and protein expression data for genes included in ARDS MAIC
 were retrieved from the Human Protein Atlas (HPA, version
-21.0)\textsuperscript{64}. We investigated mRNA expression in a
+21.0)\textsuperscript{74}. We investigated mRNA expression in a
 consensus scRNA-seq dataset of 81 cells from 31 sources
 (\url{https://www.proteinatlas.org/about/assays+annotation\#singlecell_rna})
-and in the HPA RNA-seq blood dataset\textsuperscript{65}, containing
+and in the HPA RNA-seq blood dataset\textsuperscript{75}, containing
 expression levels in 18 immune cell types and total peripheral blood
 mononuclear cells. To investigate protein expression, we retrieved
-tissue-specific expression scores from the HPA\textsuperscript{66}. We
+tissue-specific expression scores from the HPA\textsuperscript{76}. We
 conducted cell-type specific enrichment analysis using
-WebCSEA\textsuperscript{67} and extracted the top 20 general cell types
+WebCSEA\textsuperscript{77} and extracted the top 20 general cell types
 for each query.
 
 \hypertarget{functional-enrichment-1}{%
 \paragraph{Functional enrichment}\label{functional-enrichment-1}}
 
 We performed functional enrichment of genes against the universe of all
-annotated genes using g:Profiler\textsuperscript{68}. The following data
+annotated genes using g:Profiler\textsuperscript{78}. The following data
 sources were used; Kyoto Encyclopaedia of Genes and Genomes
-(KEGG)\textsuperscript{69}, Reactome\textsuperscript{70},
-WikiPathways\textsuperscript{71}, and Gene Ontology\textsuperscript{72}.
+(KEGG)\textsuperscript{79}, Reactome\textsuperscript{80},
+WikiPathways\textsuperscript{81}, and Gene Ontology\textsuperscript{82}.
 Multiple testing was corrected for using the g:SCS
-algorithm\textsuperscript{68}, with a threshold of \emph{P} \textless{}
+algorithm\textsuperscript{78}, with a threshold of \emph{P} \textless{}
 0.01. Input lists were ordered by MAIC score were appropriate. In the
 case of GO cellular component terms, we used the REVIGO tool to perform
 multi-dimensional scaling of the matrix of all pairwise semantic
-similarities\textsuperscript{73}. Enrichment was also performed against
+similarities\textsuperscript{83}. Enrichment was also performed against
 the National Human Genome Research Institute GWAS
-Catalog\textsuperscript{74} using the Enrichr
-web-interface\textsuperscript{75}. Protein-protein interaction
-enrichment was performed using STRING v11\textsuperscript{76}. We
+Catalog\textsuperscript{84} using the Enrichr
+web-interface\textsuperscript{85}. Protein-protein interaction
+enrichment was performed using STRING v11\textsuperscript{86}. We
 included all possible interaction sources but specified a minimum
 interaction score of 0.7. We used the the whole annotated genome as the
 statistical background. Markov Clustering Analysis (MCL) was applied to
 the resulting network with an inflation parameter of 3. Clusters were
 annotated by hand having considered enrichment against KEGG, Reactome,
 and WikiPathways. To identify hub genes within the PPI network, we used
-cytoHubba\textsuperscript{77} and Cytoscape\textsuperscript{78}. The
+cytoHubba\textsuperscript{87} and Cytoscape\textsuperscript{88}. The
 highest ranked genes by Maximum Neighbourhood Component (MNC), Maximal
 Clique Centrality (MCC), Density of MNC (DMNC), Edge Percolated
 Component (EPC), and node degree were retrieved. The intersecting genes
 of these methods were deemed hub genes. Hub genes were searched for in
-the Drug Gene Interaction Database\textsuperscript{79} to identify if
+the Drug Gene Interaction Database\textsuperscript{89} to identify if
 they were present in the druggable genome.
 
 \hypertarget{software-and-code-availability}{%
@@ -1335,139 +1414,204 @@ genes for acute respiratory distress syndrome. \emph{Front. Genet.}
 available {RNA-seq} data from human and mouse. \emph{Nat. Commun.}
 \textbf{9}, 1366 (2018).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Page2021}{}}%
+\leavevmode\vadjust pre{\hypertarget{ref-pmid35817619}{}}%
 \CSLLeftMargin{57. }%
+\CSLRightInline{Fischer, M. \& Hoffmann, S. {{S}ynthesizing genome
+regulation data with vote-counting}. \emph{Trends Genet} \textbf{38},
+1208--1216 (2022).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pmid35274164}{}}%
+\CSLLeftMargin{58. }%
+\CSLRightInline{Bos, L. D. J. \emph{et al.} {{T}owards a biological
+definition of {A}{R}{D}{S}: are treatable traits the solution?}
+\emph{Intensive Care Med Exp} \textbf{10}, 8 (2022).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pmid921049}{}}%
+\CSLLeftMargin{59. }%
+\CSLRightInline{Bachofen, M. \& Weibel, E. R. {{A}lterations of the gas
+exchange apparatus in adult respiratory insufficiency associated with
+septicemia}. \emph{Am Rev Respir Dis} \textbf{116}, 589--615 (1977).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pmid36725964}{}}%
+\CSLLeftMargin{60. }%
+\CSLRightInline{Cambier, S., Gouwy, M. \& Proost, P. {{T}he chemokines
+{C}{X}{C}{L}8 and {C}{X}{C}{L}12: molecular and functional properties,
+role in disease and efforts towards pharmacological intervention}.
+\emph{Cell Mol Immunol} \textbf{20}, 217--251 (2023).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pmid37695136}{}}%
+\CSLLeftMargin{61. }%
+\CSLRightInline{Moore, A. R. \emph{et al.} {{E}levated {P}lasma
+{I}nterleukin-18 {I}dentifies {H}igh-{R}isk {A}cute {R}espiratory
+{D}istress {S}yndrome {P}atients not {D}istinguished by {P}rior {L}atent
+{C}lass {A}nalyses {U}sing {T}raditional {I}nflammatory {C}ytokines: {A}
+{R}etrospective {A}nalysis of {T}wo {R}andomized {C}linical {T}rials}.
+\emph{Crit Care Med} (2023).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pmid21565917}{}}%
+\CSLLeftMargin{62. }%
+\CSLRightInline{Davey, A., McAuley, D. F. \& O'Kane, C. M. {{M}atrix
+metalloproteinases in acute lung injury: mediators of injury and drivers
+of repair}. \emph{Eur Respir J} \textbf{38}, 959--970 (2011).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pmid33536260}{}}%
+\CSLLeftMargin{63. }%
+\CSLRightInline{Ballester, B., Milara, J. \& Cortijo, J. {{T}he role of
+mucin 1 in respiratory diseases}. \emph{Eur Respir Rev} \textbf{30},
+(2021).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pmid16835243}{}}%
+\CSLLeftMargin{64. }%
+\CSLRightInline{Weiske, J. \& Huber, O. {{T}he histidine triad protein
+{H}int1 triggers apoptosis independent of its enzymatic activity}.
+\emph{J Biol Chem} \textbf{281}, 27356--27366 (2006).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pmid34309672}{}}%
+\CSLLeftMargin{65. }%
+\CSLRightInline{Menon, D. K. \& Rosand, J. {{F}inding a {P}lace for
+{C}andidate {G}ene {S}tudies in a {G}enome-{W}ide {A}ssociation {S}tudy
+{W}orld}. \emph{JAMA Netw Open} \textbf{4}, e2118594 (2021).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pmid34446707}{}}%
+\CSLLeftMargin{66. }%
+\CSLRightInline{Sarma, A. \emph{et al.} {{T}racheal aspirate {R}{N}{A}
+sequencing identifies distinct immunological features of
+{C}{O}{V}{I}{D}-19 {A}{R}{D}{S}}. \emph{Nat Commun} \textbf{12}, 5152
+(2021).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Page2021}{}}%
+\CSLLeftMargin{67. }%
 \CSLRightInline{Page, M. J. \emph{et al.} The {PRISMA} 2020 statement:
 An updated guideline for reporting systematic reviews. \emph{BMJ}
 \textbf{372}, n71 (2021).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Clark2020}{}}%
-\CSLLeftMargin{58. }%
+\CSLLeftMargin{68. }%
 \CSLRightInline{Clark, J. \emph{et al.} A full systematic review was
 completed in 2 weeks using automation tools: A case study. \emph{J.
 Clin. Epidemiol.} \textbf{121}, 81--90 (2020).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Battaglini2022}{}}%
-\CSLLeftMargin{59. }%
+\CSLLeftMargin{69. }%
 \CSLRightInline{Battaglini, D. \emph{et al.} Personalized medicine using
 omics approaches in acute respiratory distress syndrome to identify
 biological phenotypes. \emph{Respir. Res.} \textbf{23}, 318 (2022).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Hernandez-Beeftink2019}{}}%
-\CSLLeftMargin{60. }%
+\CSLLeftMargin{70. }%
 \CSLRightInline{Hernández-Beeftink, T., Guillen-Guio, B., Villar, J. \&
 Flores, C. Genomics and the acute respiratory distress syndrome: Current
 and future directions. \emph{Int. J. Mol. Sci.} \textbf{20}, 4004
 (2019).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Reilly2017}{}}%
-\CSLLeftMargin{61. }%
+\CSLLeftMargin{71. }%
 \CSLRightInline{Reilly, J. P., Christie, J. D. \& Meyer, N. J. Fifty
 years of research in {ARDS}. Genomic contributions and opportunities.
 \emph{Am. J. Respir. Crit. Care Med.} \textbf{196}, 1113--1121 (2017).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Zheng2022}{}}%
-\CSLLeftMargin{62. }%
+\CSLLeftMargin{72. }%
 \CSLRightInline{Zheng, F. \emph{et al.} Novel biomarkers for acute
 respiratory distress syndrome: Genetics, epigenetics and
 transcriptomics. \emph{Biomark. Med.} \textbf{16}, 217--231 (2022).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-inflection}{}}%
-\CSLLeftMargin{63. }%
+\CSLLeftMargin{73. }%
 \CSLRightInline{Christopoulos, D. T.
 \emph{\href{https://CRAN.R-project.org/package=inflection}{Inflection:
 Finds the inflection point of a curve}}. (2019).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Uhlen2010}{}}%
-\CSLLeftMargin{64. }%
+\CSLLeftMargin{74. }%
 \CSLRightInline{Uhlen, M. \emph{et al.} Towards a knowledge-based human
 protein atlas. \emph{Nat. Biotechnol.} \textbf{28}, 1248--1250 (2010).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Uhlen2019}{}}%
-\CSLLeftMargin{65. }%
+\CSLLeftMargin{75. }%
 \CSLRightInline{Uhlen, M. \emph{et al.} A genome-wide transcriptomic
 analysis of protein-coding genes in human blood cells. \emph{Science}
 \textbf{366}, eaax9198 (2019).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Uhlen2015}{}}%
-\CSLLeftMargin{66. }%
+\CSLLeftMargin{76. }%
 \CSLRightInline{Uhlén, M. \emph{et al.} Proteomics. Tissue-based map of
 the human proteome. \emph{Science} \textbf{347}, 1260419 (2015).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-WebCSEA}{}}%
-\CSLLeftMargin{67. }%
+\CSLLeftMargin{77. }%
 \CSLRightInline{Dai, Y. \emph{et al.} {WebCSEA: web-based
 cell-type-specific enrichment analysis of genes}. \emph{Nucleic Acids
 Research} \textbf{50}, W782--W790 (2022).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Raudvere2019}{}}%
-\CSLLeftMargin{68. }%
+\CSLLeftMargin{78. }%
 \CSLRightInline{Raudvere, U. \emph{et al.} G:profiler: A web server for
 functional enrichment analysis and conversions of gene lists (2019
 update). \emph{Nucleic Acids Res.} \textbf{47}, W191--W198 (2019).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Kanehisa2000}{}}%
-\CSLLeftMargin{69. }%
+\CSLLeftMargin{79. }%
 \CSLRightInline{Kanehisa, M. \& Goto, S. {KEGG}: Kyoto encyclopedia of
 genes and genomes. \emph{Nucleic Acids Res.} \textbf{28}, 27--30
 (2000).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Gillespie2022}{}}%
-\CSLLeftMargin{70. }%
+\CSLLeftMargin{80. }%
 \CSLRightInline{Gillespie, M. \emph{et al.} The reactome pathway
 knowledgebase 2022. \emph{Nucleic Acids Res.} \textbf{50}, D687--D692
 (2022).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Martens2021}{}}%
-\CSLLeftMargin{71. }%
+\CSLLeftMargin{81. }%
 \CSLRightInline{Martens, M. \emph{et al.} {WikiPathways}: Connecting
 communities. \emph{Nucleic Acids Res.} \textbf{49}, D613--D621 (2021).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-GO}{}}%
-\CSLLeftMargin{72. }%
+\CSLLeftMargin{82. }%
 \CSLRightInline{Ashburner, M. \emph{et al.} {{G}ene ontology: tool for
 the unification of biology. {T}he {G}ene {O}ntology {C}onsortium}.
 \emph{Nat Genet} \textbf{25}, 25--29 (2000).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-REVIGO}{}}%
-\CSLLeftMargin{73. }%
+\CSLLeftMargin{83. }%
 \CSLRightInline{Supek, F., njak, M., kunca, N. \& muc, T.
 {{R}{E}{V}{I}{G}{O} summarizes and visualizes long lists of gene
 ontology terms}. \emph{PLoS One} \textbf{6}, e21800 (2011).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-GWAScatalog}{}}%
-\CSLLeftMargin{74. }%
+\CSLLeftMargin{84. }%
 \CSLRightInline{Welter, D. \emph{et al.} {The NHGRI GWAS Catalog, a
 curated resource of SNP-trait associations}. \emph{Nucleic Acids
 Research} \textbf{42}, D1001--D1006 (2013).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-enrichr}{}}%
-\CSLLeftMargin{75. }%
+\CSLLeftMargin{85. }%
 \CSLRightInline{Kuleshov, M. V. \emph{et al.} {Enrichr: a comprehensive
 gene set enrichment analysis web server 2016 update}. \emph{Nucleic
 Acids Research} \textbf{44}, W90--W97 (2016).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Szklarczyk2019}{}}%
-\CSLLeftMargin{76. }%
+\CSLLeftMargin{86. }%
 \CSLRightInline{Szklarczyk, D. \emph{et al.} {STRING} v11:
 Protein-protein association networks with increased coverage, supporting
 functional discovery in genome-wide experimental datasets. \emph{Nucleic
 Acids Res.} \textbf{47}, D607--D613 (2019).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-cytoHubba}{}}%
-\CSLLeftMargin{77. }%
+\CSLLeftMargin{87. }%
 \CSLRightInline{Chin, C.-H. \emph{et al.} {cytoHubba}: Identifying hub
 objects and sub-networks from complex interactome. \emph{BMC Systems
 Biology} \textbf{8}, S11 (2014).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-cytoscape}{}}%
-\CSLLeftMargin{78. }%
+\CSLLeftMargin{88. }%
 \CSLRightInline{Shannon, P. \emph{et al.} Cytoscape: A software
 environment for integrated models of biomolecular interaction networks.
 \emph{Genome Research} \textbf{13}, 2498--2504 (2003).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-DGidb}{}}%
-\CSLLeftMargin{79. }%
+\CSLLeftMargin{89. }%
 \CSLRightInline{Freshour, S. L. \emph{et al.} {Integration of the
 Drug--Gene Interaction Database (DGIdb 4.0) with open crowdsource
 efforts}. \emph{Nucleic Acids Research} \textbf{49}, D1144--D1151

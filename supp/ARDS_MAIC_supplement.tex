@@ -107,6 +107,7 @@
 \usepackage{lscape}
 \newcommand{\blandscape}{\begin{landscape}}
 \newcommand{\elandscape}{\end{landscape}}
+\pagenumbering{roman}
 \makeatletter
 \makeatother
 \makeatletter
@@ -183,12 +184,12 @@ response.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners, boxrule=0pt, frame hidden, interior hidden, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden, sharp corners, breakable]}{\end{tcolorbox}}\fi
 
 \setstretch{1.5}
 \begin{center}
 
-\textbf{\LARGE Supplement}
+\textbf{\LARGE Supplementary Material}
 
 \end{center}
 
@@ -196,6 +197,12 @@ response.}
 
 \hypertarget{supplementary-methods}{%
 \subsection{Supplementary Methods}\label{supplementary-methods}}
+
+Search strategy
+
+Inclusion criteria
+
+\newpage
 
 \hypertarget{search-strategy}{%
 \subsubsection{Search Strategy}\label{search-strategy}}
@@ -336,7 +343,9 @@ Exclusion:
 \hypertarget{supplementary-results}{%
 \subsection{Supplementary Results}\label{supplementary-results}}
 
-\newpage
+Supplementary Figures 1-7
+
+Supplementary Tables 1-4
 
 \begin{figure}
 
@@ -467,9 +476,9 @@ cohort and graph-based clusters with ≥ 5 members.}
 
 \end{figure}
 
-\textbf{Supplementary Table 1. Details of included studies.}
+\newpage
 
-\textbf{Supplementary Table 2. Gene list information content and
+\textbf{Supplementary Table 1. Gene list information content and
 contribution.}
 
 \begin{longtable}[]{@{}
@@ -577,7 +586,7 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 
 \newpage
 
-\textbf{Supplementary Table 3. ARDS MAIC prioritised genes found in
+\textbf{Supplementary Table 2. ARDS MAIC prioritised genes found in
 common by BioLitMine with \textgreater= 2 associated publications.}
 
 \begin{longtable}[]{@{}
@@ -632,7 +641,7 @@ MMP8 & 2 & 24651234, 15187163 & 1223 \\
 
 \newpage
 
-\textbf{Supplementary Table 4. ARDS susceptibility gene list information
+\textbf{Supplementary Table 3. ARDS susceptibility gene list information
 content and contribution.}
 
 \begin{longtable}[]{@{}
@@ -712,7 +721,7 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 
 \newpage
 
-\textbf{Supplementary Table 5. ARDS survival/severity gene list
+\textbf{Supplementary Table 4. ARDS survival/severity gene list
 information content and contribution.}
 
 \begin{longtable}[]{@{}
@@ -756,6 +765,52 @@ Lu\textsuperscript{29} & Transcriptomics & Microarray & 12 & 2.2 &
 \begin{scriptsize}
 Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; rIC - Relative information content; rICtb - Relative information contribution; WES - Whole-exome sequencing.
 \end{scriptsize}
+
+\newpage
+
+\hypertarget{supplementary-data}{%
+\subsection{Supplementary Data}\label{supplementary-data}}
+
+Supplementary Data Files 1-8
+
+\newpage
+
+\textbf{Supplementary Data File 1. Raw gene list input to MAIC}.
+
+\url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_1.csv}
+
+\textbf{Supplementary Data File 2. MAIC output - overall}.
+
+\url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_2.csv}
+
+\textbf{Supplementary Data File 3. BioLitMine and ARDS Database of Genes
+results}.
+
+\url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_3.csv}
+
+\textbf{Supplementary Data File 4. MAIC output - susceptibility
+sub-group}.
+
+\url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_4.csv}
+
+\textbf{Supplementary Data File 5. MAIC output - survival sub-group}.
+
+\url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_5.csv}
+
+\textbf{Supplementary Data File 6. Functional enrichment results -
+overall}.
+
+\url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_6.csv}
+
+\textbf{Supplementary Data File 7. Functional enrichment results -
+susceptibility sub-group}.
+
+\url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_7.csv}
+
+\textbf{Supplementary Data File 8. Functional enrichment results -
+survival sub-group}.
+
+\url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_8.csv}
 
 \newpage
 
