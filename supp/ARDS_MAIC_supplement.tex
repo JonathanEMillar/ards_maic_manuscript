@@ -184,7 +184,7 @@ response.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, sharp corners, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \setstretch{1.5}
 \begin{center}
@@ -364,24 +364,41 @@ Supplementary Tables 1-4
 
 }
 
-\caption{\textbf{Overlap between ARDS MAIC and ARDS-associated genes and
-ARDS MAIC and COVID-19 MAIC}. (a) Eular diagram of gene overlap between
-ARDS MAIC and a BioLitMine search using the ARDS MeSH term. (b)
-Schematic overview of a co-expression search for genes identified in the
-BioLitMine search but not present in ARDS MAIC and a stacked bar plot of
-the proportion of the 100 most co-expressed genes of this group and ARDS
-MAIC. (c) Eular diagram of gene overlap between ARDS MAIC and the ARDS
-Database of Genes. (d) Eular diagram of gene overlap between ARDS MAIC
-and a MAIC of COVID-19 host-response studies. (e) Heatmap of the 50 top
-ranked ARDS MAIC genes also prioritised by the COVID-19 MAIC, displaying
-the ARDS MAIC score for each gene, highest gene score in each category,
-and the number of supporting gene lists.}
+\caption{\textbf{Attributing information in MAIC}. (a) Shared
+information content (IC) between gene lists. Links indicate absolute IC
+(sum of common gene scores) between studies. (b) Proportion of
+replicated genes. Circle diameter is equal to logarithm (base 2) of gene
+number per list. (c) IC normalised by number of genes. Overlapping
+circles denote equal normalised IC and contribution (ICtb - sum of
+common gene scores contributing to MAIC), indicating all gene scores
+contributed to MAIC.}
 
 \end{figure}
 
 \begin{figure}
 
 {\centering \includegraphics{../img/Supplementary_Figure_3.png}
+
+}
+
+\caption{\textbf{Overlap between ARDS MAIC and ARDS-associated genes and
+ARDS MAIC and coronavirus MAIC}. (a) Eular diagram of gene overlap
+between ARDS MAIC and a BioLitMine search using the ARDS MeSH term. (b)
+Schematic overview of a co-expression search for genes identified in the
+BioLitMine search but not present in ARDS MAIC and a stacked bar plot of
+the proportion of the 100 most co-expressed genes of this group and ARDS
+MAIC. (c) Eular diagram of gene overlap between ARDS MAIC and the ARDS
+Database of Genes. (d) Eular diagram of gene overlap between ARDS MAIC
+and a MAIC of COVID-19 host-response studies. (e) Heatmap of the 50 top
+ranked ARDS MAIC genes also prioritised by the coronavirus MAIC,
+displaying the ARDS MAIC score for each gene, highest gene score in each
+category, and the number of supporting gene lists.}
+
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics{../img/Supplementary_Figure_4.png}
 
 }
 
@@ -403,7 +420,7 @@ identified by studies based on blood sampling.}
 
 \begin{figure}
 
-{\centering \includegraphics{../img/Supplementary_Figure_4.png}
+{\centering \includegraphics{../img/Supplementary_Figure_5.png}
 
 }
 
@@ -420,7 +437,7 @@ prioritised genes against the GWAS catolog.}
 
 \begin{figure}
 
-{\centering \includegraphics{../img/Supplementary_Figure_5.png}
+{\centering \includegraphics{../img/Supplementary_Figure_6.png}
 
 }
 
@@ -433,46 +450,26 @@ WikiPathways, and GO Biological Process terms.}
 
 \begin{figure}
 
-{\centering \includegraphics{../img/Supplementary_Figure_6.png}
-
-}
-
-\caption{\textbf{Details of MAIC on sub-groups}. (a) Gene prioritization
-for the ARDS MAIC susceptibility sub-group using the Unit Invariant Knee
-method. Intersection of lines identifies elbow point of best-fit curve.
-130 genes in upper left quadrant were prioritied. (b) Eular diagrams of
-gene overlap between the ARDS MAIC susceptibility sub-group and a
-BioLitMine search using the ARDS MeSH term and the ARDS Database of
-Genes. (c) Shared information content (IC) between susceptibility gene
-lists. Links indicate absolute IC (sum of common gene scores) between
-studies. (d) Gene prioritization for the ARDS MAIC survival sub-group
-using the Unit Invariant Knee method. Intersection of lines identifies
-elbow point of best-fit curve. 33 genes in upper left quadrant were
-prioritied. (e) Eular diagrams of gene overlap between the ARDS MAIC
-survival sub-group and a BioLitMine search using the ARDS MeSH term and
-the ARDS Database of Genes. (f) Shared information content (IC) between
-survival gene lists. Links indicate absolute IC (sum of common gene
-scores) between studies.}
-
-\end{figure}
-
-\begin{figure}
-
 {\centering \includegraphics{../img/Supplementary_Figure_7.png}
 
 }
 
-\caption{\textbf{Sub-group functional enrichment}. (a) Significantly
-enriched Reactome, WikiPathways, and KEGG terms (\emph{P} \textless{}
-0.01) for prioritised genes in the susceptibility sub-group. Terms are
-coloured by pathway and size is proportional to recall. (b) A
-protein-protein interaction network of prioritsed genes in the
-susceptibility cohort and graph-based clusters with ≥ 5 members. (c)
-Significantly enriched Reactome, WikiPathways, and KEGG terms (\emph{P}
-\textless{} 0.01) for prioritised genes in the survival sub-group. Terms
-are coloured by pathway and size is proportional to recall. (d) A
-protein-protein interaction network of prioritsed genes in the survival
-cohort and graph-based clusters with ≥ 5 members.}
+\caption{\textbf{Details of MAIC on sub-groups}. (a) Gene prioritisation
+for the ARDS MAIC ARDS vs.~non-ARDS controls sub-group using the Unit
+Invariant Knee method. Intersection of lines identifies elbow point of
+best-fit curve. 130 genes in upper left quadrant were prioritied. (b)
+Eular diagrams of gene overlap between the ARDS vs.~non-ARDS controls
+sub-group and a BioLitMine search using the ARDS MeSH term and the ARDS
+Database of Genes. (c) Shared information content (IC) between ARDS
+vs.~non-ARDS controls gene lists. Links indicate absolute IC (sum of
+common gene scores) between studies. (d) Gene prioritisation for the
+ARDS MAIC survival sub-group using the Unit Invariant Knee method.
+Intersection of lines identifies elbow point of best-fit curve. 33 genes
+in upper left quadrant were prioritied. (e) Eular diagrams of gene
+overlap between the survival sub-group and a BioLitMine search using the
+ARDS MeSH term and the ARDS Database of Genes. (f) Shared information
+content (IC) between survival gene lists. Links indicate absolute IC
+(sum of common gene scores) between studies.}
 
 \end{figure}
 
@@ -788,8 +785,8 @@ results}.
 
 \url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_3.csv}
 
-\textbf{Supplementary Data File 4. MAIC output - susceptibility
-sub-group}.
+\textbf{Supplementary Data File 4. MAIC output - ARDS vs.~non-ARDS
+controls sub-group}.
 
 \url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_4.csv}
 
@@ -802,8 +799,8 @@ overall}.
 
 \url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_6.csv}
 
-\textbf{Supplementary Data File 7. Functional enrichment results -
-susceptibility sub-group}.
+\textbf{Supplementary Data File 7. Functional enrichment results - ARDS
+vs.~non-ARDS controls sub-group}.
 
 \url{https://github.com/JonathanEMillar/ards_maic_manuscript/Supplementary_Data_File_7.csv}
 
