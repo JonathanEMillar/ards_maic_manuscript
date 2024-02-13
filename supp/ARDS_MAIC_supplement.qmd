@@ -29,15 +29,8 @@ echo: false
 bibliography: ref_supplement.bib
 csl: nature-medicine.csl
 biblio-title: "References"
-# additions from Kenny - untested! 
-figureTitle: Supplementary Figure
-figPrefix:
-  - "Supplementary Figure"
-  - "Supplementary Figures"
-tableTitle: Supplementary Table
-tblPrefix:
-  - "Supplementary Table"
-  - "Supplementary Tables"
+crossref: 
+  fig-title: "Supplementary-Figure"
 ---
 
 \begin{center}
@@ -53,6 +46,8 @@ tblPrefix:
 Search strategy
 
 Inclusion criteria
+
+Glossary
 
 \newpage
 
@@ -170,55 +165,55 @@ Supplementary Tables 1-4
 
 **Supplementary Table 1.  Gene list information content and contribution.**
 
-| **Study**                     | **Method**      | **Category** | **N genes** | **totMS** (%)  | **ctotMS** (%)    |
-|-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
-| Sarma[@Sarma2022]             | Transcriptomics | RNA-seq      | 4954        | 50.8           | 53.1              |
-| Juss[@Juss2016]               | Transcriptomics | Microarray   | 1318        | 16             | 15.7              |
-| Sarma[@Sarma2022]             | Transcriptomics | scRNA-seq    | 706         | 9.8            | 10.3              |
-| Nguyen[@Nguyen2013]           | Proteomics      | Mass Spec    | 161         | 2.2            | 2.1               |
-| Wang[@Wang2008]               | Transcriptomics | Microarray   | 137         | 1.9            | 1.9               |
-| Bhargava[@Bhargava2014]       | Proteomics      | Mass Spec    | 233         | 3.1            | 1.9               |
-| Kovach[@Kovach2015]           | Transcriptomics | Microarray   | 123         | 1.8            | 1.9               |
-| Bhargava[@Bhargava2017]       | Proteomics      | Mass Spec    | 144         | 1.9            | 1.8               |
-| Morrell[@Morrell2019]         | Transcriptomics | Microarray   | 155         | 1.9            | 1.7               |
-| Christie[@Christie2012]       | GWAS            | Genotyping   | 143         | 1.4            | 1.5               |
-| Liao[@Liao2021]               | GWAS            | Genotyping   | 67          | 0.7            | 0.8               |
-| Sarma[@Sarma2022]             | Proteomics      | Other        | 60          | 0.8            | 0.7               |
-| Jiang[@Jiang2020]             | Transcriptomics | scRNA-seq    | 53          | 0.7            | 0.6               |
-| Batra[@Batra2022]             | Proteomics      | Other        | 39          | 0.6            | 0.6               |
-| Bime[@Bime2018]               | GWAS            | Genotyping   | 51          | 0.5            | 0.5               |
-| Bos[@Bos2019]                 | Transcriptomics | Microarray   | 53          | 0.7            | 0.5               |
-| Chang[@Chang2008]             | Proteomics      | Mass Spec    | 37          | 0.5            | 0.5               |
-| Mirchandani[@Mirchandani2022] | Transcriptomics | Microarray   | 41          | 0.5            | 0.4               |
-| Mirchandani[@Mirchandani2022] | Proteomics      | Mass Spec    | 29          | 0.4            | 0.4               |
-| Liao[@Liao2021]               | Transcriptomics | RNA-seq      | 43          | 0.4            | 0.4               |
-| Dong[@Dong2013]               | Proteomics      | Mass Spec    | 27          | 0.4            | 0.4               |
-| Ren[@Ren2016]                 | Proteomics      | Other        | 17          | 0.3            | 0.3               |
-| Tejera[@Tejera2012]           | GWAS            | Genotyping   | 19          | 0.3            | 0.3               |
-| Howrylak[@Howrylak2009]       | Transcriptomics | Microarray   | 28          | 0.3            | 0.2               |
-| Xu[@Xu2021]                   | GWAS            | WES          | 16          | 0.2            | 0.2               |
-| Chen[@Chen2016]               | Proteomics      | Mass Spec    | 16          | 0.2            | 0.2               |
-| Zhang[@Zhang2022]             | Transcriptomics | RNA-seq      | 20          | 0.2            | 0.2               |
-| Kangelaris[@Kangelaris2015]   | Transcriptomics | Microarray   | 15          | 0.2            | 0.2               |
-| Meyer[@Meyer2013]             | GWAS            | Genotyping   | 10          | 0.1            | 0.1               |
-| Martucci[@Martucci2020]       | Transcriptomics | Microarray   | 13          | 0.1            | 0.1               |
-| Zhu[@Zhu2017]                 | Transcriptomics | Microarray   | 14          | 0.1            | 0.1               |
-| Englert[@Englert2019]         | Transcriptomics | RNA-seq      | 10          | 0.1            | 0.1               |
-| Lu[@Lu2017]                   | Transcriptomics | Microarray   | 12          | < 0.1          | < 0.1             |
-| Scheller[@Scheller2019]       | Transcriptomics | RNA-seq      | 9           | < 0.1          | < 0.1             |
-| Nick[@Nick2016]               | Transcriptomics | Microarray   | 4           | < 0.1          | < 0.1             |
-| Guillen-Guio[@GuillenGuio2020]| GWAS            | Genotyping   | 6           | < 0.1          | < 0.1             |
-| Meyer[@Meyer2011]             | GWAS            | Genotyping   | 4           | < 0.1          | < 0.1             |
-| Dolinay[@Dolinay2012]         | Transcriptomics | Microarray   | 4           | < 0.1          | < 0.1             |
-| Chen[@Chen2013]               | Proteomics      | Mass Spec    | 16          | < 0.1          | < 0.1             |
-| Zhang[@Zhang2021]             | Transcriptomics | RNA-seq      | 5           | < 0.1          | < 0.1             |
-| Shortt[@Shortt2014]           | GWAS            | WES          | 3           | < 0.1          | < 0.1             |
-| Bowler[@Bowler2004]           | Proteomics      | Mass Spec    | 18          | < 0.1          | < 0.1             |
-| Morrell[@Morrell2018]         | Transcriptomics | Microarray   | 1           | < 0.1          | < 0.1             |
+| **Study**                     | **Method**      | **Category** | **N genes** | **totMS** (% sum) | **ctotMS** (% sum) |
+|-------------------------------|-----------------|--------------|-------------|-------------------|--------------------|
+| Sarma[@Sarma2022]             | Transcriptomics | RNA-seq      | 4954        | 50.8              | 53.1              |
+| Juss[@Juss2016]               | Transcriptomics | Microarray   | 1318        | 16                | 15.7              |
+| Sarma[@Sarma2022]             | Transcriptomics | scRNA-seq    | 706         | 9.8               | 10.3              |
+| Nguyen[@Nguyen2013]           | Proteomics      | Mass Spec    | 161         | 2.2               | 2.1               |
+| Wang[@Wang2008]               | Transcriptomics | Microarray   | 137         | 1.9               | 1.9               |
+| Bhargava[@Bhargava2014]       | Proteomics      | Mass Spec    | 233         | 3.1               | 1.9               |
+| Kovach[@Kovach2015]           | Transcriptomics | Microarray   | 123         | 1.8               | 1.9               |
+| Bhargava[@Bhargava2017]       | Proteomics      | Mass Spec    | 144         | 1.9               | 1.8               |
+| Morrell[@Morrell2019]         | Transcriptomics | Microarray   | 155         | 1.9               | 1.7               |
+| Christie[@Christie2012]       | GWAS            | Genotyping   | 143         | 1.4               | 1.5               |
+| Liao[@Liao2021]               | GWAS            | Genotyping   | 67          | 0.7               | 0.8               |
+| Sarma[@Sarma2022]             | Proteomics      | Other        | 60          | 0.8               | 0.7               |
+| Jiang[@Jiang2020]             | Transcriptomics | scRNA-seq    | 53          | 0.7               | 0.6               |
+| Batra[@Batra2022]             | Proteomics      | Other        | 39          | 0.6               | 0.6               |
+| Bime[@Bime2018]               | GWAS            | Genotyping   | 51          | 0.5               | 0.5               |
+| Bos[@Bos2019]                 | Transcriptomics | Microarray   | 53          | 0.7               | 0.5               |
+| Chang[@Chang2008]             | Proteomics      | Mass Spec    | 37          | 0.5               | 0.5               |
+| Mirchandani[@Mirchandani2022] | Transcriptomics | Microarray   | 41          | 0.5               | 0.4               |
+| Mirchandani[@Mirchandani2022] | Proteomics      | Mass Spec    | 29          | 0.4               | 0.4               |
+| Liao[@Liao2021]               | Transcriptomics | RNA-seq      | 43          | 0.4               | 0.4               |
+| Dong[@Dong2013]               | Proteomics      | Mass Spec    | 27          | 0.4               | 0.4               |
+| Ren[@Ren2016]                 | Proteomics      | Other        | 17          | 0.3               | 0.3               |
+| Tejera[@Tejera2012]           | GWAS            | Genotyping   | 19          | 0.3               | 0.3               |
+| Howrylak[@Howrylak2009]       | Transcriptomics | Microarray   | 28          | 0.3               | 0.2               |
+| Xu[@Xu2021]                   | GWAS            | WES          | 16          | 0.2               | 0.2               |
+| Chen[@Chen2016]               | Proteomics      | Mass Spec    | 16          | 0.2               | 0.2               |
+| Zhang[@Zhang2022]             | Transcriptomics | RNA-seq      | 20          | 0.2               | 0.2               |
+| Kangelaris[@Kangelaris2015]   | Transcriptomics | Microarray   | 15          | 0.2               | 0.2               |
+| Meyer[@Meyer2013]             | GWAS            | Genotyping   | 10          | 0.1               | 0.1               |
+| Martucci[@Martucci2020]       | Transcriptomics | Microarray   | 13          | 0.1               | 0.1               |
+| Zhu[@Zhu2017]                 | Transcriptomics | Microarray   | 14          | 0.1               | 0.1               |
+| Englert[@Englert2019]         | Transcriptomics | RNA-seq      | 10          | 0.1               | 0.1               |
+| Lu[@Lu2017]                   | Transcriptomics | Microarray   | 12          | < 0.1             | < 0.1             |
+| Scheller[@Scheller2019]       | Transcriptomics | RNA-seq      | 9           | < 0.1             | < 0.1             |
+| Nick[@Nick2016]               | Transcriptomics | Microarray   | 4           | < 0.1             | < 0.1             |
+| Guillen-Guio[@GuillenGuio2020]| GWAS            | Genotyping   | 6           | < 0.1             | < 0.1             |
+| Meyer[@Meyer2011]             | GWAS            | Genotyping   | 4           | < 0.1             | < 0.1             |
+| Dolinay[@Dolinay2012]         | Transcriptomics | Microarray   | 4           | < 0.1             | < 0.1             |
+| Chen[@Chen2013]               | Proteomics      | Mass Spec    | 16          | < 0.1             | < 0.1             |
+| Zhang[@Zhang2021]             | Transcriptomics | RNA-seq      | 5           | < 0.1             | < 0.1             |
+| Shortt[@Shortt2014]           | GWAS            | WES          | 3           | < 0.1             | < 0.1             |
+| Bowler[@Bowler2004]           | Proteomics      | Mass Spec    | 18          | < 0.1             | < 0.1             |
+| Morrell[@Morrell2018]         | Transcriptomics | Microarray   | 1           | < 0.1             | < 0.1             |
 
 ```{=tex}
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing. totMS and ctotMS are reported as the percentage of the sum of totMS/ctotMS for all lists included in the analysis.
 \end{scriptsize}
 ```
 
@@ -257,40 +252,40 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 
 **Supplementary Table 3. ARDS susceptibility gene list information content and contribution.**
 
-| **Study**                     | **Method**      | **Category** | **N genes** | **totMS** (%)  | **ctotMS** (%)    |
-|-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
-| Juss[@Juss2016]               | Transcriptomics | Microarray   | 1318        | 54.7           | 54.7              |
-| Nguyen[@Nguyen2013]           | Proteomics      | Mass Spec    | 161         | 8.1            | 7.7               |
-| Christie[@Christie2012]       | GWAS            | Genotyping   | 143         | 6              | 6.3               |
-| Kovach[@Kovach2015]           | Transcriptomics | Microarray   | 123         | 5.8            | 6.1               |
-| Wang[@Wang2008]               | Transcriptomics | Microarray   | 137         | 5.8            | 6                 |
-| Jiang[@Jiang2020]             | Transcriptomics | scRNA-seq    | 53          | 2.9            | 3                 |
-| Bime[@Bime2018]               | GWAS            | Genotyping   | 51          | 2.2            | 2.3               |
-| Mirchandani[@Mirchandani2022] | Transcriptomics | Microarray   | 41          | 1.7            | 1.6               |
-| Chang[@Chang2008]             | Proteomics      | Mass Spec    | 37          | 1.9            | 1.5               |
-| Mirchandani[@Mirchandani2022] | Proteomics      | Mass Spec    | 29          | 1.4            | 1.3               |
-| Howrylak[@Howrylak2009]       | Transcriptomics | Microarray   | 28          | 1.2            | 1.3               |
-| Ren[@Ren2016]                 | Proteomics      | Other        | 17          | 1              | 1.1               |
-| Tejera[@Tejera2012]           | GWAS            | Genotyping   | 19          | 0.9            | 1                 |
-| Chen[@Chen2013]               | Proteomics      | Mass Spec    | 16          | 0.9            | 0.9               |
-| Zhang[@Zhang2022]             | Transcriptomics | RNA-seq      | 20          | 0.8            | 0.9               |
-| Zhu[@Zhu2017]                 | Transcriptomics | Microarray   | 14          | 0.6            | 0.6               |
-| Kangelaris[@Kangelaris2015]   | Transcriptomics | Microarray   | 15          | 0.7            | 0.6               |
-| Englert[@Englert2019]         | Transcriptomics | RNA-seq      | 10          | 0.6            | 0.6               |
-| Lu[@Lu2017]                   | Transcriptomics | Microarray   | 12          | 0.5            | 0.5               |
-| Meyer[@Meyer2013]             | GWAS            | Genotyping   | 10          | 0.4            | 0.4               |
-| Bowler[@Bowler2004]           | Proteomics      | Mass Spec    | 18          | 0.9            | 0.4               |
-| Scheller[@Scheller2019]       | Transcriptomics | RNA-seq      | 9           | 0.4            | 0.3               |
-| Guillen-Guio[@GuillenGuio2020]| GWAS            | Genotyping   | 6           | 0.2            | 0.2               |
-| Zhang[@Zhang2021]             | Transcriptomics | RNA-seq      | 5           | 0.2            | 0.2               |
-| Dolinay[@Dolinay2012]         | Transcriptomics | Microarray   | 4           | 0.2            | 0.2               |
-| Shortt[@Shortt2014]           | GWAS            | WES          | 3           | 0.1            | 0.1               |
-| Meyer[@Meyer2011]             | GWAS            | Genotyping   | 4           | < 0.1          | 0.1               |
-| Morrell[@Morrell2018]         | Transcriptomics | Microarray   | 1           | < 0.1          | < 0.1             |
+| **Study**                     | **Method**      | **Category** | **N genes** | **totMS** (% sum) | **ctotMS** (% sum) |
+|-------------------------------|-----------------|--------------|-------------|-------------------|--------------------|
+| Juss[@Juss2016]               | Transcriptomics | Microarray   | 1318        | 54.7              | 54.7               |
+| Nguyen[@Nguyen2013]           | Proteomics      | Mass Spec    | 161         | 8.1               | 7.7                |
+| Christie[@Christie2012]       | GWAS            | Genotyping   | 143         | 6                 | 6.3                |
+| Kovach[@Kovach2015]           | Transcriptomics | Microarray   | 123         | 5.8               | 6.1                |
+| Wang[@Wang2008]               | Transcriptomics | Microarray   | 137         | 5.8               | 6                  |
+| Jiang[@Jiang2020]             | Transcriptomics | scRNA-seq    | 53          | 2.9               | 3                  |
+| Bime[@Bime2018]               | GWAS            | Genotyping   | 51          | 2.2               | 2.3                |
+| Mirchandani[@Mirchandani2022] | Transcriptomics | Microarray   | 41          | 1.7               | 1.6                |
+| Chang[@Chang2008]             | Proteomics      | Mass Spec    | 37          | 1.9               | 1.5                |
+| Mirchandani[@Mirchandani2022] | Proteomics      | Mass Spec    | 29          | 1.4               | 1.3                |
+| Howrylak[@Howrylak2009]       | Transcriptomics | Microarray   | 28          | 1.2               | 1.3                |
+| Ren[@Ren2016]                 | Proteomics      | Other        | 17          | 1                 | 1.1                |
+| Tejera[@Tejera2012]           | GWAS            | Genotyping   | 19          | 0.9               | 1                  |
+| Chen[@Chen2013]               | Proteomics      | Mass Spec    | 16          | 0.9               | 0.9                |
+| Zhang[@Zhang2022]             | Transcriptomics | RNA-seq      | 20          | 0.8               | 0.9                |
+| Zhu[@Zhu2017]                 | Transcriptomics | Microarray   | 14          | 0.6               | 0.6                |
+| Kangelaris[@Kangelaris2015]   | Transcriptomics | Microarray   | 15          | 0.7               | 0.6                |
+| Englert[@Englert2019]         | Transcriptomics | RNA-seq      | 10          | 0.6               | 0.6                |
+| Lu[@Lu2017]                   | Transcriptomics | Microarray   | 12          | 0.5               | 0.5                |
+| Meyer[@Meyer2013]             | GWAS            | Genotyping   | 10          | 0.4               | 0.4                |
+| Bowler[@Bowler2004]           | Proteomics      | Mass Spec    | 18          | 0.9               | 0.4                |
+| Scheller[@Scheller2019]       | Transcriptomics | RNA-seq      | 9           | 0.4               | 0.3                |
+| Guillen-Guio[@GuillenGuio2020]| GWAS            | Genotyping   | 6           | 0.2               | 0.2                |
+| Zhang[@Zhang2021]             | Transcriptomics | RNA-seq      | 5           | 0.2               | 0.2                |
+| Dolinay[@Dolinay2012]         | Transcriptomics | Microarray   | 4           | 0.2               | 0.2                |
+| Shortt[@Shortt2014]           | GWAS            | WES          | 3           | 0.1               | 0.1                |
+| Meyer[@Meyer2011]             | GWAS            | Genotyping   | 4           | < 0.1             | 0.1                |
+| Morrell[@Morrell2018]         | Transcriptomics | Microarray   | 1           | < 0.1             | < 0.1              |
 
 ```{=tex}
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing. totMS and ctotMS are reported as the percentage of the sum of totMS/ctotMS for all lists included in the analysis.
 \end{scriptsize}
 ```
 
@@ -298,20 +293,20 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 
 **Supplementary Table 4. ARDS survival/severity gene list information content and contribution.**
 
-| **Study**                     | **Method**      | **Category** | **N genes** | **totMS** (%)  | **ctotMS** (%)    |
-|-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
-| Bhargava[@Bhargava2017]       | Proteomics      | Mass Spec    | 144         | 30.4           | 30.3              |
-| Morrell[@Morrell2019]         | Transcriptomics | Microarray   | 155         | 29.7           | 29.7              |
-| Liao[@Liao2021]               | GWAS            | Genotyping   | 67          | 12.9           | 13                |
-| Batra[@Batra2022]             | Proteomics      | Other        | 39          | 9.4            | 9.4               |
-| Liao[@Liao2021]               | Transcriptomics | RNA-seq      | 43          | 8.5            | 8.5               |
-| Xu[@Xu2021]                   | GWAS            | WES          | 16          | 3.5            | 3.5               |
-| Chen[@Chen2016]               | Proteomics      | Mass Spec    | 16          | 3.4            | 3.4               |
-| Lu[@Lu2017]                   | Transcriptomics | Microarray   | 12          | 2.2            | 2.2               |
+| **Study**                     | **Method**      | **Category** | **N genes** | **totMS** (% sum) | **ctotMS** (% sum) |
+|-------------------------------|-----------------|--------------|-------------|-------------------|--------------------|
+| Bhargava[@Bhargava2017]       | Proteomics      | Mass Spec    | 144         | 30.4              | 30.3               |
+| Morrell[@Morrell2019]         | Transcriptomics | Microarray   | 155         | 29.7              | 29.7               |
+| Liao[@Liao2021]               | GWAS            | Genotyping   | 67          | 12.9              | 13                 |
+| Batra[@Batra2022]             | Proteomics      | Other        | 39          | 9.4               | 9.4                |
+| Liao[@Liao2021]               | Transcriptomics | RNA-seq      | 43          | 8.5               | 8.5                |
+| Xu[@Xu2021]                   | GWAS            | WES          | 16          | 3.5               | 3.5                |
+| Chen[@Chen2016]               | Proteomics      | Mass Spec    | 16          | 3.4               | 3.4                |
+| Lu[@Lu2017]                   | Transcriptomics | Microarray   | 12          | 2.2               | 2.2                |
 
 ```{=tex}
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing. totMS and ctotMS are reported as the percentage of the sum of totMS/ctotMS for all lists included in the analysis.
 \end{scriptsize}
 ```
 

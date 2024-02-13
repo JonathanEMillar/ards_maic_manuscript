@@ -237,24 +237,25 @@ collated and interpreted.
 To solve this, we performed a systematic review and computational
 integration of existing omics data implicating host response pathways in
 ARDS pathogenesis. We identified 40 unbiased studies reporting
-associations, correlations other links with 7000 named protein-coding
-genes, from 6,856 ARDS patients.
+associations, correlations, and other links with genes and single
+nucleotide polymorphisms (SNPs), from 6,856 ARDS patients.
 
 We used meta-analysis by information content (MAIC) to integrate and
-evaluate these data, ranking over 7,000 genes and weighting cumulative
-evidence for association. Functional enrichment of strongly-supported
-genes revealed cholesterol metabolism, endothelial dysfunction, innate
-immune activation and neutrophil degranulation as key processes. We
-identify 51 hub genes, most of which are potential therapeutic targets.
-To explore biological heterogeneity, we conducted a separate analysis of
-ARDS severity/outcomes, revealing distinct gene associations and tissue
-specificity. Our large-scale integration of existing omics data in ARDS
-enhances understanding of the genomic landscape by synthesising decades
-of data from diverse sources. The findings will help researchers refine
-hypotheses, select candidate genes for functional validation, and
-identify potential therapeutic targets and repurposing opportunities.
-Our study and the publicly available computational framework represent
-an open, evolving platform for interpretation of ARDS genomic data.
+evaluate these data, ranking over 7,000 genes and SNPs and weighting
+cumulative evidence for association. Functional enrichment of
+strongly-supported genes revealed cholesterol metabolism, endothelial
+dysfunction, innate immune activation and neutrophil degranulation as
+key processes. We identify 51 hub genes, most of which are potential
+therapeutic targets. To explore biological heterogeneity, we conducted a
+separate analysis of ARDS severity/outcomes, revealing distinct gene
+associations and tissue specificity. Our large-scale integration of
+existing omics data in ARDS enhances understanding of the genomic
+landscape by synthesising decades of data from diverse sources. The
+findings will help researchers refine hypotheses, select candidate genes
+for functional validation, and identify potential therapeutic targets
+and repurposing opportunities. Our study and the publicly available
+computational framework represent an open, evolving platform for
+interpretation of ARDS genomic data.
 
 \newpage
 
@@ -293,7 +294,7 @@ combining gene lists from diverse sources\textsuperscript{10}. MAIC is
 agnostic to the quality or methodology of the sources and combines
 ranked or un-ranked gene sets by calculating weights for each list and
 gene, and iteratively updating them to converge on a ranked meta-list.
-We have successfully applied MAIC to host-genomics studies of Influenza
+We have successfully applied MAIC to host-genomics studies of influenza
 A\textsuperscript{10} and coronavirus infection\textsuperscript{8,11},
 and shown that it out-performs existing algorithms when combining ranked
 and un-ranked lists obtained from heterogeneous
@@ -343,7 +344,7 @@ We analysed all 43 available gene lists using MAIC. Lists were
 categorised by method (i.e., GWAS, transcriptomics, and proteomics) and
 technique (e.g., RNA-seq, mass spectrometry; see Table 1). In total, we
 ranked 7,085 unique genes (or SNPs), with a median of 27 genes per gene
-list (range 1-4,954). The top 100 ranked genes are summarized in
+list (range 1-4,954). The top 100 ranked genes are summarised in
 Figure~\ref{fig-fig1}. Most genes were found in a single category
 (n=5,866, 82.8\%); only 157 (2.2\%) were identified in ≥ 3 categories,
 with the maximum number of categories supporting a gene being 5
@@ -383,10 +384,10 @@ To assess the influence of individual lists, we calculated the total
 MAIC score (totMS), reflecting the sum of gene scores across each list
 (Fig. S2), and the contributing total MAIC score (ctotMS), measuring the
 sum of each lists gene scores which contribute to a gene's overall MAIC
-score. To obtain relative values, we divided the tot/MS/ctotMS for each
+score. To obtain relative values, we divided the totMS/ctotMS for each
 list by the total across all included lists. This demonstrated that only
 10 lists (from 9 studies) contributed \textgreater1\% by either metric
-(Tab. S2). Notably, the RNA-seq list from Sarma et
+(Tab. S1). Notably, the RNA-seq list from Sarma et
 al.\textsuperscript{44} accounts for \textgreater50\%, a function of its
 length. To account for this, we normalised totMS/ctotMS by the number of
 genes per list; along with the proportion of replicated genes in each
@@ -403,7 +404,7 @@ and the ARDS Database of Genes\textsuperscript{55} (Fig. S3a and Fig.
 S3c). A search using BioLitMine, identified 271 ARDS-associated genes,
 of which 142 (52.4\%) were present in our analysis. Almost half of the
 overlapping genes (n = 63, 44.4\%) ranked within our prioritised set
-(Tab. S3).
+(Tab. S2).
 
 \newpage
 
@@ -576,8 +577,8 @@ genome-wide support.
 Finally, we compared the overlap between genes ranked by ARDS MAIC and
 those identified in a previous MAIC of the host response to
 coronaviruses\textsuperscript{11} (Fig. S3d). In total, 2,606 genes
-(36.8\%) were shared, of which 143 were prioritised by both
-analyses(Fig. S3e).
+(36.8\%) were shared, of which 143 were prioritised by both analyses
+(Fig. S3e).
 
 \paragraph{Tissue and cell-specific
 expression}\label{tissue-and-cell-specific-expression}
@@ -594,7 +595,7 @@ the lung (HPA scRNA-seq data, ≥ 5 normalised transcripts per million
 For prioritised genes found in lists obtained from airways sampling,
 there was a wide variety of cell-specific expression (Fig. S4d).
 However, in the smaller set of prioritised genes identified solely in
-lists employing blood samples, clusters of expression specific to
+lists employing blood sampling, clusters of expression specific to
 neutrophils, T cells, and monocytes were evident (Fig. S4e). Cell-type
 specific gene enrichment analysis suggests innate immune as well as
 epithelial and endothelial cell types are enriched among genes
@@ -628,13 +629,12 @@ programs associated with the proteaosome, cholesterol metabolism,
 interferon signalling, IL-6 signalling, and the complement cascade (Fig.
 S6). We then sought to use the PPI network to identify hub genes using
 an ensemble of topological methods. This analysis suggests 51 genes as
-being central to the wider network (Figure~\ref{fig-fig2}). Clustering
-these genes alone identified 5 clusters, which may be associated with
-innate immune cytokine signalling, interferon signalling, MHC class II
-antigen presentation, PI3K-Akt signalling, and eukaryotic translation
-elongation (Figure~\ref{fig-fig2}). The majority of hub genes (n=31,
-61\%) are currently druggable and include targets such as \emph{IL-6},
-\emph{IL-17A}, \emph{IL-18}, and \emph{MAP3K14}.
+being central to the wider network, which fall into clear clusters
+implicating plausible biological pathways, including innate immune
+cytokine signalling, and interferon response (Figure~\ref{fig-fig2}).
+The majority of hub genes (n=31, 61\%) are currently druggable and
+include targets such as \emph{IL-6}, \emph{IL-17A}, \emph{IL-18}, and
+\emph{MAP3K14}.
 
 \begin{figure}
 
@@ -651,58 +651,64 @@ genes}. (a) Significantly enriched Reactome terms (\emph{P} \textless{}
 methods. MNC - Maximum Neighbourhood Component, MCC - Maximal Clique
 Centrality, DMNC - Density of MNC, EPC - Edge Percolated Component. (c)
 Protein-protein interaction (PPI) network of hub genes, clustered using
-the Markov Chain Algorithm. (d). Heatmap of common hub genes displaying
-tissue type(s), MAIC score, highest category score, supporting lists,
-and presence in the DGIdb druggable genome (indicated in red).}
+MCL (Markov clustering). Clusters 1 and 2 contain canonical genes
+associated with innate immune cytokine signalling and interferon
+signalling respectively. Cluster 3 contains genes in the PI3K/AKT/mTOR
+pathway, which is an imporatant regulator of the cell cycle, and Cluster
+4 contains ribosomal genes which are typically over-expressed during a
+stress response when protein synthesis increases. Cluster 5 contains
+genes required for antigen presentation through the MHC Class II
+pathway. (d). Heatmap of common hub genes displaying tissue type(s),
+MAIC score, highest category score, supporting lists, and presence in
+the DGIdb druggable genome (indicated in red).}
 
 \end{figure}%
 
 \paragraph{Sub-groups}\label{sub-groups}
 
-A potential limitation of our approach is the disparity in design of
-included studies. To address this, we undertook MAIC on subsets of gene
-lists, stratified by study focus. There were sufficient lists to make
-this tractable for studies focused on ARDS versus non-ARDS controls
-(n=28) and studies of ARDS survival and severity (n=7)
-(Figure~\ref{fig-fig3}).
+To address the disparate range of study designs included in the overall
+analysis, we applied MAIC to key subsets of gene lists, with two
+different study desings: studies of ARDS versus non-ARDS controls
+(i.e.~presence/absence of ARDS) (n=28) and studies of ARDS survival and
+severity (n=7) (Figure~\ref{fig-fig3}).
 
 For ARDS vs.~non-ARDS controls, there were 15 transcriptomic (54\%), 7
-GWAS (25\%), and 6 proteomic lists (21\%). Together, these studies
+GWAS (25\%), and 6 proteomic studies (21\%). Together, these studies
 included 5,713 patients with ARDS. MAIC ranked 2,096 genes
-(Figure~\ref{fig-fig3}). The majority of these (n=1,222, 58\%) were
+(Figure~\ref{fig-fig3}). The majority of these (n=1,222; 58\%) were
 unique to to this sub-group (Figure~\ref{fig-fig3}). Most were
 identified in blood, with a small fraction found solely in airways
-samples. The inflection point method prioritised the top ranked 130
+samples. The inflection point method prioritised the top-ranked 130
 genes (Fig. S7a). In comparison to the BioLitMine search and the ARDS
-Database of Genes, 71/271 and 117/239 genes were found among this set,
-respectively (Fig. S7b). A microarray-based transcriptomic list from
-Juss \emph{et. al.}\textsuperscript{30} accounted for more than half
-(54.7\%) of the relative ICtb, with an additional 12 lists having a
-relative ICtb ≥ 1\% (Tab. S4). ORA using Reactome, KEGG, and
-WikiPathways identified 25 significantly enriched pathways, including
-multiple terms related to cholesterol metabolism and glycolysis
-(Figure~\ref{fig-fig4}). A consensus of topological models identified 7
-hub genes within a PPI network of prioritised genes. These genes cluster
-in a single group, characterised as being related to cholesterol
-metabolism (Figure~\ref{fig-fig3}).
+Database of Genes, 71/271 and 117/239 genes were found among this
+sub-group, respectively (Fig. S7b). A single study, a microarray-based
+transcriptomic list from Juss \emph{et. al.}\textsuperscript{30},
+contributed the largest total MAIC score in this analysis (Tab. S3). ORA
+using Reactome, KEGG, and WikiPathways identified 25 significantly
+enriched pathways, including multiple terms related to cholesterol
+metabolism and glycolysis (Figure~\ref{fig-fig4}). A consensus of
+topological models identified 7 hub genes within a PPI network of
+prioritised genes. These genes cluster in a single grouping related to
+cholesterol metabolism (Figure~\ref{fig-fig3}).
 
-For survival, there were 8 gene lists, consisting of 3 transcriptomic
-lists (37.5\%), 3 proteomic lists (37.5\%), and 2 GWAS (25\%). Together,
-these studies included 644 patients with ARDS. MAIC ranked 463 genes
-(Figure~\ref{fig-fig3}). Approximately half of these (n=238, 51\%) were
-unique to survival-based lists. In contrast to the ARDS vs.~non-ARDS
-analysis, most survival genes were found in airways samples.
-Thirty-three genes were prioritised (Fig. S7d). In total, 32/271 of the
-BioLitMine ARDS-associated genes and 23/239 of the ARDS Database of
-Genes genes were found among the ARDS MAIC survival set (Fig. S7e). The
-proteomic and transcriptomic lists from Bhargava
-\emph{et.al}\textsuperscript{15} and Morrell \emph{et.
+In the survival/severity analysis, there were 8 gene lists, consisting
+of 3 transcriptomic lists (37.5\%), 3 proteomic lists (37.5\%), and 2
+very small GWAS (25\%). Together, these studies included 644 patients
+with ARDS. MAIC ranked 463 genes (Figure~\ref{fig-fig3}). Approximately
+half of these (n=238, 51\%) were unique to survival-based lists. In
+contrast to the ARDS vs.~non-ARDS analysis, most survival genes were
+found in airways samples. Thirty-three genes were prioritised (Fig.
+S7d). In total, 32/271 of the BioLitMine ARDS-associated genes and
+23/239 of the ARDS Database of Genes genes were found among the ARDS
+MAIC survival set (Fig. S7e). The proteomic and transcriptomic lists
+from Bhargava \emph{et.al}\textsuperscript{15} and Morrell \emph{et.
 al}\textsuperscript{40} each contributed approximately 30\% of the
-relative ICtb (Tab. S5). IL-10 and IL-18 signalling pathways were both
-significantly enriched in ORA (Figure~\ref{fig-fig4}). Graph-based
-clustering of the prioritised set of survival genes identified a single
-large cluster of immune-related genes including, \emph{IL-10},
-\emph{CXCL8}, \emph{TNFRSF1A}, and \emph{IL2RA} (Figure~\ref{fig-fig4}).
+summed ctotMS of all included gene lists (Tab. S4). IL-10 and IL-18
+signalling pathways were both significantly enriched in ORA
+(Figure~\ref{fig-fig4}). Graph-based (MCL) clustering of the prioritised
+set of survival genes identified a single large cluster of
+immune-related genes including, \emph{IL-10}, \emph{CXCL8},
+\emph{TNFRSF1A}, and \emph{IL2RA} (Figure~\ref{fig-fig4}).
 
 \begin{figure}
 
@@ -717,7 +723,7 @@ ARDS MAIC sub-group analyses. (b) Heatmap of top 50 ranked genes in the
 ARDS vs.~non-ARDS controls set showing MAIC score, highest score per
 category, and number of supporting lists. (c) Heatmap of 16 ranked genes
 in the survival set with multi-list support showing MAIC score, highest
-score per category, and number of supporting lists. (d) Eular diagram of
+score per category, and number of supporting lists. (d) Euler diagram of
 gene overlap between the ARDS vs.~non-ARDS controls and survival sets
 and the remainder of genes. (e) Bar plots of the tissue type in which
 genes are identified. (f) Slope plot comparing the ranks of ARDS
@@ -726,8 +732,7 @@ the full iteration of ARDS MAIC. (g) Euler diagram of the overlap of hub
 genes identified by five methods. MNC - Maximum Neighbourhood Component,
 MCC - Maximal Clique Centrality, DMNC - Density of MNC, EPC - Edge
 Percolated Component and a protein-protein interaction (PPI) network of
-hub genes, clustered using the Markov Chain Algorithm - for ARDS
-vs.~non-ARDS controls.}
+hub genes, clustered using the MCL - for ARDS vs.~non-ARDS controls.}
 
 \end{figure}%
 
@@ -758,118 +763,127 @@ graph-based clusters with ≥ 5 members.}
 
 \subsection{Discussion}\label{discussion}
 
-Our systematic integration of more than 20 years of data is the first
-large-scale meta-analysis of the genomic landscape of ARDS. This
-implicates over 7,000 genes and prioritises 1,306. The wide inclusion
-criteria capture a diverse range of study designs and methods; the
-subsequent application of MAIC establishes the sum of this knowledge,
-downgrading noisy, irrelevant, or low-quality information. These results
-have three main applications. First, they can be used to better
+Our large-scale meta-analysis of the genomic landscape of ARDS
+prioritises 1,306 genes. Using wide inclusion criteria, we capture a
+diverse range of study designs and methods; the subsequent application
+of MAIC downgrades noisy, irrelevant, or low-quality information. These
+results have three main applications. First, they can be used to better
 understand the pathobiology of ARDS, providing a resource to prioritise
 future \emph{in-vitro} and \emph{in-vivo} studies and permitting
 comparisons between important sub-groups. Second, they prioritise
-therapeutic targets, serving as a source against which novel and
+therapeutic targets, serving as a resource against which novel and
 repurposed treatments can be screened. Third, they serve as a base for
-quantifying the novelty or additive nature of future omics studies in
-ARDS.
+quantifying the novelty or additive nature of future ARDS studies using
+high-throughput technologies.
 
-Our review included 40 studies with genome-wide hypotheses. These
-studies varied in their aims and methods, however, some key themes are
-of note. Most obviously, the rate at which this form of study is being
-published is increasing; half of all studies in the last 5 years and a
-quarter since 2020. Similarly, there were few studies which employed
-next-generation sequencing (NGS) techniques or equivalent, and only two
-single-cell RNA-seq studies. A partial explanation may be the emergence
-of COVID-19, which is likely to have consumed the attention of many
-research teams active in this field. It is not unreasonable to conclude
-that an increasing number of non-COVID ARDS single-cell and NGS studies
-will emerge in the coming years. This reinforces the requirement for
-methods capable of meta-analysing multi-omic data\textsuperscript{57}.
-Less obviously, a minority of studies have sampled the lung in ARDS,
-with only four examining the bulk transcriptome in the distal airspace.
+Our review included 40 studies taking a genome/proteome-wide approach
+with a variety of aims and methods. The rate at which this form of study
+is being published is increasing; half of all studies in the last 5
+years and a quarter since 2020. Similarly, there were few studies which
+employed next-generation sequencing (NGS) techniques or equivalent, and
+only two single-cell RNA-seq studies. A partial explanation may be the
+emergence of COVID-19, which is likely to have consumed the attention of
+many research teams active in this field. We anticipate that an
+increasing number of non-COVID ARDS single-cell and NGS studies will
+emerge in the coming years. This reinforces the requirement for methods
+capable of meta-analysing multi-omic data\textsuperscript{57}. Less
+obviously. A minority of studies have sampled the lung in ARDS, with
+only four examining the bulk transcriptome in the distal airspace.
 Reliance on information derived from blood samples may present a skewed
-picture of the pathobiology of ARDS and represents a missed opportunity
-to identify novel targets in the lung\textsuperscript{58}.
+picture of the pathobiology of ARDS and may be a missed opportunity to
+identify novel targets in the lung\textsuperscript{58}.
 
 A key advantage of the MAIC approach is its ability to integrate diverse
-data sources. Traditional methods of gene list meta-analysis rely on
-simple vote counting or robust rank aggregation\textsuperscript{59}.
-Instead, MAIC applies a data-derived weighting to each gene list, allows
-the investigator to define granular categorisation (preventing any one
+data sources and deprioritise irrelevant information or noise.
+Traditional methods of gene list meta-analysis rely on simple vote
+counting or robust rank aggregation\textsuperscript{59}. Instead, MAIC
+applies a data-derived weighting to each gene list, allows the
+investigator to define granular categorisation (preventing any one
 particular method from overwhelming the analysis), and permits the
-inclusion of both ranked and unranked lists. We have previously used
-MAIC to identify anti-viral genes in response to Influenza A infection,
-showing that it outperforms other available methods\textsuperscript{10}.
-We have since validated the superiority of MAIC in similar circumstances
-in a comprehensive simulation\textsuperscript{12}.
+inclusion of both ranked and unranked lists. For data structures common
+in biological research (high noise, heterogeneity between studies, large
+input lists), MAIC outperformed other methods in a comprehensive
+simulation\textsuperscript{12}. We have previously used MAIC to identify
+anti-viral genes in response to influenza A
+infection\textsuperscript{10} and Covid-19\textsuperscript{11}.
 
-Our prioritisation of genes simultaneously validates existing concepts
-of ARDS pathobiology and provides novel insights. The functional
-prominence of innate immunity and cytokine signalling - in particular
-neutrophil-related activity - is unsurprising\textsuperscript{60}. As is
-the high ranking of genes such as \emph{CXCL8}\textsuperscript{61},
+Our results reinforce existing associations and reveal some new
+insights. The functional prominence of innate immunity and cytokine
+signalling - in particular neutrophil-related activity - is well
+described in the ARDS literature\textsuperscript{60}, as is the high
+ranking of genes such as \emph{CXCL8}\textsuperscript{61},
 \emph{IL-18}\textsuperscript{62}, \emph{MMP9}\textsuperscript{63}, and
-\emph{MUC1}\textsuperscript{64}. However, other findings are intriguing.
-A single gene example is histidine triad nucleotide binding protein 1
-(\emph{HINT1}), ranked 10\textsuperscript{th} and one of only 5 genes to
-have support from GWAS, transcriptomics, and proteomics methods. To our
-knowledge, no plausible role for \emph{HINT1} has previously been
-suggested in ARDS\textsuperscript{65}. However, \emph{HINT1} has been
-implicated in T-cell response\textsuperscript{66},
-immunoregulation\textsuperscript{67}, and apoptosis\textsuperscript{65}.
-Another notable finding is the significant enrichment of cholesterol
-uptake, efflux, and esterification pathways among prioritised
-genes\textsuperscript{68,69}. Stratification by sub-group offered
-further insights. The observation of a tight cluster of genes important
-in cholesterol metabolism at the hub of those prioritised in ARDS
-vs.~non-ARDS controls is of therapeutic
-relevance\textsuperscript{70,71}. However, other programs were observed
-in the setting of ARDS vs.~non-ARDS controls including, type I
-interferon signalling\textsuperscript{72}, MHC class
-II\textsuperscript{73}, cell-cell adhesion\textsuperscript{74}, and
-natural killer cell cytotoxicity\textsuperscript{75}. In contrast, genes
-prioritised for outcome are functionally more homogeneous and related to
-cytokine signalling, in particular IL-10 and IL-18 signalling,
-indicating that shared pathways dictate mortality/severity once ARDS is
-established.
+\emph{MUC1}\textsuperscript{64}. However, we also identify several genes
+that are consistently highly ranked in multiple studies, but have not
+been extensively discussed in the literature. Histidine triad nucleotide
+binding protein 1 (\emph{HINT1}), ranked 10\textsuperscript{th} in our
+MAIC analysis, is one of only 5 genes to have support from GWAS,
+transcriptomics, and proteomics methods. To our knowledge, no role for
+\emph{HINT1} has previously been suggested in ARDS\textsuperscript{65}.
+However, \emph{HINT1} has been implicated in T-cell
+response\textsuperscript{66}, immunoregulation\textsuperscript{67}, and
+apoptosis\textsuperscript{65}. There is significant enrichment of
+cholesterol uptake, efflux, and esterification pathways among
+prioritised genes\textsuperscript{68,69}. Stratification by sub-group
+revealed a tight cluster of genes important in cholesterol metabolism at
+the hub of those prioritised in ARDS vs.~non-ARDS controls. This is of
+considerable therapeutic relevance given the potential role of drugs
+targeting this pathway in ARDS therapy\textsuperscript{70,71}.
 
-Our approach has limitations. We purposefully sought studies with
-genome-wide hypotheses, excluding single-gene or candidate genetics
-studies. In the case of a gene with extensive evidence from the latter,
-our methodology may underestimate its association with ARDS. However,
-these study designs are subject to other limitations, such as
-publication and investigator biases\textsuperscript{76}. In our
-iteration of MAIC, we did not account for direction of expression or
-effect. For a given gene, if the direction of expression differs between
-studies, MAIC may overestimate the strength of evidence associated with
-that gene. The inability to account for directionality also limits the
-scope of functional enrichment analyses which can be performed.
-Similarly, the use of an unsupervised prioritisation threshold may
-influence the outcomes of downstream analyses, however principled the
-approach. Finally, the general paucity of data, and in particular the
-limited number of single-cell transcriptomics (or proteomics) studies,
-limits the depth of inference that can be made. It is likely that many
-pathological perturbations occur with cell-specificity, which may not be
-apparent in bulk analyses of heterogeneous tissues\textsuperscript{77}.
-In future. the addition of data from these modalities may reveal
-precision targets.
+Multiple distinct pathways were identified in the setting of ARDS
+vs.~non-ARDS controls, including type I interferon
+signalling\textsuperscript{72}, MHC class II antigen
+presentation\textsuperscript{73}, cell-cell
+adhesion\textsuperscript{74}, and natural killer cell
+cytotoxicity\textsuperscript{75}. In contrast, genes prioritised in our
+severity/outcome analysis are functionally more homogeneous and related
+to cytokine signalling, in particular IL-10 and IL-18 signalling. Our
+approach cannot determine whether this indicates a real difference
+between pathways active in ARDS (from the ARDS vs.~non-ARDS analysis)
+and pathways associated with severity/survival, or an imbalance of study
+design or a of lack statistical power to detect some pathways in the
+severity/survival studies that have been conducted. We provide an open
+platform and associated tools to enable deeper mining of the output,
+allowing others to re-analyse the data based on alternative sub-group
+divisions or to integrate unseen information
+(\url{https://github.com/baillielab/ARDSMAICr}).In future, the addition
+of data from new technologies, and in greater scale and precision from
+existing technologies, is expected to substantially improve this
+analysis. For this reason, we consider this report to be the beginning
+of an ongoing, community-led multi-omic data integration.
 
-Crucially, we provide an open platform and associated tools to enable
-deeper mining of the output. This allows others to re-analyse the data
-based on alternative sub-group divisions or to integrate unseen
-information. Ongoing multi-omic data integration with this initial study
-will further enhance the resolution of the data and increase our
-confidence in the results.
+Our approach has limitations. The majority of the original studies do
+not have designs that support causal inference, so we make no attempt to
+determine causality. Different methodologies, such as large-scale
+GWAS/meta-analysis and genome-wide summary Mendelian randomisation, may
+support causal inference in future. At present the available GWAS data
+is underpowered for this purpose. We purposefully excluded single-gene
+or candidate genetics studies. In the case of a gene with extensive
+evidence from the latter, our methodology may underestimate its
+association with ARDS. However, these study designs are subject to other
+limitations, such as publication and investigator biases and spurious
+associations arising from underpowered studies\textsuperscript{76}. The
+limitations of the available data prevented us from accounting for
+direction of expression or effect. For a given gene, if the direction of
+expression differs between studies, we may therefore overestimate the
+strength of evidence associated with that gene. This also limits the
+scope of functional enrichment analyses which can be performed. Finally,
+the paucity of available data, and in particular the limited number of
+studies reporting data from ARDS subtypes or single-cell transcriptomics
+(or proteomics) studies, is an unavoidable limitation. It is likely that
+many pathological perturbations are highly cell-type and -state
+specific, and specific to distinct underlying disease process, which may
+not be apparent in bulk analyses of heterogeneous tissues identified
+using syndromic definitions\textsuperscript{77}.
 
-In summary, by systematically integrating decades of ARDS genomics, this
-study improves the scope for gene prioritisation and enhances molecular
-pathophysiological clarity. Our results strongly implicate interferon
-signalling and cholesterol metabolism dysregulation, providing a
-specific therapeutic targets. Enrichment patterns and sub-group
-differences also give clues to genomic drivers of susceptibility,
-outcomes, and mortality. This substantially improves our
-conceptualisation of the genomic landscape of ARDS, setting the stage
-for functional validation.
+Our study provides a first step in systematically integrating decades of
+work in ARDS. Our results implicate potential therapeutic targets
+including interferon signalling and cholesterol metabolism
+dysregulation. Enrichment patterns and sub-group differences also give
+clues to genomic drivers of susceptibility, outcomes, and mortality. We
+show that combining existing data reveals new insights that were not
+observed in the original studies, and provide a framework for a living
+summary of the genomic landscape of ARDS.
 
 \newpage
 
@@ -1029,18 +1043,19 @@ web-interface\textsuperscript{97}. Protein-protein interaction
 enrichment was performed using STRING v11\textsuperscript{98}. We
 included all possible interaction sources but specified a minimum
 interaction score of 0.7. We used the the whole annotated genome as the
-statistical background. Markov Clustering Analysis (MCL) was applied to
-the resulting network with an inflation parameter of 3. Clusters were
-annotated by hand having considered enrichment against KEGG, Reactome,
-and WikiPathways. To identify hub genes within the PPI network, we used
-cytoHubba\textsuperscript{99} and Cytoscape\textsuperscript{100}. The
-highest ranked genes by Maximum Neighbourhood Component (MNC), Maximal
-Clique Centrality (MCC), Density of MNC (DMNC), Edge Percolated
-Component (EPC), and node degree were retrieved. The intersecting genes
-of these methods were deemed hub genes. Hub genes were searched for in
-the Drug Gene Interaction Database\textsuperscript{101} to identify if
-they were present in the druggable genome. The Drug Gene Interaction
-Database (DGIdb) was queried for each ranked gene\textsuperscript{102}.
+statistical background. The MCL (Markov Clustering) algorithm{[}PMID:
+22144159{]} was applied to the resulting network with an inflation
+parameter of 3. Clusters were annotated by hand having considered
+enrichment against KEGG, Reactome, and WikiPathways. To identify hub
+genes within the PPI network, we used cytoHubba\textsuperscript{99} and
+Cytoscape\textsuperscript{100}. The highest ranked genes by Maximum
+Neighbourhood Component (MNC), Maximal Clique Centrality (MCC), Density
+of MNC (DMNC), Edge Percolated Component (EPC), and node degree were
+retrieved. The intersecting genes of these methods were deemed hub
+genes. Hub genes were searched for in the Drug Gene Interaction
+Database\textsuperscript{101} to identify if they were present in the
+druggable genome. The Drug Gene Interaction Database (DGIdb) was queried
+for each ranked gene\textsuperscript{102}.
 
 \paragraph{Software and code
 availability}\label{software-and-code-availability}

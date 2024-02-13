@@ -137,9 +137,9 @@
   \newcommand\listtablename{List of Tables}
 \fi
 \ifdefined\figurename
-  \renewcommand*\figurename{Figure}
+  \renewcommand*\figurename{Supplementary-Figure}
 \else
-  \newcommand\figurename{Figure}
+  \newcommand\figurename{Supplementary-Figure}
 \fi
 \ifdefined\tablename
   \renewcommand*\tablename{Table}
@@ -198,6 +198,8 @@ response.}
 Search strategy
 
 Inclusion criteria
+
+Glossary
 
 \newpage
 
@@ -393,13 +395,13 @@ all gene scores contributed to MAIC.}
 }
 
 \caption{\textbf{Overlap between ARDS MAIC and ARDS-associated genes and
-ARDS MAIC and coronavirus MAIC}. (a) Eular diagram of gene overlap
+ARDS MAIC and coronavirus MAIC}. (a) Euler diagram of gene overlap
 between ARDS MAIC and a BioLitMine search using the ARDS MeSH term. (b)
 Schematic overview of a co-expression search for genes identified in the
 BioLitMine search but not present in ARDS MAIC and a stacked bar plot of
 the proportion of the 100 most co-expressed genes of this group and ARDS
-MAIC. (c) Eular diagram of gene overlap between ARDS MAIC and the ARDS
-Database of Genes. (d) Eular diagram of gene overlap between ARDS MAIC
+MAIC. (c) Euler diagram of gene overlap between ARDS MAIC and the ARDS
+Database of Genes. (d) Euler diagram of gene overlap between ARDS MAIC
 and a MAIC of COVID-19 host-response studies. (e) Heatmap of the 50 top
 ranked ARDS MAIC genes also prioritised by the coronavirus MAIC,
 displaying the ARDS MAIC score for each gene, highest gene score in each
@@ -465,14 +467,14 @@ WikiPathways, and GO Biological Process terms.}
 for the ARDS MAIC ARDS vs.~non-ARDS controls sub-group using the Unit
 Invariant Knee method. Intersection of lines identifies elbow point of
 best-fit curve. 130 genes in upper left quadrant were prioritied. (b)
-Eular diagrams of gene overlap between the ARDS vs.~non-ARDS controls
+Euler diagrams of gene overlap between the ARDS vs.~non-ARDS controls
 sub-group and a BioLitMine search using the ARDS MeSH term and the ARDS
 Database of Genes. (c) Shared information between ARDS vs.~non-ARDS
 controls gene lists. Links indicate shared summed common gene scores
 between studies. (d) Gene prioritisation for the ARDS MAIC survival
 sub-group using the Unit Invariant Knee method. Intersection of lines
 identifies elbow point of best-fit curve. 33 genes in upper left
-quadrant were prioritied. (e) Eular diagrams of gene ovelap between the
+quadrant were prioritied. (e) Euler diagrams of gene ovelap between the
 survival sub-group and a BioLitMine search using the ARDS MeSH term and
 the ARDS Database of Genes. (f) Shared information between survival gene
 lists. Links indicate shared summed common gene scores between studies.}
@@ -485,12 +487,12 @@ lists. Links indicate shared summed common gene scores between studies.}
 contribution.}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2818}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1545}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1273}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1182}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1455}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1727}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2719}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1491}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1140}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1754}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Study}
@@ -501,9 +503,9 @@ contribution.}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{N genes}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{totMS} (\%)
+\textbf{totMS} (\% sum)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{ctotMS} (\%)
+\textbf{ctotMS} (\% sum)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -584,7 +586,7 @@ Morrell\textsuperscript{39} & Transcriptomics & Microarray & 1 &
 \end{longtable}
 
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing. totMS and ctotMS are reported as the percentage of the sum of totMS/ctotMS for all lists included in the analysis.
 \end{scriptsize}
 
 \newpage
@@ -648,12 +650,12 @@ MMP8 & 2 & 24651234, 15187163 & 1223 \\
 content and contribution.}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2818}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1545}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1273}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1182}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1455}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1727}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2719}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1491}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1140}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1754}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Study}
@@ -664,9 +666,9 @@ content and contribution.}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{N genes}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{totMS} (\%)
+\textbf{totMS} (\% sum)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{ctotMS} (\%)
+\textbf{ctotMS} (\% sum)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -719,7 +721,7 @@ Morrell\textsuperscript{39} & Transcriptomics & Microarray & 1 &
 \end{longtable}
 
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing. totMS and ctotMS are reported as the percentage of the sum of totMS/ctotMS for all lists included in the analysis.
 \end{scriptsize}
 
 \newpage
@@ -728,12 +730,12 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 information content and contribution.}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2818}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1545}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1273}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1182}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1455}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1727}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2719}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1491}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1140}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1754}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Study}
@@ -744,9 +746,9 @@ information content and contribution.}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{N genes}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{totMS} (\%)
+\textbf{totMS} (\% sum)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{ctotMS} (\%)
+\textbf{ctotMS} (\% sum)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -766,7 +768,7 @@ Lu\textsuperscript{29} & Transcriptomics & Microarray & 12 & 2.2 &
 \end{longtable}
 
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing. totMS and ctotMS are reported as the percentage of the sum of totMS/ctotMS for all lists included in the analysis.
 \end{scriptsize}
 
 \newpage
