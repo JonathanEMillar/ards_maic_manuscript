@@ -80,38 +80,44 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
 \setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
   % turn on hanging indent if param 1 is 1
   \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
   \fi
   % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
 \usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{lscape}
 \newcommand{\blandscape}{\begin{landscape}}
 \newcommand{\elandscape}{\end{landscape}}
 \pagenumbering{roman}
-\makeatletter
-\makeatother
-\makeatletter
-\makeatother
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -148,23 +154,16 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -184,7 +183,6 @@ response.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \setstretch{1.5}
 \begin{center}
@@ -195,8 +193,7 @@ response.}
 
 \newpage
 
-\hypertarget{supplementary-methods}{%
-\subsection{Supplementary Methods}\label{supplementary-methods}}
+\subsection{Supplementary Methods}\label{supplementary-methods}
 
 Search strategy
 
@@ -204,8 +201,7 @@ Inclusion criteria
 
 \newpage
 
-\hypertarget{search-strategy}{%
-\subsubsection{Search Strategy}\label{search-strategy}}
+\subsubsection{Search Strategy}\label{search-strategy}
 
 We used the following strategy to search MEDLINE and a direct
 translation to search Embase.
@@ -267,8 +263,7 @@ toddler? or underage? or under-age? or youth*).ti,kw
 
 \newpage
 
-\hypertarget{inclusion-criteria}{%
-\subsubsection{Inclusion criteria}\label{inclusion-criteria}}
+\subsubsection{Inclusion criteria}\label{inclusion-criteria}
 
 Inclusion:
 
@@ -340,14 +335,32 @@ Exclusion:
 
 \newpage
 
-\hypertarget{supplementary-results}{%
-\subsection{Supplementary Results}\label{supplementary-results}}
+\subsubsection{Glossary}\label{glossary}
+
+\textbf{MAIC score} - the score assigned by MAIC to a given gene
+considering all lists.
+
+\textbf{Gene score} - the score assigned by MAIC to a given gene in a
+given list.
+
+\textbf{Total MAIC score} - the sum of all scores assigned by MAIC to a
+genes in a given list.
+
+\textbf{Contributing total MAIC score} - the sum of all scores assigned
+by MAIC to a genes in a given list where that score contributes to the
+MAIC score for that gene (i.e., excluding those gene scores that are not
+used because a gene score from another list in the same category is
+greater).
+
+\newpage
+
+\subsection{Supplementary Results}\label{supplementary-results}
 
 Supplementary Figures 1-7
 
 Supplementary Tables 1-4
 
-\begin{figure}
+\begin{figure}[H]
 
 {\centering \includegraphics{../img/Supplementary_Figure_1.png}
 
@@ -356,26 +369,24 @@ Supplementary Tables 1-4
 \caption{\textbf{Systematic review inclusion diagram}. Abbreviations: db
 - data base; GEO - NCBI Gene Expression Omnibus.}
 
-\end{figure}
-
-\begin{figure}
+\end{figure}%%
+\begin{figure}[H]
 
 {\centering \includegraphics{../img/Supplementary_Figure_2.png}
 
 }
 
 \caption{\textbf{Attributing information in MAIC}. (a) Shared
-information content (IC) between gene lists. Links indicate absolute IC
-(sum of common gene scores) between studies. (b) Proportion of
-replicated genes. Circle diameter is equal to logarithm (base 2) of gene
-number per list. (c) IC normalised by number of genes. Overlapping
-circles denote equal normalised IC and contribution (ICtb - sum of
-common gene scores contributing to MAIC), indicating all gene scores
-contributed to MAIC.}
+information between gene lists. Links indicate shared summed common gene
+scores between studies. (b) Proportion of replicated genes. Circle
+diameter is equal to logarithm (base 2) of gene number per list. (c)
+Total MAIC score (totMS) normalised by number of genes. Overlapping
+circles denote equal normalised totMS and contribution (ctotMS - sum of
+common gene scores contributing to MAIC score for a gene), indicating
+all gene scores contributed to MAIC.}
 
-\end{figure}
-
-\begin{figure}
+\end{figure}%%
+\begin{figure}[H]
 
 {\centering \includegraphics{../img/Supplementary_Figure_3.png}
 
@@ -394,9 +405,8 @@ ranked ARDS MAIC genes also prioritised by the coronavirus MAIC,
 displaying the ARDS MAIC score for each gene, highest gene score in each
 category, and the number of supporting gene lists.}
 
-\end{figure}
-
-\begin{figure}
+\end{figure}%%
+\begin{figure}[H]
 
 {\centering \includegraphics{../img/Supplementary_Figure_4.png}
 
@@ -416,9 +426,8 @@ genes identified by studies based on airways sampling. (g) Manhatten
 plot of the top 20 cell types overenriched for expression of genes
 identified by studies based on blood sampling.}
 
-\end{figure}
-
-\begin{figure}
+\end{figure}%%
+\begin{figure}[H]
 
 {\centering \includegraphics{../img/Supplementary_Figure_5.png}
 
@@ -433,9 +442,8 @@ between signficantly enriched GO cellular component terms for
 prioritised genes (d) Manhatten plot of the overenrichment of
 prioritised genes against the GWAS catolog.}
 
-\end{figure}
-
-\begin{figure}
+\end{figure}%%
+\begin{figure}[H]
 
 {\centering \includegraphics{../img/Supplementary_Figure_6.png}
 
@@ -446,9 +454,8 @@ prioritsed genes and the 10 largest graph-based clusters. Functional
 annotation by hand based on a concencus of enriched Reactome, KEGG,
 WikiPathways, and GO Biological Process terms.}
 
-\end{figure}
-
-\begin{figure}
+\end{figure}%%
+\begin{figure}[H]
 
 {\centering \includegraphics{../img/Supplementary_Figure_7.png}
 
@@ -460,18 +467,17 @@ Invariant Knee method. Intersection of lines identifies elbow point of
 best-fit curve. 130 genes in upper left quadrant were prioritied. (b)
 Eular diagrams of gene overlap between the ARDS vs.~non-ARDS controls
 sub-group and a BioLitMine search using the ARDS MeSH term and the ARDS
-Database of Genes. (c) Shared information content (IC) between ARDS
-vs.~non-ARDS controls gene lists. Links indicate absolute IC (sum of
-common gene scores) between studies. (d) Gene prioritisation for the
-ARDS MAIC survival sub-group using the Unit Invariant Knee method.
-Intersection of lines identifies elbow point of best-fit curve. 33 genes
-in upper left quadrant were prioritied. (e) Eular diagrams of gene
-overlap between the survival sub-group and a BioLitMine search using the
-ARDS MeSH term and the ARDS Database of Genes. (f) Shared information
-content (IC) between survival gene lists. Links indicate absolute IC
-(sum of common gene scores) between studies.}
+Database of Genes. (c) Shared information between ARDS vs.~non-ARDS
+controls gene lists. Links indicate shared summed common gene scores
+between studies. (d) Gene prioritisation for the ARDS MAIC survival
+sub-group using the Unit Invariant Knee method. Intersection of lines
+identifies elbow point of best-fit curve. 33 genes in upper left
+quadrant were prioritied. (e) Eular diagrams of gene ovelap between the
+survival sub-group and a BioLitMine search using the ARDS MeSH term and
+the ARDS Database of Genes. (f) Shared information between survival gene
+lists. Links indicate shared summed common gene scores between studies.}
 
-\end{figure}
+\end{figure}%
 
 \newpage
 
@@ -495,9 +501,9 @@ contribution.}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{N genes}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{rIC} (\%)
+\textbf{totMS} (\%)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{rICtb} (\%)
+\textbf{ctotMS} (\%)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -578,7 +584,7 @@ Morrell\textsuperscript{39} & Transcriptomics & Microarray & 1 &
 \end{longtable}
 
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; rIC - Relative information content; rICtb - Relative information contribution; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
 \end{scriptsize}
 
 \newpage
@@ -658,9 +664,9 @@ content and contribution.}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{N genes}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{rIC} (\%)
+\textbf{totMS} (\%)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{rICtb} (\%)
+\textbf{ctotMS} (\%)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -713,7 +719,7 @@ Morrell\textsuperscript{39} & Transcriptomics & Microarray & 1 &
 \end{longtable}
 
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; rIC - Relative information content; rICtb - Relative information contribution; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
 \end{scriptsize}
 
 \newpage
@@ -738,9 +744,9 @@ information content and contribution.}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{N genes}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{rIC} (\%)
+\textbf{totMS} (\%)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{rICtb} (\%)
+\textbf{ctotMS} (\%)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -760,13 +766,12 @@ Lu\textsuperscript{29} & Transcriptomics & Microarray & 12 & 2.2 &
 \end{longtable}
 
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; rIC - Relative information content; rICtb - Relative information contribution; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
 \end{scriptsize}
 
 \newpage
 
-\hypertarget{supplementary-data}{%
-\subsection{Supplementary Data}\label{supplementary-data}}
+\subsection{Supplementary Data}\label{supplementary-data}
 
 Supplementary Data Files 1-8
 
@@ -811,237 +816,236 @@ survival sub-group}.
 
 \newpage
 
-\hypertarget{references}{%
-\subsection{References}\label{references}}
+\subsection{References}\label{references}
 
-\hypertarget{refs}{}
+\phantomsection\label{refs}
 \begin{CSLReferences}{0}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-Sarma2022}{}}%
+\bibitem[\citeproctext]{ref-Sarma2022}
 \CSLLeftMargin{1. }%
 \CSLRightInline{Sarma, A. \emph{et al.} Hyperinflammatory {ARDS} is
 characterized by interferon-stimulated gene expression, t-cell
 activation, and an altered metatranscriptome in tracheal aspirates.
 \emph{bioRxiv} (2022).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Juss2016}{}}%
+\bibitem[\citeproctext]{ref-Juss2016}
 \CSLLeftMargin{2. }%
 \CSLRightInline{Juss, J. K. \emph{et al.} Acute respiratory distress
 syndrome neutrophils have a distinct phenotype and are resistant to
 phosphoinositide 3-kinase inhibition. \emph{Am. J. Respir. Crit. Care
 Med.} \textbf{194}, 961--973 (2016).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Nguyen2013}{}}%
+\bibitem[\citeproctext]{ref-Nguyen2013}
 \CSLLeftMargin{3. }%
 \CSLRightInline{Nguyen, E. V. \emph{et al.} Proteomic profiling of
 bronchoalveolar lavage fluid in critically ill patients with
 ventilator-associated pneumonia. \emph{PLoS One} \textbf{8}, e58782
 (2013).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Wang2008}{}}%
+\bibitem[\citeproctext]{ref-Wang2008}
 \CSLLeftMargin{4. }%
 \CSLRightInline{Wang, Z., Beach, D., Su, L., Zhai, R. \& Christiani, D.
 C. A genome-wide expression analysis in blood identifies pre-elafin as a
 biomarker in {ARDS}. \emph{Am. J. Respir. Cell Mol. Biol.} \textbf{38},
 724--732 (2008).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Bhargava2014}{}}%
+\bibitem[\citeproctext]{ref-Bhargava2014}
 \CSLLeftMargin{5. }%
 \CSLRightInline{Bhargava, M. \emph{et al.} Proteomic profiles in acute
 respiratory distress syndrome differentiates survivors from
 non-survivors. \emph{PLoS One} \textbf{9}, e109713 (2014).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Kovach2015}{}}%
+\bibitem[\citeproctext]{ref-Kovach2015}
 \CSLLeftMargin{6. }%
 \CSLRightInline{Kovach, M. A. \emph{et al.} Microarray analysis
 identifies {IL-1} receptor type 2 as a novel candidate biomarker in
 patients with acute respiratory distress syndrome. \emph{Respir. Res.}
 \textbf{16}, 29 (2015).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Bhargava2017}{}}%
+\bibitem[\citeproctext]{ref-Bhargava2017}
 \CSLLeftMargin{7. }%
 \CSLRightInline{Bhargava, M. \emph{et al.} Bronchoalveolar lavage fluid
 protein expression in acute respiratory distress syndrome provides
 insights into pathways activated in subjects with different outcomes.
 \emph{Sci. Rep.} \textbf{7}, 7464 (2017).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Morrell2019}{}}%
+\bibitem[\citeproctext]{ref-Morrell2019}
 \CSLLeftMargin{8. }%
 \CSLRightInline{Morrell, E. D. \emph{et al.} Alveolar macrophage
 transcriptional programs are associated with outcomes in acute
 respiratory distress syndrome. \emph{Am. J. Respir. Crit. Care Med.}
 \textbf{200}, 732--741 (2019).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Christie2012}{}}%
+\bibitem[\citeproctext]{ref-Christie2012}
 \CSLLeftMargin{9. }%
 \CSLRightInline{Christie, J. D. \emph{et al.} Genome wide association
 identifies {PPFIA1} as a candidate gene for acute lung injury risk
 following major trauma. \emph{PLoS One} \textbf{7}, e28268 (2012).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Liao2021}{}}%
+\bibitem[\citeproctext]{ref-Liao2021}
 \CSLLeftMargin{10. }%
 \CSLRightInline{Liao, S. Y. \emph{et al.} Identification of early and
 intermediate biomarkers for {ARDS} mortality by multi-omic approaches.
 \emph{Sci. Rep.} \textbf{11}, 18874 (2021).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Jiang2020}{}}%
+\bibitem[\citeproctext]{ref-Jiang2020}
 \CSLLeftMargin{11. }%
 \CSLRightInline{Jiang, Y. \emph{et al.} Single cell {RNA} sequencing
 identifies an early monocyte gene signature in acute respiratory
 distress syndrome. \emph{JCI Insight} \textbf{5}, (2020).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Batra2022}{}}%
+\bibitem[\citeproctext]{ref-Batra2022}
 \CSLLeftMargin{12. }%
 \CSLRightInline{Batra, R. \emph{et al.} Multi-omic comparative analysis
 of {COVID-19} and bacterial sepsis-induced {ARDS}. \emph{PLoS Pathog.}
 \textbf{18}, e1010819 (2022).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Bime2018}{}}%
+\bibitem[\citeproctext]{ref-Bime2018}
 \CSLLeftMargin{13. }%
 \CSLRightInline{Bime, C. \emph{et al.} Genome-wide association study in
 african americans with acute respiratory distress syndrome identifies
 the selectin {P} ligand gene as a risk factor. \emph{Am. J. Respir.
 Crit. Care Med.} \textbf{197}, 1421--1432 (2018).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Bos2019}{}}%
+\bibitem[\citeproctext]{ref-Bos2019}
 \CSLLeftMargin{14. }%
 \CSLRightInline{Bos, L. D. J. \emph{et al.} Understanding heterogeneity
 in biologic phenotypes of acute respiratory distress syndrome by
 leukocyte expression profiles. \emph{Am. J. Respir. Crit. Care Med.}
 \textbf{200}, 42--50 (2019).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Chang2008}{}}%
+\bibitem[\citeproctext]{ref-Chang2008}
 \CSLLeftMargin{15. }%
 \CSLRightInline{Chang, D. W. \emph{et al.} Proteomic and computational
 analysis of bronchoalveolar proteins during the course of the acute
 respiratory distress syndrome. \emph{Am. J. Respir. Crit. Care Med.}
 \textbf{178}, 701--709 (2008).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Mirchandani2022}{}}%
+\bibitem[\citeproctext]{ref-Mirchandani2022}
 \CSLLeftMargin{16. }%
 \CSLRightInline{Mirchandani, A. S. \emph{et al.} Hypoxia shapes the
 immune landscape in lung injury and promotes the persistence of
 inflammation. \emph{Nat. Immunol.} \textbf{23}, 927--939 (2022).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Dong2013}{}}%
+\bibitem[\citeproctext]{ref-Dong2013}
 \CSLLeftMargin{17. }%
 \CSLRightInline{Dong, H. \emph{et al.} Comparative analysis of the
 alveolar macrophage proteome in {ALI/ARDS} patients between the
 exudative phase and recovery phase. \emph{BMC Immunol.} \textbf{14}, 25
 (2013).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Ren2016}{}}%
+\bibitem[\citeproctext]{ref-Ren2016}
 \CSLLeftMargin{18. }%
 \CSLRightInline{Ren, S. \emph{et al.} Deleted in malignant brain tumors
 1 protein is a potential biomarker of acute respiratory distress
 syndrome induced by pneumonia. \emph{Biochem. Biophys. Res. Commun.}
 \textbf{478}, 1344--1349 (2016).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Tejera2012}{}}%
+\bibitem[\citeproctext]{ref-Tejera2012}
 \CSLLeftMargin{19. }%
 \CSLRightInline{Tejera, P. \emph{et al.} Distinct and replicable genetic
 risk factors for acute respiratory distress syndrome of pulmonary or
 extrapulmonary origin. \emph{J. Med. Genet.} \textbf{49}, 671--680
 (2012).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Howrylak2009}{}}%
+\bibitem[\citeproctext]{ref-Howrylak2009}
 \CSLLeftMargin{20. }%
 \CSLRightInline{Howrylak, J. A. \emph{et al.} Discovery of the gene
 signature for acute lung injury in patients with sepsis. \emph{Physiol.
 Genomics} \textbf{37}, 133--139 (2009).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Xu2021}{}}%
+\bibitem[\citeproctext]{ref-Xu2021}
 \CSLLeftMargin{21. }%
 \CSLRightInline{Xu, J.-Y. \emph{et al.} Nucleotide polymorphism in
 {ARDS} outcome: A whole exome sequencing association study. \emph{Ann.
 Transl. Med.} \textbf{9}, 780 (2021).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Chen2016}{}}%
+\bibitem[\citeproctext]{ref-Chen2016}
 \CSLLeftMargin{22. }%
 \CSLRightInline{Chen, C., Shi, L., Li, Y., Wang, X. \& Yang, S.
 Disease-specific dynamic biomarkers selected by integrating inflammatory
 mediators with clinical informatics in {ARDS} patients with severe
 pneumonia. \emph{Cell Biol. Toxicol.} \textbf{32}, 169--184 (2016).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Zhang2022}{}}%
+\bibitem[\citeproctext]{ref-Zhang2022}
 \CSLLeftMargin{23. }%
 \CSLRightInline{Zhang, C. \emph{et al.} Differential expression profile
 of plasma exosomal {microRNAs} in acute type a aortic dissection with
 acute lung injury. \emph{Sci. Rep.} \textbf{12}, 11667 (2022).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Kangelaris2015}{}}%
+\bibitem[\citeproctext]{ref-Kangelaris2015}
 \CSLLeftMargin{24. }%
 \CSLRightInline{Kangelaris, K. N. \emph{et al.} Increased expression of
 neutrophil-related genes in patients with early sepsis-induced {ARDS}.
 \emph{Am. J. Physiol. Lung Cell. Mol. Physiol.} \textbf{308}, L1102--13
 (2015).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Meyer2013}{}}%
+\bibitem[\citeproctext]{ref-Meyer2013}
 \CSLLeftMargin{25. }%
 \CSLRightInline{Meyer, N. J. \emph{et al.} {IL1RN} coding variant is
 associated with lower risk of acute respiratory distress syndrome and
 increased plasma {IL-1} receptor antagonist. \emph{Am. J. Respir. Crit.
 Care Med.} \textbf{187}, 950--959 (2013).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Martucci2020}{}}%
+\bibitem[\citeproctext]{ref-Martucci2020}
 \CSLLeftMargin{26. }%
 \CSLRightInline{Martucci, G. \emph{et al.} Identification of a
 circulating {miRNA} signature to stratify acute respiratory distress
 syndrome patients. \emph{J. Pers. Med.} \textbf{11}, 15 (2020).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Zhu2017}{}}%
+\bibitem[\citeproctext]{ref-Zhu2017}
 \CSLLeftMargin{27. }%
 \CSLRightInline{Zhu, Z. \emph{et al.} Whole blood {microRNA} markers are
 associated with acute respiratory distress syndrome. \emph{Intensive
 Care Med. Exp.} \textbf{5}, 38 (2017).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Englert2019}{}}%
+\bibitem[\citeproctext]{ref-Englert2019}
 \CSLLeftMargin{28. }%
 \CSLRightInline{Englert, J. A. \emph{et al.} Whole blood {RNA}
 sequencing reveals a unique transcriptomic profile in patients with
 {ARDS} following hematopoietic stem cell transplantation. \emph{Respir.
 Res.} \textbf{20}, 15 (2019).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Lu2017}{}}%
+\bibitem[\citeproctext]{ref-Lu2017}
 \CSLLeftMargin{29. }%
 \CSLRightInline{Lu, X.-G. \emph{et al.} Circulating {miRNAs} as
 biomarkers for severe acute pancreatitis associated with acute lung
 injury. \emph{World J. Gastroenterol.} \textbf{23}, 7440--7449 (2017).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Scheller2019}{}}%
+\bibitem[\citeproctext]{ref-Scheller2019}
 \CSLLeftMargin{30. }%
 \CSLRightInline{Scheller, N. \emph{et al.} Proviral {MicroRNAs} detected
 in extracellular vesicles from bronchoalveolar lavage fluid of patients
 with influenza virus-induced acute respiratory distress syndrome.
 \emph{J. Infect. Dis.} \textbf{219}, 540--543 (2019).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Nick2016}{}}%
+\bibitem[\citeproctext]{ref-Nick2016}
 \CSLLeftMargin{31. }%
 \CSLRightInline{Nick, J. A. \emph{et al.} Extremes of
 interferon-stimulated gene expression associate with worse outcomes in
 the acute respiratory distress syndrome. \emph{PLoS One} \textbf{11},
 e0162490 (2016).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-GuillenGuio2020}{}}%
+\bibitem[\citeproctext]{ref-GuillenGuio2020}
 \CSLLeftMargin{32. }%
 \CSLRightInline{Guillen-Guio, B. \emph{et al.} Sepsis-associated acute
 respiratory distress syndrome in individuals of european ancestry: A
 genome-wide association study. \emph{Lancet Respir. Med.} \textbf{8},
 258--266 (2020).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Meyer2011}{}}%
+\bibitem[\citeproctext]{ref-Meyer2011}
 \CSLLeftMargin{33. }%
 \CSLRightInline{Meyer, N. J. \emph{et al.} {ANGPT2} genetic variant is
 associated with trauma-associated acute lung injury and altered plasma
 angiopoietin-2 isoform ratio. \emph{Am. J. Respir. Crit. Care Med.}
 \textbf{183}, 1344--1353 (2011).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Dolinay2012}{}}%
+\bibitem[\citeproctext]{ref-Dolinay2012}
 \CSLLeftMargin{34. }%
 \CSLRightInline{Dolinay, T. \emph{et al.} Inflammasome-regulated
 cytokines are critical mediators of acute lung injury. \emph{Am. J.
 Respir. Crit. Care Med.} \textbf{185}, 1225--1234 (2012).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Chen2013}{}}%
+\bibitem[\citeproctext]{ref-Chen2013}
 \CSLLeftMargin{35. }%
 \CSLRightInline{Chen, X., Shan, Q., Jiang, L., Zhu, B. \& Xi, X.
 Quantitative proteomic analysis by {iTRAQ} for identification of
@@ -1049,26 +1053,26 @@ candidate biomarkers in plasma from acute respiratory distress syndrome
 patients. \emph{Biochem. Biophys. Res. Commun.} \textbf{441}, 1--6
 (2013).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Zhang2021}{}}%
+\bibitem[\citeproctext]{ref-Zhang2021}
 \CSLLeftMargin{36. }%
 \CSLRightInline{Zhang, S. \emph{et al.} miR-584 and miR-146 are
 candidate biomarkers for acute respiratory distress syndrome. \emph{Exp.
 Ther. Med.} \textbf{21}, 445 (2021).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Shortt2014}{}}%
+\bibitem[\citeproctext]{ref-Shortt2014}
 \CSLLeftMargin{37. }%
 \CSLRightInline{Shortt, K. \emph{et al.} Identification of novel single
 nucleotide polymorphisms associated with acute respiratory distress
 syndrome by exome-seq. \emph{PLoS One} \textbf{9}, e111953 (2014).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Bowler2004}{}}%
+\bibitem[\citeproctext]{ref-Bowler2004}
 \CSLLeftMargin{38. }%
 \CSLRightInline{Bowler, R. P. \emph{et al.} Proteomic analysis of
 pulmonary edema fluid and plasma in patients with acute lung injury.
 \emph{Am. J. Physiol. Lung Cell. Mol. Physiol.} \textbf{286}, L1095--104
 (2004).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Morrell2018}{}}%
+\bibitem[\citeproctext]{ref-Morrell2018}
 \CSLLeftMargin{39. }%
 \CSLRightInline{Morrell, E. D. \emph{et al.} Cytometry {TOF} identifies
 alveolar macrophage subtypes in acute respiratory distress syndrome.

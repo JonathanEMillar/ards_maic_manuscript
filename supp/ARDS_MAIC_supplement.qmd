@@ -125,6 +125,18 @@ Exclusion:
 
 \newpage
 
+### Glossary
+
+**MAIC score** - the score assigned by MAIC to a given gene considering all lists.
+
+**Gene score** - the score assigned by MAIC to a given gene in a given list.
+
+**Total MAIC score** - the sum of all scores assigned by MAIC to a genes in a given list.
+
+**Contributing total MAIC score** - the sum of all scores assigned by MAIC to a genes in a given list where that score contributes to the MAIC score for that gene (i.e., excluding those gene scores that are not used because a gene score from another list in the same category is greater). 
+
+\newpage
+
 ## Supplementary Results
 
 Supplementary Figures 1-7
@@ -133,7 +145,7 @@ Supplementary Tables 1-4
 
 ![**Systematic review inclusion diagram**. Abbreviations: db - data base; GEO - NCBI Gene Expression Omnibus.](../img/Supplementary_Figure_1.png)
 
-![**Attributing information in MAIC**. (a) Shared information content (IC) between gene lists. Links indicate absolute IC (sum of common gene scores) between studies. (b) Proportion of replicated genes. Circle diameter is equal to logarithm (base 2) of gene number per list. (c) IC normalised by number of genes. Overlapping circles denote equal normalised IC and contribution (ICtb - sum of common gene scores contributing to MAIC), indicating all gene scores contributed to MAIC.](../img/Supplementary_Figure_2.png)
+![**Attributing information in MAIC**. (a) Shared information between gene lists. Links indicate shared summed common gene scores between studies. (b) Proportion of replicated genes. Circle diameter is equal to logarithm (base 2) of gene number per list. (c) Total MAIC score (totMS) normalised by number of genes. Overlapping circles denote equal normalised totMS and contribution (ctotMS - sum of common gene scores contributing to MAIC score for a gene), indicating all gene scores contributed to MAIC.](../img/Supplementary_Figure_2.png)
 
 ![**Overlap between ARDS MAIC and ARDS-associated genes and ARDS MAIC and coronavirus MAIC**. (a) Eular diagram of gene overlap between ARDS MAIC and a BioLitMine search using the ARDS MeSH term. (b) Schematic overview of a co-expression search for genes identified in the BioLitMine search but not present in ARDS MAIC and a stacked bar plot of the proportion of the 100 most co-expressed genes of this group and ARDS MAIC. (c) Eular diagram of gene overlap between ARDS MAIC and the ARDS Database of Genes. (d) Eular diagram of gene overlap between ARDS MAIC and a MAIC of COVID-19 host-response studies. (e) Heatmap of the 50 top ranked ARDS MAIC genes also prioritised by the coronavirus MAIC, displaying the ARDS MAIC score for each gene, highest gene score in each category, and the number of supporting gene lists.](../img/Supplementary_Figure_3.png)
 
@@ -143,13 +155,13 @@ Supplementary Tables 1-4
 
 ![**PPI clusters**. A protein-protein interaction network of prioritsed genes and the 10 largest graph-based clusters. Functional annotation by hand based on a concencus of enriched Reactome, KEGG, WikiPathways, and GO Biological Process terms.](../img/Supplementary_Figure_6.png)
 
-![**Details of MAIC on sub-groups**. (a) Gene prioritisation for the ARDS MAIC ARDS vs. non-ARDS controls sub-group using the Unit Invariant Knee method. Intersection of lines identifies elbow point of best-fit curve. 130 genes in upper left quadrant were prioritied. (b) Eular diagrams of gene overlap between the ARDS vs. non-ARDS controls sub-group and a BioLitMine search using the ARDS MeSH term and the ARDS Database of Genes. (c) Shared information content (IC) between ARDS vs. non-ARDS controls gene lists. Links indicate absolute IC (sum of common gene scores) between studies. (d) Gene prioritisation for the ARDS MAIC survival sub-group using the Unit Invariant Knee method. Intersection of lines identifies elbow point of best-fit curve. 33 genes in upper left quadrant were prioritied. (e) Eular diagrams of gene overlap between the survival sub-group and a BioLitMine search using the ARDS MeSH term and the ARDS Database of Genes. (f) Shared information content (IC) between survival gene lists. Links indicate absolute IC (sum of common gene scores) between studies.](../img/Supplementary_Figure_7.png)
+![**Details of MAIC on sub-groups**. (a) Gene prioritisation for the ARDS MAIC ARDS vs. non-ARDS controls sub-group using the Unit Invariant Knee method. Intersection of lines identifies elbow point of best-fit curve. 130 genes in upper left quadrant were prioritied. (b) Eular diagrams of gene overlap between the ARDS vs. non-ARDS controls sub-group and a BioLitMine search using the ARDS MeSH term and the ARDS Database of Genes. (c) Shared information between ARDS vs. non-ARDS controls gene lists. Links indicate shared summed common gene scores between studies. (d) Gene prioritisation for the ARDS MAIC survival sub-group using the Unit Invariant Knee method. Intersection of lines identifies elbow point of best-fit curve. 33 genes in upper left quadrant were prioritied. (e) Eular diagrams of gene ovelap between the survival sub-group and a BioLitMine search using the ARDS MeSH term and the ARDS Database of Genes. (f) Shared information between survival gene lists. Links indicate shared summed common gene scores between studies.](../img/Supplementary_Figure_7.png)
 
 \newpage
 
 **Supplementary Table 1.  Gene list information content and contribution.**
 
-| **Study**                     | **Method**      | **Category** | **N genes** | **rIC** (%)    | **rICtb** (%)     |
+| **Study**                     | **Method**      | **Category** | **N genes** | **totMS** (%)  | **ctotMS** (%)    |
 |-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
 | Sarma[@Sarma2022]             | Transcriptomics | RNA-seq      | 4954        | 50.8           | 53.1              |
 | Juss[@Juss2016]               | Transcriptomics | Microarray   | 1318        | 16             | 15.7              |
@@ -197,7 +209,7 @@ Supplementary Tables 1-4
 
 ```{=tex}
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; rIC - Relative information content; rICtb - Relative information contribution; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
 \end{scriptsize}
 ```
 
@@ -236,7 +248,7 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 
 **Supplementary Table 3. ARDS susceptibility gene list information content and contribution.**
 
-| **Study**                     | **Method**      | **Category** | **N genes** | **rIC** (%)    | **rICtb** (%)     |
+| **Study**                     | **Method**      | **Category** | **N genes** | **totMS** (%)  | **ctotMS** (%)    |
 |-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
 | Juss[@Juss2016]               | Transcriptomics | Microarray   | 1318        | 54.7           | 54.7              |
 | Nguyen[@Nguyen2013]           | Proteomics      | Mass Spec    | 161         | 8.1            | 7.7               |
@@ -269,7 +281,7 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 
 ```{=tex}
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; rIC - Relative information content; rICtb - Relative information contribution; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
 \end{scriptsize}
 ```
 
@@ -277,7 +289,7 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 
 **Supplementary Table 4. ARDS survival/severity gene list information content and contribution.**
 
-| **Study**                     | **Method**      | **Category** | **N genes** | **rIC** (%)    | **rICtb** (%)     |
+| **Study**                     | **Method**      | **Category** | **N genes** | **totMS** (%)  | **ctotMS** (%)    |
 |-------------------------------|-----------------|--------------|-------------|----------------|-------------------|
 | Bhargava[@Bhargava2017]       | Proteomics      | Mass Spec    | 144         | 30.4           | 30.3              |
 | Morrell[@Morrell2019]         | Transcriptomics | Microarray   | 155         | 29.7           | 29.7              |
@@ -290,7 +302,7 @@ Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometr
 
 ```{=tex}
 \begin{scriptsize}
-Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; rIC - Relative information content; rICtb - Relative information contribution; WES - Whole-exome sequencing.
+Abbreviations: GWAS - Genome-wide association study; Mass Spec - Mass spectometry; totMS - Total MAIC score; ctotMS - Contributing total MAIC score; WES - Whole-exome sequencing.
 \end{scriptsize}
 ```
 
